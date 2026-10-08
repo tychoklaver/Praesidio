@@ -37,7 +37,10 @@
 # Visual Studio cache directory
 .vs/
 
-.vscode/
+# Ignore generated shader files, but keep the graph source
+*.shader
+!*.shadergraph   
+
 # Gradle cache directory
 .gradle/
 
