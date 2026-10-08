@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class Worker : MonoBehaviour
 {
     public enum State { Idle, Construction, Working }
+    public enum WorkPhase { ToNode, Gathering, ToDepot }
     
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
@@ -15,29 +16,41 @@ public class Worker : MonoBehaviour
     
     [Header("Work")]
     [SerializeField] float buildingRate = 1f;
-    [SerializeField] float workRange= 2f;
+    [Tooltip("Hoe ver van de rand van een gebouw de worker blijft staan")]
+    [SerializeField] float arriveDistance = 0.3f;
 
     
     public ProductionBuilding Home {get; private set;}
     public JobData Job => Home != null ? Home.Job : null;
     public State CurrentState {get; private set;} = State.Idle;
     public bool IsAvailable => Home  == null;
+    public int Carried => carried;
     
     Vector3 wanderCenter, wanderTarget;
     bool hasWanderTarget;
     float waitTimer, gatherTimer;
+    [SerializeField] WorkPhase phase = WorkPhase.ToNode;
+    int carried;
 
     public void AssignTo(ProductionBuilding building)
     {
         Home = building;
-        gatherTimer = 0f;
+        ResetWork();
     }
 
     public void Unassign()
     {
         Home = null;
-        gatherTimer = 0f;
+        ResetWork();
     }
+
+    void ResetWork()
+    {
+        gatherTimer = 0f;
+        carried = 0;
+        phase = WorkPhase.ToNode;
+    }
+
     private void Update()
     {
         Building site = GetConstructionTarget();
@@ -82,29 +95,71 @@ public class Worker : MonoBehaviour
         }
         return best;
     }
-
+    
     void Construct(Building site)
     {
         if (MoveTo(site.transform.position, ReachOf(site)))
             site.AddConstructionWork(buildingRate * Time.deltaTime);
     }
-
+    
     private void Work()
     {
         if (Job == null) return;
+
+        ResourceNode node = Home.Node;
+        if (node == null)
+        {
+            WorkAtBuilding();
+            return;
+        }
+
+        switch (phase)
+        {
+            case WorkPhase.ToNode:
+                if (MoveTo(node.transform.position, node.Reach))
+                {
+                    gatherTimer = 0f;
+                    phase = WorkPhase.Gathering;
+                }
+                break;
+
+            case WorkPhase.Gathering:
+                gatherTimer += Time.deltaTime;
+                if (gatherTimer >= Job.interval)
+                {
+                    carried = Job.amountPerTick;
+                    phase = WorkPhase.ToDepot;
+                }
+                break;
+
+            case WorkPhase.ToDepot:
+                if (MoveTo(Home.transform.position, ReachOf(Home)))
+                {
+                    Deliver();
+                    phase = WorkPhase.ToNode;
+                }
+                break;
+        }
+    }
+
+    void WorkAtBuilding()
+    {
         if (!MoveTo(Home.transform.position, ReachOf(Home))) return;
-        
+
         gatherTimer += Time.deltaTime;
         if (gatherTimer >= Job.interval)
         {
             gatherTimer = 0f;
-            Gather();
+            carried = Job.amountPerTick;
+            Deliver();
         }
     }
-    void Gather()
+
+    void Deliver()
     {
-        if (Job != null)
-            ResourceManager.Instance.Add(Job.resource, Job.amountPerTick);
+        if (Job != null && carried > 0)
+            ResourceManager.Instance.Add(Job.resource, carried);
+        carried = 0;
     }
 
     void Wander()
@@ -118,27 +173,30 @@ public class Worker : MonoBehaviour
             hasWanderTarget = true;
         }
 
-        if (MoveTo(wanderTarget, 0.05f))
+        if (MoveTo(wanderTarget, 0f))
         {
             hasWanderTarget = false;
             waitTimer = Random.Range(wanderPause.x, wanderPause.y);
         }
     }
+
+    const float ArriveTolerance = 0.05f;
+
     bool MoveTo(Vector3 target, float stopDistance)
     {
         Vector3 to = target  - transform.position;
         to.z = 0f;
         float distance = to.magnitude;
-        if (distance <= stopDistance) return true;
+        if (distance <= stopDistance + ArriveTolerance) return true;
         
         float step = Mathf.Min(moveSpeed * Time.deltaTime, distance - stopDistance);
         transform.position += to / distance * step;
         return false;
     }
-
+    
     float ReachOf(Building building)
     {
         float half = Mathf.Max(building.size.x, building.size.y) * 0.5f * GridManager.Instance.CellSize;
-        return half + workRange;
+        return half + arriveDistance;
     }
 }
