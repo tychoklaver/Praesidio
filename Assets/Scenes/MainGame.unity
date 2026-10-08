@@ -2231,7 +2231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563794466}
   - component: {fileID: 1563794467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MapBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
