@@ -407,9 +407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b457d6dcbb6bec545b08d318de94816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSelector
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 759296179}
   ghost: {fileID: 1439833673}
-  buildingPanel: {fileID: 0}
+  buildingPanel: {fileID: 1673104200}
 --- !u!4 &323270447
 Transform:
   m_ObjectHideFlags: 0
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1673104200}
         m_TargetAssemblyTypeName: BuildingPanel, Assembly-CSharp
         m_MethodName: Hide
         m_Mode: 1
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f027fcc60e41609676b18761b85ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildButton
-  menu: {fileID: 0}
+  menu: {fileID: 1673104199}
   type: 1
 --- !u!114 &860284800
 MonoBehaviour:
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1673104200}
         m_TargetAssemblyTypeName: BuildingPanel, Assembly-CSharp
         m_MethodName: RemoveWorker
         m_Mode: 1
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3126870aadb67745ac339ba560a99ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingGhost
-  cam: {fileID: 0}
+  cam: {fileID: 759296179}
   validColor: {r: 0.3, g: 1, b: 0.3, a: 0.6}
   invalidColor: {r: 1, g: 0.3, b: 0.3, a: 0.6}
   isValidPlacement: 0
@@ -2658,7 +2658,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1673104200}
         m_TargetAssemblyTypeName: BuildingPanel, Assembly-CSharp
         m_MethodName: AddWorker
         m_Mode: 1
@@ -2782,7 +2782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6847352122794484dbae74599da308c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ca9a0dfddf4b472c8eac280c7b7b310, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
