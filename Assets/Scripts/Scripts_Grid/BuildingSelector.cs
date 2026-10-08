@@ -18,8 +18,12 @@ public class BuildingSelector : MonoBehaviour
         Vector2 world = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Collider2D hit = Physics2D.OverlapPoint(world);
         ProductionBuilding b = hit != null ? hit.GetComponent<ProductionBuilding>() : null;
-        
-        if (b != null) buildingPanel.Show(b);
+
+        if (b != null)
+        {
+            Debug.Log("rah");
+            buildingPanel.Show(b);
+        }
     }
     
 }
