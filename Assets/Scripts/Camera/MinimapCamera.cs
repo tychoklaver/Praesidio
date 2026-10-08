@@ -7,20 +7,21 @@ public class MinimapCamera : MonoBehaviour
 
     void Start()
     {
-        Bounds bounds = mapBounds.bounds;
+        UpdateBounds();
+    }
 
-        float aspect = (float)Screen.width / Screen.height;
+    void Update()
+    {
+        UpdateBounds();
+    }
 
-        float width = bounds.size.x;
-        float height = bounds.size.y;
+    void UpdateBounds()
+    {
+        float height = minimapCamera.orthographicSize * 2f;
+        float width = height * minimapCamera.aspect;
 
-        minimapCamera.orthographicSize =
-            Mathf.Max(height, width / aspect) / 2f;
+        mapBounds.size = new Vector2(width, height);
 
-        minimapCamera.transform.position = new Vector3(
-            bounds.center.x,
-            bounds.center.y,
-            minimapCamera.transform.position.z
-        );
+        mapBounds.transform.position = minimapCamera.transform.position;
     }
 }
