@@ -5,5 +5,6 @@ public enum BuildingType
     LumberJack,
     ForageHut,
     Wall,
-    House
+    House,
+    StoneGatherer
 }
