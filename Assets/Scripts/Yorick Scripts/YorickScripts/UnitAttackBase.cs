@@ -38,10 +38,9 @@ public abstract class UnitAttackBase : MonoBehaviour
 
         return true;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnAttackHit()
     {
-        if (pendingTarget == null) return;
+        if (!enabled || pendingTarget == null) return;
         PerformAttack(pendingTarget);
     }
     protected abstract void PerformAttack(Transform target);

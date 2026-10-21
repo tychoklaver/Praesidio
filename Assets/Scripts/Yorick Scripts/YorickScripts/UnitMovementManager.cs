@@ -19,6 +19,7 @@ public class UnitMovementManager : MonoBehaviour
 
     void Update()
     {
+        
         FlowfieldManager fm = FlowfieldManager.Instance;
         if (fm == null) return;
 
@@ -94,6 +95,7 @@ public class UnitMovementManager : MonoBehaviour
 
         if (target == null)
         {
+            unitBase.SetWalking(false);      // NIEUW
             unitBase.nextRetargetTime = 0f; // target weg: meteen opnieuw zoeken
             return;
         }
@@ -102,38 +104,29 @@ public class UnitMovementManager : MonoBehaviour
 
         // Dichtstbijzijnde punt op het target (rand van zijn collider)
         Vector2 edge = ClosestPointOnTarget(unitBase, pos);
+        float edgeDist = Vector2.Distance(pos, edge);
 
-        // In range: stoppen met lopen en aanvallen
-        if (unitBase.AttackRange.IsInAttackRange(target) || Vector2.Distance(pos, edge) <= unitBase.Data.unitAttackRange)
+        // Eén maat voor "in range": afstand tot de rand van de collider
+        if (edgeDist <= unitBase.Data.unitAttackRange)
         {
+            unitBase.SetWalking(false);
+            unitBase.FaceDirection(edge.x - pos.x);
             unitBase.Attack?.TryAttack(target);
             return;
         }
 
         Vector3 destination;
 
-        // Vijand met vrij zicht: recht erop af
         bool chase = unitBase.hasUnitInRange && fm.HasLineOfSight(pos, target.position);
 
-        // Dichtbij het target met vrij zicht: laatste stuk recht naar de rand, flowfield negeren
-        bool close = Vector2.Distance(pos, edge) <= fm.cellSize * 2f && fm.HasLineOfSight(pos, edge);
+        Vector2 losPoint = Vector2.MoveTowards(pos, edge, Mathf.Max(0f, edgeDist - fm.cellSize * 0.5f));
+        bool close = edgeDist <= fm.cellSize * 2f && fm.HasLineOfSight(pos, losPoint);
 
-        if (chase)
-        {
-            destination = target.position;
-        }
-        else if (close)
-        {
-            destination = edge;
-        }
+        if (chase) destination = target.position;
+        else if (close) destination = edge;
         else if (fm.TryGetNextPoint(pos, out destination, unitBase.TargetType))
-        {
             destination += (Vector3)(unitBase.CellOffset * fm.cellSize);
-        }
-        else
-        {
-            destination = edge; // geen pad: toch richting het target proberen
-        }
+        else destination = edge;
 
         Vector2 toDestination = (Vector2)(destination - pos);
         Vector2 velocity = toDestination.normalized + GetSeparation(unitBase) * separationStrength;
@@ -141,13 +134,19 @@ public class UnitMovementManager : MonoBehaviour
         if (velocity.magnitude > 1f) velocity.Normalize();
 
         Vector3 step = (Vector3)(velocity * unitBase.Data.unitSpeed * dt / 2);
+        Vector3 newPos = pos;
 
         if (!fm.IsBlocked(pos + step))
-            unitBase.transform.position = pos + step;
+            newPos = pos + step;
         else if (!fm.IsBlocked(pos + new Vector3(step.x, 0, 0)))
-            unitBase.transform.position = pos + new Vector3(step.x, 0, 0);
+            newPos = pos + new Vector3(step.x, 0, 0);
         else if (!fm.IsBlocked(pos + new Vector3(0, step.y, 0)))
-            unitBase.transform.position = pos + new Vector3(0, step.y, 0);
+            newPos = pos + new Vector3(0, step.y, 0);
+
+        unitBase.transform.position = newPos;
+        unitBase.SetWalking(newPos != pos);
+        unitBase.FaceDirection(velocity.x);
+        
     }
 
     void BuildGrid()

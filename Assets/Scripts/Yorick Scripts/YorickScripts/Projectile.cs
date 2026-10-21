@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 
     Transform target;
     float damage;
+
     public void Initialize(Transform target, float damage)
     {
         this.target = target;
