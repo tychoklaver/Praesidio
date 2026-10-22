@@ -6,7 +6,7 @@ public class FlowfieldManager : MonoBehaviour
     public static FlowfieldManager Instance { get; private set; }
 
     // Voeg hier later gewoon meer doelen aan toe
-    public enum TargetType { DefenseBuilding, EnemyTarget }
+    public enum TargetType { DefenseBuilding, EnemyTarget, PlayerVillager }
 
     public bool showAllPaths;
 
@@ -168,6 +168,11 @@ public class FlowfieldManager : MonoBehaviour
                 foreach (var t in FindObjectsByType<EnemyTargetSCript>(FindObjectsSortMode.None))
                     list.Add(t.transform);
                 break;
+
+            case TargetType.PlayerVillager:
+                foreach (var t in FindObjectsByType<PVTest>(FindObjectsSortMode.None))
+                    list.Add(t.transform);
+                break;
         }
 
         return list;
@@ -268,6 +273,9 @@ public class FlowfieldManager : MonoBehaviour
 
             foreach (var u in FindObjectsByType<PlayerUnitTestAI>(FindObjectsSortMode.None))
                 DrawPath(u.transform.position, TargetType.EnemyTarget);
+
+            foreach (var u in FindObjectsByType<EnemyBanditAI>(FindObjectsSortMode.None))
+                DrawPath(u.transform.position, TargetType.PlayerVillager);
         }
     }
 

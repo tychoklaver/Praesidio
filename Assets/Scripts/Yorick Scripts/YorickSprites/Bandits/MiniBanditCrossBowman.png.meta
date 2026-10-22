@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 60e427ec6314bfc40b5ee8219d2b11ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1464300180900460111
+    second: MiniBanditCrossBowman_0
+  - first:
+      213: 5320254360929911865
+    second: MiniBanditCrossBowman_1
+  - first:
+      213: -6311889947489839740
+    second: MiniBanditCrossBowman_2
+  - first:
+      213: -1693203486252344380
+    second: MiniBanditCrossBowman_3
+  - first:
+      213: 527625261768870686
+    second: MiniBanditCrossBowman_4
+  - first:
+      213: -2623627061448991719
+    second: MiniBanditCrossBowman_5
+  - first:
+      213: 7774725721112708248
+    second: MiniBanditCrossBowman_6
+  - first:
+      213: -6300265823538288778
+    second: MiniBanditCrossBowman_7
+  - first:
+      213: 7208258383295472723
+    second: MiniBanditCrossBowman_8
+  - first:
+      213: -417268116096016357
+    second: MiniBanditCrossBowman_9
+  - first:
+      213: 1883654200435685233
+    second: MiniBanditCrossBowman_10
+  - first:
+      213: 1238062637854353516
+    second: MiniBanditCrossBowman_11
+  - first:
+      213: 1923627579590674497
+    second: MiniBanditCrossBowman_12
+  - first:
+      213: 6566377352193085978
+    second: MiniBanditCrossBowman_13
+  - first:
+      213: 7469848821799597961
+    second: MiniBanditCrossBowman_14
+  - first:
+      213: -1672441856178505322
+    second: MiniBanditCrossBowman_15
+  - first:
+      213: 2060138540021836592
+    second: MiniBanditCrossBowman_16
+  - first:
+      213: 8663098084066017278
+    second: MiniBanditCrossBowman_17
+  - first:
+      213: 5362426676319056836
+    second: MiniBanditCrossBowman_18
+  - first:
+      213: -6651855786639797763
+    second: MiniBanditCrossBowman_19
+  - first:
+      213: -7529244102799023461
+    second: MiniBanditCrossBowman_20
+  - first:
+      213: 3981348564941087586
+    second: MiniBanditCrossBowman_21
+  - first:
+      213: -3399198421227180997
+    second: MiniBanditCrossBowman_22
+  - first:
+      213: -8057743180791454093
+    second: MiniBanditCrossBowman_23
+  - first:
+      213: 3196990837553836767
+    second: MiniBanditCrossBowman_24
+  - first:
+      213: 6946173776106656615
+    second: MiniBanditCrossBowman_25
+  - first:
+      213: 9135885687251085924
+    second: MiniBanditCrossBowman_26
+  - first:
+      213: -1088269728065392759
+    second: MiniBanditCrossBowman_27
+  - first:
+      213: -9202665328822618142
+    second: MiniBanditCrossBowman_28
+  - first:
+      213: 1108735938231829961
+    second: MiniBanditCrossBowman_29
+  - first:
+      213: -8540555008427741311
+    second: MiniBanditCrossBowman_30
+  - first:
+      213: -155055655008317453
+    second: MiniBanditCrossBowman_31
+  - first:
+      213: -8273835483176756672
+    second: MiniBanditCrossBowman_32
+  - first:
+      213: 5142562478666099591
+    second: MiniBanditCrossBowman_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 192
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b943e06eb2cdabe0800000000000000
+      internalID: -1464300180900460111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 192
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93443f1472755d940800000000000000
+      internalID: 5320254360929911865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 192
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485528ad889a768a0800000000000000
+      internalID: -6311889947489839740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 192
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbd97576688088e0800000000000000
+      internalID: -1693203486252344380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 161
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b814e4160825700800000000000000
+      internalID: 527625261768870686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 160
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c1b339611079bd0800000000000000
+      internalID: -2623627061448991719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8940401e9df55eb60800000000000000
+      internalID: 7774725721112708248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 161
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677677d1d95f098a0800000000000000
+      internalID: -6300265823538288778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 160
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354ee810fc0e80460800000000000000
+      internalID: 7208258383295472723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b102004fbd0953af0800000000000000
+      internalID: -417268116096016357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 129
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17734a8e385142a10800000000000000
+      internalID: 1883654200435685233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_11
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 129
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68edfad86b7e2110800000000000000
+      internalID: 1238062637854353516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 128
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14885a1871912ba10800000000000000
+      internalID: 1923627579590674497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 96
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1293a26965702b50800000000000000
+      internalID: 6566377352193085978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_14
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 96
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9873c3d2deb3aa760800000000000000
+      internalID: 7469848821799597961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 96
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6993cf62efa4ac8e0800000000000000
+      internalID: -1672441856178505322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 96
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03be71a4615179c10800000000000000
+      internalID: 2060138540021836592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 96
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff3f13fec1893870800000000000000
+      internalID: 8663098084066017278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_18
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 96
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3731896aa2b6a40800000000000000
+      internalID: 5362426676319056836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df15534b76cdfa3a0800000000000000
+      internalID: -6651855786639797763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_20
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 96
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92a5715160c28790800000000000000
+      internalID: -7529244102799023461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_21
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 96
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263235cfc67904730800000000000000
+      internalID: 3981348564941087586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_22
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 64
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c6fadab0f93d0d0800000000000000
+      internalID: -3399198421227180997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3766991d4452d2090800000000000000
+      internalID: -8057743180791454093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_24
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd233967a3efd5c20800000000000000
+      internalID: 3196990837553836767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_25
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 64
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76398f83f34c56060800000000000000
+      internalID: 6946173776106656615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_26
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 64
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a2d29e0af29ce70800000000000000
+      internalID: 9135885687251085924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 64
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fe9deb270b5e0f0800000000000000
+      internalID: -1088269728065392759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_28
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e779b824a0994080800000000000000
+      internalID: -9202665328822618142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 32
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c584042675036f00800000000000000
+      internalID: 1108735938231829961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f2bf9387ad97980800000000000000
+      internalID: -8540555008427741311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff40da04b129ddf0800000000000000
+      internalID: -155055655008317453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a1a37f67e6d2d80800000000000000
+      internalID: -8273835483176756672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditCrossBowman_33
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b2520f35d0e5740800000000000000
+      internalID: 5142562478666099591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniBanditCrossBowman_0: -1464300180900460111
+      MiniBanditCrossBowman_1: 5320254360929911865
+      MiniBanditCrossBowman_10: 1883654200435685233
+      MiniBanditCrossBowman_11: 1238062637854353516
+      MiniBanditCrossBowman_12: 1923627579590674497
+      MiniBanditCrossBowman_13: 6566377352193085978
+      MiniBanditCrossBowman_14: 7469848821799597961
+      MiniBanditCrossBowman_15: -1672441856178505322
+      MiniBanditCrossBowman_16: 2060138540021836592
+      MiniBanditCrossBowman_17: 8663098084066017278
+      MiniBanditCrossBowman_18: 5362426676319056836
+      MiniBanditCrossBowman_19: -6651855786639797763
+      MiniBanditCrossBowman_2: -6311889947489839740
+      MiniBanditCrossBowman_20: -7529244102799023461
+      MiniBanditCrossBowman_21: 3981348564941087586
+      MiniBanditCrossBowman_22: -3399198421227180997
+      MiniBanditCrossBowman_23: -8057743180791454093
+      MiniBanditCrossBowman_24: 3196990837553836767
+      MiniBanditCrossBowman_25: 6946173776106656615
+      MiniBanditCrossBowman_26: 9135885687251085924
+      MiniBanditCrossBowman_27: -1088269728065392759
+      MiniBanditCrossBowman_28: -9202665328822618142
+      MiniBanditCrossBowman_29: 1108735938231829961
+      MiniBanditCrossBowman_3: -1693203486252344380
+      MiniBanditCrossBowman_30: -8540555008427741311
+      MiniBanditCrossBowman_31: -155055655008317453
+      MiniBanditCrossBowman_32: -8273835483176756672
+      MiniBanditCrossBowman_33: 5142562478666099591
+      MiniBanditCrossBowman_4: 527625261768870686
+      MiniBanditCrossBowman_5: -2623627061448991719
+      MiniBanditCrossBowman_6: 7774725721112708248
+      MiniBanditCrossBowman_7: -6300265823538288778
+      MiniBanditCrossBowman_8: 7208258383295472723
+      MiniBanditCrossBowman_9: -417268116096016357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

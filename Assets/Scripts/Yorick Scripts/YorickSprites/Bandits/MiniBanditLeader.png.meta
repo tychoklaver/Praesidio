@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: a2eaa6e654f41d145a972d6b8173fd35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2091274421085605147
+    second: MiniBanditLeader_0
+  - first:
+      213: -7683938756997906344
+    second: MiniBanditLeader_1
+  - first:
+      213: -1915745493049337595
+    second: MiniBanditLeader_2
+  - first:
+      213: 1823614202784383476
+    second: MiniBanditLeader_3
+  - first:
+      213: 3196298669004985099
+    second: MiniBanditLeader_4
+  - first:
+      213: 7342261470361477791
+    second: MiniBanditLeader_5
+  - first:
+      213: -5346561514363804693
+    second: MiniBanditLeader_6
+  - first:
+      213: -988875443617630552
+    second: MiniBanditLeader_7
+  - first:
+      213: -5502953736711170050
+    second: MiniBanditLeader_8
+  - first:
+      213: -806417799275221415
+    second: MiniBanditLeader_9
+  - first:
+      213: -2110037997704342801
+    second: MiniBanditLeader_10
+  - first:
+      213: 2033794079359667113
+    second: MiniBanditLeader_11
+  - first:
+      213: 3956926986899017490
+    second: MiniBanditLeader_12
+  - first:
+      213: -1617951249363258661
+    second: MiniBanditLeader_13
+  - first:
+      213: 192608386451706234
+    second: MiniBanditLeader_14
+  - first:
+      213: 4778839213706493539
+    second: MiniBanditLeader_15
+  - first:
+      213: -4182660679184273267
+    second: MiniBanditLeader_16
+  - first:
+      213: -994724686035818208
+    second: MiniBanditLeader_17
+  - first:
+      213: 1833036045457326283
+    second: MiniBanditLeader_18
+  - first:
+      213: -4634591155267157893
+    second: MiniBanditLeader_19
+  - first:
+      213: 7302882816720180530
+    second: MiniBanditLeader_20
+  - first:
+      213: -1854208063243638157
+    second: MiniBanditLeader_21
+  - first:
+      213: -9063627548222391137
+    second: MiniBanditLeader_22
+  - first:
+      213: 7059735038186012965
+    second: MiniBanditLeader_23
+  - first:
+      213: -4771617476915005297
+    second: MiniBanditLeader_24
+  - first:
+      213: 4880325769169604963
+    second: MiniBanditLeader_25
+  - first:
+      213: -5127465686141161076
+    second: MiniBanditLeader_26
+  - first:
+      213: -7467640373933613293
+    second: MiniBanditLeader_27
+  - first:
+      213: 189012750744700259
+    second: MiniBanditLeader_28
+  - first:
+      213: 4652524247816693256
+    second: MiniBanditLeader_29
+  - first:
+      213: 4876412260121712674
+    second: MiniBanditLeader_30
+  - first:
+      213: 1212001862968246643
+    second: MiniBanditLeader_31
+  - first:
+      213: -7953048349089000878
+    second: MiniBanditLeader_32
+  - first:
+      213: 562173452016067758
+    second: MiniBanditLeader_33
+  - first:
+      213: 4255779400608092249
+    second: MiniBanditLeader_34
+  - first:
+      213: 9107550916907746565
+    second: MiniBanditLeader_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniBanditLeader_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 192
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2f45b7efc4af2e0800000000000000
+      internalID: -2091274421085605147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 192
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8508849696a2d5590800000000000000
+      internalID: -7683938756997906344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 192
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5091db6cf97e965e0800000000000000
+      internalID: -1915745493049337595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 192
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1025c9477ce4910800000000000000
+      internalID: 1823614202784383476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 161
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03981a64b88b5c20800000000000000
+      internalID: 3196298669004985099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_5
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 160
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92eee408e3f4e560800000000000000
+      internalID: 7342261470361477791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3229641a23dc5b0800000000000000
+      internalID: -5346561514363804693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 161
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a67018f50fc642f0800000000000000
+      internalID: -988875443617630552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 160
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef71ceb7bb491a3b0800000000000000
+      internalID: -5502953736711170050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ee5adb8470fc4f0800000000000000
+      internalID: -806417799275221415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 129
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2914cde93a7b2e0800000000000000
+      internalID: -2110037997704342801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 129
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab868e80fc793c10800000000000000
+      internalID: 2033794079359667113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21fc5404124d9e630800000000000000
+      internalID: 3956926986899017490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2bdc539e1eb89e0800000000000000
+      internalID: -1617951249363258661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 96
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7117379e484ca200800000000000000
+      internalID: 192608386451706234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_15
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 96
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ebeab02f8d15240800000000000000
+      internalID: 4778839213706493539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d803a31e54434f5c0800000000000000
+      internalID: -4182660679184273267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029e5871b270232f0800000000000000
+      internalID: -994724686035818208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_18
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 96
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc088fd4290407910800000000000000
+      internalID: 1833036045457326283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70422f36ef9eafb0800000000000000
+      internalID: -4634591155267157893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_20
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 96
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23519eeba3d095560800000000000000
+      internalID: 7302882816720180530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_21
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 96
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aa2ba27978446e0800000000000000
+      internalID: -1854208063243638157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_22
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 96
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c72cb14c6873280800000000000000
+      internalID: -9063627548222391137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_23
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 64
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521c477fc9739f160800000000000000
+      internalID: 7059735038186012965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 64
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f887f649f2fc7cdb0800000000000000
+      internalID: -4771617476915005297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_25
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3611a831e666ab340800000000000000
+      internalID: 4880325769169604963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_26
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c813d8bff1597d8b0800000000000000
+      internalID: -5127465686141161076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 32
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f525925ac9d5890800000000000000
+      internalID: -7467640373933613293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365482a68128f9200800000000000000
+      internalID: 189012750744700259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_29
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806610c3726119040800000000000000
+      internalID: 4652524247816693256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_30
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2281aee3d1f7ca340800000000000000
+      internalID: 4876412260121712674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_31
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371855dd545e1d010800000000000000
+      internalID: 1212001862968246643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_32
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2521b0fd9a811a190800000000000000
+      internalID: -7953048349089000878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_33
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4a29da6cd3dc700800000000000000
+      internalID: 562173452016067758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_34
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9509ba711d09f0b30800000000000000
+      internalID: 4255779400608092249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditLeader_35
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505c1181e45846e70800000000000000
+      internalID: 9107550916907746565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniBanditLeader_0: -2091274421085605147
+      MiniBanditLeader_1: -7683938756997906344
+      MiniBanditLeader_10: -2110037997704342801
+      MiniBanditLeader_11: 2033794079359667113
+      MiniBanditLeader_12: 3956926986899017490
+      MiniBanditLeader_13: -1617951249363258661
+      MiniBanditLeader_14: 192608386451706234
+      MiniBanditLeader_15: 4778839213706493539
+      MiniBanditLeader_16: -4182660679184273267
+      MiniBanditLeader_17: -994724686035818208
+      MiniBanditLeader_18: 1833036045457326283
+      MiniBanditLeader_19: -4634591155267157893
+      MiniBanditLeader_2: -1915745493049337595
+      MiniBanditLeader_20: 7302882816720180530
+      MiniBanditLeader_21: -1854208063243638157
+      MiniBanditLeader_22: -9063627548222391137
+      MiniBanditLeader_23: 7059735038186012965
+      MiniBanditLeader_24: -4771617476915005297
+      MiniBanditLeader_25: 4880325769169604963
+      MiniBanditLeader_26: -5127465686141161076
+      MiniBanditLeader_27: -7467640373933613293
+      MiniBanditLeader_28: 189012750744700259
+      MiniBanditLeader_29: 4652524247816693256
+      MiniBanditLeader_3: 1823614202784383476
+      MiniBanditLeader_30: 4876412260121712674
+      MiniBanditLeader_31: 1212001862968246643
+      MiniBanditLeader_32: -7953048349089000878
+      MiniBanditLeader_33: 562173452016067758
+      MiniBanditLeader_34: 4255779400608092249
+      MiniBanditLeader_35: 9107550916907746565
+      MiniBanditLeader_4: 3196298669004985099
+      MiniBanditLeader_5: 7342261470361477791
+      MiniBanditLeader_6: -5346561514363804693
+      MiniBanditLeader_7: -988875443617630552
+      MiniBanditLeader_8: -5502953736711170050
+      MiniBanditLeader_9: -806417799275221415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

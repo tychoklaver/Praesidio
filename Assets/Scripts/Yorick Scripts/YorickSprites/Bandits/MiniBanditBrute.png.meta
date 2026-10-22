@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: c74d627cc03b43240a1ed0a428aafacb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3096333718072250476
+    second: MiniBanditBrute_0
+  - first:
+      213: -5802076815397436071
+    second: MiniBanditBrute_1
+  - first:
+      213: 4673854397429379246
+    second: MiniBanditBrute_2
+  - first:
+      213: -2833297929453758364
+    second: MiniBanditBrute_3
+  - first:
+      213: -2923149627538602927
+    second: MiniBanditBrute_4
+  - first:
+      213: 1150061511775820273
+    second: MiniBanditBrute_5
+  - first:
+      213: 6982174543306352097
+    second: MiniBanditBrute_6
+  - first:
+      213: -3567103550654965197
+    second: MiniBanditBrute_7
+  - first:
+      213: -4811485593609983084
+    second: MiniBanditBrute_8
+  - first:
+      213: 4012296322844371773
+    second: MiniBanditBrute_9
+  - first:
+      213: 1928510284422048448
+    second: MiniBanditBrute_10
+  - first:
+      213: 3602937774163418609
+    second: MiniBanditBrute_11
+  - first:
+      213: 4294848994690104798
+    second: MiniBanditBrute_12
+  - first:
+      213: 2320770360172779640
+    second: MiniBanditBrute_13
+  - first:
+      213: 3523615400317586327
+    second: MiniBanditBrute_14
+  - first:
+      213: 6394768910976629591
+    second: MiniBanditBrute_15
+  - first:
+      213: 7155868493045799608
+    second: MiniBanditBrute_16
+  - first:
+      213: 5323887927806333076
+    second: MiniBanditBrute_17
+  - first:
+      213: -2619366826764397972
+    second: MiniBanditBrute_18
+  - first:
+      213: 4678394085598665535
+    second: MiniBanditBrute_19
+  - first:
+      213: 9158646977775099522
+    second: MiniBanditBrute_20
+  - first:
+      213: -4298265976150021603
+    second: MiniBanditBrute_21
+  - first:
+      213: -8614977021235312514
+    second: MiniBanditBrute_22
+  - first:
+      213: 7472944123299314601
+    second: MiniBanditBrute_23
+  - first:
+      213: 7726752558787767504
+    second: MiniBanditBrute_24
+  - first:
+      213: 5497133962571604992
+    second: MiniBanditBrute_25
+  - first:
+      213: 7012311700496882070
+    second: MiniBanditBrute_26
+  - first:
+      213: 8708061496513987144
+    second: MiniBanditBrute_27
+  - first:
+      213: -4304616906848150417
+    second: MiniBanditBrute_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniBanditBrute_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 160
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60d2cb8c1368fa20800000000000000
+      internalID: 3096333718072250476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 160
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955c4ba80e1ea7fa0800000000000000
+      internalID: -5802076815397436071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 160
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0fca2bfcddcd040800000000000000
+      internalID: 4673854397429379246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 160
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4681f0c6b8a1ea8d0800000000000000
+      internalID: -2833297929453758364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 129
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1540f39b6e2ee67d0800000000000000
+      internalID: -2923149627538602927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_5
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 128
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f91f370ad6d5ff00800000000000000
+      internalID: 1150061511775820273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5ec8501caa5e060800000000000000
+      internalID: 6982174543306352097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 129
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a1d22583a1f7ec0800000000000000
+      internalID: -3567103550654965197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_8
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 128
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ba7fe485b2a3db0800000000000000
+      internalID: -4811485593609983084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 128
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3baeb06f3a8ea730800000000000000
+      internalID: 4012296322844371773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 97
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cae9a0d2e173ca10800000000000000
+      internalID: 1928510284422048448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 97
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdd8d001d4300230800000000000000
+      internalID: 3602937774163418609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 96
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd7274d76e5a9b30800000000000000
+      internalID: 4294848994690104798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 64
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8789a5bb858053020800000000000000
+      internalID: 2320770360172779640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 64
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b8605a98566e030800000000000000
+      internalID: 3523615400317586327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b397f8178ceb850800000000000000
+      internalID: 6394768910976629591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 64
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba97632b70ce4360800000000000000
+      internalID: 7155868493045799608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 64
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49013e8fcdf32e940800000000000000
+      internalID: 5323887927806333076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 64
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c621442cfb326abd0800000000000000
+      internalID: -2619366826764397972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 64
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b956732aefce040800000000000000
+      internalID: 4678394085598665535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 32
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e5d75d6ec0a1f70800000000000000
+      internalID: 9158646977775099522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_21
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 32
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a2e6d2edd7954c0800000000000000
+      internalID: -4298265976150021603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_22
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78cd151b04717880800000000000000
+      internalID: -8614977021235312514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_23
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab3997361b35b760800000000000000
+      internalID: 7472944123299314601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_24
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dca2ed9380fa3b60800000000000000
+      internalID: 7726752558787767504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_25
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004e0d1c63eb94c40800000000000000
+      internalID: 5497133962571604992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_26
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6999e6ab65cb05160800000000000000
+      internalID: 7012311700496882070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_27
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84209f53bcf39d870800000000000000
+      internalID: 8708061496513987144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniBanditBrute_28
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cdc25eabde244c0800000000000000
+      internalID: -4304616906848150417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniBanditBrute_0: 3096333718072250476
+      MiniBanditBrute_1: -5802076815397436071
+      MiniBanditBrute_10: 1928510284422048448
+      MiniBanditBrute_11: 3602937774163418609
+      MiniBanditBrute_12: 4294848994690104798
+      MiniBanditBrute_13: 2320770360172779640
+      MiniBanditBrute_14: 3523615400317586327
+      MiniBanditBrute_15: 6394768910976629591
+      MiniBanditBrute_16: 7155868493045799608
+      MiniBanditBrute_17: 5323887927806333076
+      MiniBanditBrute_18: -2619366826764397972
+      MiniBanditBrute_19: 4678394085598665535
+      MiniBanditBrute_2: 4673854397429379246
+      MiniBanditBrute_20: 9158646977775099522
+      MiniBanditBrute_21: -4298265976150021603
+      MiniBanditBrute_22: -8614977021235312514
+      MiniBanditBrute_23: 7472944123299314601
+      MiniBanditBrute_24: 7726752558787767504
+      MiniBanditBrute_25: 5497133962571604992
+      MiniBanditBrute_26: 7012311700496882070
+      MiniBanditBrute_27: 8708061496513987144
+      MiniBanditBrute_28: -4304616906848150417
+      MiniBanditBrute_3: -2833297929453758364
+      MiniBanditBrute_4: -2923149627538602927
+      MiniBanditBrute_5: 1150061511775820273
+      MiniBanditBrute_6: 6982174543306352097
+      MiniBanditBrute_7: -3567103550654965197
+      MiniBanditBrute_8: -4811485593609983084
+      MiniBanditBrute_9: 4012296322844371773
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

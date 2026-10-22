@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: c2314c30aeb92374e9f05e2c952d5993
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4525521507855120766
+    second: MiniVikingHorseman_0
+  - first:
+      213: -1287875412838519768
+    second: MiniVikingHorseman_1
+  - first:
+      213: -5613192007960156582
+    second: MiniVikingHorseman_2
+  - first:
+      213: 363302236582237763
+    second: MiniVikingHorseman_3
+  - first:
+      213: 5482102845858603395
+    second: MiniVikingHorseman_4
+  - first:
+      213: -8591809080077293826
+    second: MiniVikingHorseman_5
+  - first:
+      213: 6390194456880093874
+    second: MiniVikingHorseman_6
+  - first:
+      213: 6488664559992764971
+    second: MiniVikingHorseman_7
+  - first:
+      213: -6540873555626673501
+    second: MiniVikingHorseman_8
+  - first:
+      213: 1959127386664000313
+    second: MiniVikingHorseman_9
+  - first:
+      213: 7190392155178793505
+    second: MiniVikingHorseman_10
+  - first:
+      213: -2853405530934473521
+    second: MiniVikingHorseman_11
+  - first:
+      213: -5976354641379294368
+    second: MiniVikingHorseman_12
+  - first:
+      213: -8368111961578987990
+    second: MiniVikingHorseman_13
+  - first:
+      213: 2924442575375793806
+    second: MiniVikingHorseman_14
+  - first:
+      213: -1736576019788123199
+    second: MiniVikingHorseman_15
+  - first:
+      213: -9005194360128046345
+    second: MiniVikingHorseman_16
+  - first:
+      213: -8789604712931155822
+    second: MiniVikingHorseman_17
+  - first:
+      213: 4042808253427909487
+    second: MiniVikingHorseman_18
+  - first:
+      213: -3557161630559619664
+    second: MiniVikingHorseman_19
+  - first:
+      213: -3821030031951905710
+    second: MiniVikingHorseman_20
+  - first:
+      213: -7992674706488515856
+    second: MiniVikingHorseman_21
+  - first:
+      213: -5790352039335905185
+    second: MiniVikingHorseman_22
+  - first:
+      213: 5809669663363554677
+    second: MiniVikingHorseman_23
+  - first:
+      213: -3248976503722809388
+    second: MiniVikingHorseman_24
+  - first:
+      213: 2242319786553596076
+    second: MiniVikingHorseman_25
+  - first:
+      213: 4250517700131487158
+    second: MiniVikingHorseman_26
+  - first:
+      213: 5090454354400645852
+    second: MiniVikingHorseman_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniVikingHorseman_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 160
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286c7e47a2e1231c0800000000000000
+      internalID: -4525521507855120766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 160
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ceccea22c802ee0800000000000000
+      internalID: -1287875412838519768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 160
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a562975db9fe912b0800000000000000
+      internalID: -5613192007960156582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 160
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346d6959575ba0500800000000000000
+      internalID: 363302236582237763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 128
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3816f8d2e77541c40800000000000000
+      internalID: 5482102845858603395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 128
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6640cb923c3c880800000000000000
+      internalID: -8591809080077293826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 128
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba120870088ea850800000000000000
+      internalID: 6390194456880093874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 128
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2af805f90e5c0a50800000000000000
+      internalID: 6488664559992764971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_8
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 128
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa302cf7262a35a0800000000000000
+      internalID: -6540873555626673501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 128
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bd8df6af7303b10800000000000000
+      internalID: 1959127386664000313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12aff2d919769c360800000000000000
+      internalID: 7190392155178793505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 97
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc0480a9caa668d0800000000000000
+      internalID: -2853405530934473521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 96
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06384d42e19bf0da0800000000000000
+      internalID: -5976354641379294368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_13
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 64
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e1361d18e7edb80800000000000000
+      internalID: -8368111961578987990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_14
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 64
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e7d472705b59820800000000000000
+      internalID: 2924442575375793806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 64
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3311f8f4176e7e0800000000000000
+      internalID: -1736576019788123199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 64
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa7737e07f170380800000000000000
+      internalID: -9005194360128046345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 64
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290a3a9351d050680800000000000000
+      internalID: -8789604712931155822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_18
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 64
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f638690dfa0fa1830800000000000000
+      internalID: 4042808253427909487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 64
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b538d9f75c62aec0800000000000000
+      internalID: -3557161630559619664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c386d3e69f8fac0800000000000000
+      internalID: -3821030031951905710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_21
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2a08293b0541190800000000000000
+      internalID: -7992674706488515856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58bce2bf7984afa0800000000000000
+      internalID: -5790352039335905185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dd52327c710a050800000000000000
+      internalID: 5809669663363554677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_24
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7e20c651159e2d0800000000000000
+      internalID: -3248976503722809388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_25
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca85b5e27f15e1f10800000000000000
+      internalID: 2242319786553596076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdf8dbf35fdcfa30800000000000000
+      internalID: 4250517700131487158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingHorseman_27
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd21463d34de4a640800000000000000
+      internalID: 5090454354400645852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniVikingHorseman_0: -4525521507855120766
+      MiniVikingHorseman_1: -1287875412838519768
+      MiniVikingHorseman_10: 7190392155178793505
+      MiniVikingHorseman_11: -2853405530934473521
+      MiniVikingHorseman_12: -5976354641379294368
+      MiniVikingHorseman_13: -8368111961578987990
+      MiniVikingHorseman_14: 2924442575375793806
+      MiniVikingHorseman_15: -1736576019788123199
+      MiniVikingHorseman_16: -9005194360128046345
+      MiniVikingHorseman_17: -8789604712931155822
+      MiniVikingHorseman_18: 4042808253427909487
+      MiniVikingHorseman_19: -3557161630559619664
+      MiniVikingHorseman_2: -5613192007960156582
+      MiniVikingHorseman_20: -3821030031951905710
+      MiniVikingHorseman_21: -7992674706488515856
+      MiniVikingHorseman_22: -5790352039335905185
+      MiniVikingHorseman_23: 5809669663363554677
+      MiniVikingHorseman_24: -3248976503722809388
+      MiniVikingHorseman_25: 2242319786553596076
+      MiniVikingHorseman_26: 4250517700131487158
+      MiniVikingHorseman_27: 5090454354400645852
+      MiniVikingHorseman_3: 363302236582237763
+      MiniVikingHorseman_4: 5482102845858603395
+      MiniVikingHorseman_5: -8591809080077293826
+      MiniVikingHorseman_6: 6390194456880093874
+      MiniVikingHorseman_7: 6488664559992764971
+      MiniVikingHorseman_8: -6540873555626673501
+      MiniVikingHorseman_9: 1959127386664000313
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

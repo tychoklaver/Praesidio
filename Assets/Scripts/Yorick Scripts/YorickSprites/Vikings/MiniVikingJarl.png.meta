@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: 9cd7da06a77d03b45be7d83ff47ddfa2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1530857417122709656
+    second: MiniVikingJarl_0
+  - first:
+      213: 8934122894379572324
+    second: MiniVikingJarl_1
+  - first:
+      213: 7180904027589201710
+    second: MiniVikingJarl_2
+  - first:
+      213: 5190965612242782520
+    second: MiniVikingJarl_3
+  - first:
+      213: -1033535955532773053
+    second: MiniVikingJarl_4
+  - first:
+      213: -8066712401274934200
+    second: MiniVikingJarl_5
+  - first:
+      213: 4748006465224430110
+    second: MiniVikingJarl_6
+  - first:
+      213: 2697800254068197162
+    second: MiniVikingJarl_7
+  - first:
+      213: -8587088474591955068
+    second: MiniVikingJarl_8
+  - first:
+      213: -5208379147510282339
+    second: MiniVikingJarl_9
+  - first:
+      213: -3191838870329195161
+    second: MiniVikingJarl_10
+  - first:
+      213: -5565770058168749939
+    second: MiniVikingJarl_11
+  - first:
+      213: 85639485189340522
+    second: MiniVikingJarl_12
+  - first:
+      213: 4766377569199448048
+    second: MiniVikingJarl_13
+  - first:
+      213: -2015001160758971962
+    second: MiniVikingJarl_14
+  - first:
+      213: 3794507971638077156
+    second: MiniVikingJarl_15
+  - first:
+      213: -1373716502890737450
+    second: MiniVikingJarl_16
+  - first:
+      213: -5149324569228474624
+    second: MiniVikingJarl_17
+  - first:
+      213: 7575320737507662936
+    second: MiniVikingJarl_18
+  - first:
+      213: -3725202490646635509
+    second: MiniVikingJarl_19
+  - first:
+      213: -1404912027768290925
+    second: MiniVikingJarl_20
+  - first:
+      213: -84792420335514134
+    second: MiniVikingJarl_21
+  - first:
+      213: -7599770168394190207
+    second: MiniVikingJarl_22
+  - first:
+      213: 8670630655469208149
+    second: MiniVikingJarl_23
+  - first:
+      213: -4187759539896611454
+    second: MiniVikingJarl_24
+  - first:
+      213: 3679731163010914665
+    second: MiniVikingJarl_25
+  - first:
+      213: -8257623622527305044
+    second: MiniVikingJarl_26
+  - first:
+      213: 558062505679306403
+    second: MiniVikingJarl_27
+  - first:
+      213: -4817869296359852329
+    second: MiniVikingJarl_28
+  - first:
+      213: -3702397529946498680
+    second: MiniVikingJarl_29
+  - first:
+      213: 5333980536905857924
+    second: MiniVikingJarl_30
+  - first:
+      213: -3800712621623950177
+    second: MiniVikingJarl_31
+  - first:
+      213: 8789043846282670045
+    second: MiniVikingJarl_32
+  - first:
+      213: -4720920112279396221
+    second: MiniVikingJarl_33
+  - first:
+      213: -6415076152071765134
+    second: MiniVikingJarl_34
+  - first:
+      213: -2909823521209536944
+    second: MiniVikingJarl_35
+  - first:
+      213: 3620536825366319764
+    second: MiniVikingJarl_36
+  - first:
+      213: 149751592131416123
+    second: MiniVikingJarl_37
+  - first:
+      213: 4964205458393858522
+    second: MiniVikingJarl_38
+  - first:
+      213: -1090390507098794584
+    second: MiniVikingJarl_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniVikingJarl_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 224
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8900f55c5b2be3510800000000000000
+      internalID: 1530857417122709656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 224
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46cdd2bff616cfb70800000000000000
+      internalID: 8934122894379572324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 224
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f40a2ca22b7a360800000000000000
+      internalID: 7180904027589201710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 224
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839cffea8b30a0840800000000000000
+      internalID: 5190965612242782520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 193
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34900eb368428a1f0800000000000000
+      internalID: -1033535955532773053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ce4c07fc74d0090800000000000000
+      internalID: -8066712401274934200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 192
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12d5fe59be44e140800000000000000
+      internalID: 4748006465224430110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 193
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2781ba9903807520800000000000000
+      internalID: 2697800254068197162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 192
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4877819578884d880800000000000000
+      internalID: -8587088474591955068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 192
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d970911b2ce18b7b0800000000000000
+      internalID: -5208379147510282339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 161
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7658eb1657f44b3d0800000000000000
+      internalID: -3191838870329195161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 161
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80b85dee9962c2b0800000000000000
+      internalID: -5565770058168749939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d357578a0403100800000000000000
+      internalID: 85639485189340522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 128
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd5855523952240800000000000000
+      internalID: 4766377569199448048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_14
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c136f6ce174904e0800000000000000
+      internalID: -2015001160758971962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e620e265ecc8a430800000000000000
+      internalID: 3794507971638077156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 128
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d01b1f6e149fece0800000000000000
+      internalID: -1373716502890737450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 128
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00702f9269ce988b0800000000000000
+      internalID: -5149324569228474624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_18
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 128
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c5bc23312f02960800000000000000
+      internalID: 7575320737507662936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 128
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c5b9c521c6d4cc0800000000000000
+      internalID: -3725202490646635509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391823c44ffb08ce0800000000000000
+      internalID: -1404912027768290925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_21
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 96
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed81423eb1c2def0800000000000000
+      internalID: -84792420335514134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_22
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 96
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182f0421c41388690800000000000000
+      internalID: -7599770168394190207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 96
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552cad564a4445870800000000000000
+      internalID: 8670630655469208149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_24
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 96
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d85bbd2e612e5c0800000000000000
+      internalID: -4187759539896611454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_25
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 96
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96953382ff7011330800000000000000
+      internalID: 3679731163010914665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_26
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 64
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caab26ae017076d80800000000000000
+      internalID: -8257623622527305044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_27
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 64
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aeba7564e2aeb700800000000000000
+      internalID: 558062505679306403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_28
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 64
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6b530b66d732db0800000000000000
+      internalID: -4817869296359852329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_29
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 64
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889514a00117e9cc0800000000000000
+      internalID: -3702397529946498680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_30
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 64
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48bfe15a90b160a40800000000000000
+      internalID: 5333980536905857924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_31
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 32
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94c2c6f108214bc0800000000000000
+      internalID: -3800712621623950177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_32
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfe205dfc4f8f970800000000000000
+      internalID: 8789043846282670045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_33
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380e69e9b2ceb7eb0800000000000000
+      internalID: -4720920112279396221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_34
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273ceac6a3219f6a0800000000000000
+      internalID: -6415076152071765134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_35
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05eaa33acea3e97d0800000000000000
+      internalID: -2909823521209536944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_36
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4921e2c6f0bbe3230800000000000000
+      internalID: 3620536825366319764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_37
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30da859746041200800000000000000
+      internalID: 149751592131416123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_38
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad10f9b109664e440800000000000000
+      internalID: 4964205458393858522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingJarl_39
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a51be56c972ed0f0800000000000000
+      internalID: -1090390507098794584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniVikingJarl_0: 1530857417122709656
+      MiniVikingJarl_1: 8934122894379572324
+      MiniVikingJarl_10: -3191838870329195161
+      MiniVikingJarl_11: -5565770058168749939
+      MiniVikingJarl_12: 85639485189340522
+      MiniVikingJarl_13: 4766377569199448048
+      MiniVikingJarl_14: -2015001160758971962
+      MiniVikingJarl_15: 3794507971638077156
+      MiniVikingJarl_16: -1373716502890737450
+      MiniVikingJarl_17: -5149324569228474624
+      MiniVikingJarl_18: 7575320737507662936
+      MiniVikingJarl_19: -3725202490646635509
+      MiniVikingJarl_2: 7180904027589201710
+      MiniVikingJarl_20: -1404912027768290925
+      MiniVikingJarl_21: -84792420335514134
+      MiniVikingJarl_22: -7599770168394190207
+      MiniVikingJarl_23: 8670630655469208149
+      MiniVikingJarl_24: -4187759539896611454
+      MiniVikingJarl_25: 3679731163010914665
+      MiniVikingJarl_26: -8257623622527305044
+      MiniVikingJarl_27: 558062505679306403
+      MiniVikingJarl_28: -4817869296359852329
+      MiniVikingJarl_29: -3702397529946498680
+      MiniVikingJarl_3: 5190965612242782520
+      MiniVikingJarl_30: 5333980536905857924
+      MiniVikingJarl_31: -3800712621623950177
+      MiniVikingJarl_32: 8789043846282670045
+      MiniVikingJarl_33: -4720920112279396221
+      MiniVikingJarl_34: -6415076152071765134
+      MiniVikingJarl_35: -2909823521209536944
+      MiniVikingJarl_36: 3620536825366319764
+      MiniVikingJarl_37: 149751592131416123
+      MiniVikingJarl_38: 4964205458393858522
+      MiniVikingJarl_39: -1090390507098794584
+      MiniVikingJarl_4: -1033535955532773053
+      MiniVikingJarl_5: -8066712401274934200
+      MiniVikingJarl_6: 4748006465224430110
+      MiniVikingJarl_7: 2697800254068197162
+      MiniVikingJarl_8: -8587088474591955068
+      MiniVikingJarl_9: -5208379147510282339
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
