@@ -686,25 +686,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ParallexSystem
   layers:
   - target: {fileID: 625565014}
-    strength: 0.025
+    strength: 0.01
   - target: {fileID: 359960211}
-    strength: 0.05
+    strength: 0.02
   - target: {fileID: 1096340487}
-    strength: 0.075
+    strength: 0.03
   - target: {fileID: 775794196}
-    strength: 0.1
+    strength: 0.04
   - target: {fileID: 1462563894}
-    strength: 0.125
+    strength: 0.05
   - target: {fileID: 812417686}
-    strength: 0.15
+    strength: 0.06
   - target: {fileID: 1432833448}
-    strength: 0.175
+    strength: 0.07
   - target: {fileID: 644608108}
-    strength: 0.2
+    strength: 0.08
   - target: {fileID: 127666043}
-    strength: 0.225
+    strength: 0.09
   - target: {fileID: 479063640}
-    strength: 0.25
+    strength: 0.1
   maxOffset: 2
   smoothSpeed: 5
 --- !u!4 &673449576
@@ -2048,7 +2048,7 @@ Transform:
   m_GameObject: {fileID: 1151121731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
