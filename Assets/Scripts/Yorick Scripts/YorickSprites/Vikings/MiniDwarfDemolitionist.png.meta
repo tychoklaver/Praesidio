@@ -1,0 +1,1040 @@
+fileFormatVersion: 2
+guid: c75246052228b0e4081bb4ef7d924636
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3455310265829688835
+    second: MiniDwarfDemolitionist_0
+  - first:
+      213: -5126802121037610708
+    second: MiniDwarfDemolitionist_1
+  - first:
+      213: -8647706758758548524
+    second: MiniDwarfDemolitionist_2
+  - first:
+      213: 7434673075378603479
+    second: MiniDwarfDemolitionist_3
+  - first:
+      213: -7713367803214120754
+    second: MiniDwarfDemolitionist_4
+  - first:
+      213: -8962133439478262024
+    second: MiniDwarfDemolitionist_5
+  - first:
+      213: 7825569223366905082
+    second: MiniDwarfDemolitionist_6
+  - first:
+      213: -9068671101201502439
+    second: MiniDwarfDemolitionist_7
+  - first:
+      213: -5444805942366218544
+    second: MiniDwarfDemolitionist_8
+  - first:
+      213: 4836232919463454743
+    second: MiniDwarfDemolitionist_9
+  - first:
+      213: 1975428788803524754
+    second: MiniDwarfDemolitionist_10
+  - first:
+      213: 5769656554498756724
+    second: MiniDwarfDemolitionist_11
+  - first:
+      213: 231467492650182441
+    second: MiniDwarfDemolitionist_12
+  - first:
+      213: -640906361109204122
+    second: MiniDwarfDemolitionist_13
+  - first:
+      213: -6119685435236521563
+    second: MiniDwarfDemolitionist_14
+  - first:
+      213: -318210065803697558
+    second: MiniDwarfDemolitionist_15
+  - first:
+      213: -3803308264831906144
+    second: MiniDwarfDemolitionist_16
+  - first:
+      213: 8954618687313672046
+    second: MiniDwarfDemolitionist_17
+  - first:
+      213: 1827441901896026562
+    second: MiniDwarfDemolitionist_18
+  - first:
+      213: -1493021151488076631
+    second: MiniDwarfDemolitionist_19
+  - first:
+      213: 1884525826154216100
+    second: MiniDwarfDemolitionist_20
+  - first:
+      213: -645678812400233985
+    second: MiniDwarfDemolitionist_21
+  - first:
+      213: -284366912949199742
+    second: MiniDwarfDemolitionist_22
+  - first:
+      213: 1129415459470767902
+    second: MiniDwarfDemolitionist_23
+  - first:
+      213: -2459324026732678118
+    second: MiniDwarfDemolitionist_24
+  - first:
+      213: 5887968524443773111
+    second: MiniDwarfDemolitionist_25
+  - first:
+      213: -4848828510816590443
+    second: MiniDwarfDemolitionist_26
+  - first:
+      213: 43001710379943717
+    second: MiniDwarfDemolitionist_27
+  - first:
+      213: 4229604149731021207
+    second: MiniDwarfDemolitionist_28
+  - first:
+      213: 9131171089286024109
+    second: MiniDwarfDemolitionist_29
+  - first:
+      213: -6671826866722110295
+    second: MiniDwarfDemolitionist_30
+  - first:
+      213: -4785203454522095781
+    second: MiniDwarfDemolitionist_31
+  - first:
+      213: 695705914001595410
+    second: MiniDwarfDemolitionist_32
+  - first:
+      213: 4647842130414623081
+    second: MiniDwarfDemolitionist_33
+  - first:
+      213: -784441370832694815
+    second: MiniDwarfDemolitionist_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3060a87316ab3ff20800000000000000
+      internalID: 3455310265829688835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 192
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2185d542a0f9d8b0800000000000000
+      internalID: -5126802121037610708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbb37a358c2df780800000000000000
+      internalID: -8647706758758548524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d54a1f75c34d2760800000000000000
+      internalID: 7434673075378603479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 161
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8bc73a9dc94f490800000000000000
+      internalID: -7713367803214120754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 160
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f69f36ce1b10a380800000000000000
+      internalID: -8962133439478262024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc830c3fb10a9c60800000000000000
+      internalID: 7825569223366905082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 161
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fa80c6eab952280800000000000000
+      internalID: -9068671101201502439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 160
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6535ed7d92074b0800000000000000
+      internalID: -5444805942366218544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7186baf7730cd1340800000000000000
+      internalID: 4836232919463454743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 129
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298d6b364022a6b10800000000000000
+      internalID: 1975428788803524754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 129
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47017ee3110f11050800000000000000
+      internalID: 5769656554498756724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927e67c4576563300800000000000000
+      internalID: 231467492650182441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_13
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6633ccb6f0b0b17f0800000000000000
+      internalID: -640906361109204122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_14
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a968972582821ba0800000000000000
+      internalID: -6119685435236521563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_15
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 96
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6221df81ad759bf0800000000000000
+      internalID: -318210065803697558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_16
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae036fa84fe73bc0800000000000000
+      internalID: -3803308264831906144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 96
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67f764a042354c70800000000000000
+      internalID: 8954618687313672046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_18
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c94d224ab06c5910800000000000000
+      internalID: 1827441901896026562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 64
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4986f4c29b74be0800000000000000
+      internalID: -1493021151488076631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_20
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 64
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aab8f5114e272a10800000000000000
+      internalID: 1884525826154216100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_21
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 64
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff153e38a861a07f0800000000000000
+      internalID: -645678812400233985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_22
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 64
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cd9cf9cc9bd0cf0800000000000000
+      internalID: -284366912949199742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_23
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 64
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17f691606d7caf00800000000000000
+      internalID: 1129415459470767902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_24
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 64
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14f307e3d9beddd0800000000000000
+      internalID: -2459324026732678118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_25
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 64
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8e62c5d2446b150800000000000000
+      internalID: 5887968524443773111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_26
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 64
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595adfbd82085bcb0800000000000000
+      internalID: -4848828510816590443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_27
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5274ee7e3d5c89000800000000000000
+      internalID: 43001710379943717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 32
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7915c35909292ba30800000000000000
+      internalID: 4229604149731021207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_29
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabc5380abf68be70800000000000000
+      internalID: 9131171089286024109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a40f1640d8e863a0800000000000000
+      internalID: -6671826866722110295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b570d3bafca879db0800000000000000
+      internalID: -4785203454522095781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c1430c7d4a7a900800000000000000
+      internalID: 695705914001595410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_33
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9695573dac3708040800000000000000
+      internalID: 4647842130414623081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniDwarfDemolitionist_34
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e19568baba1d15f0800000000000000
+      internalID: -784441370832694815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniDwarfDemolitionist_0: 3455310265829688835
+      MiniDwarfDemolitionist_1: -5126802121037610708
+      MiniDwarfDemolitionist_10: 1975428788803524754
+      MiniDwarfDemolitionist_11: 5769656554498756724
+      MiniDwarfDemolitionist_12: 231467492650182441
+      MiniDwarfDemolitionist_13: -640906361109204122
+      MiniDwarfDemolitionist_14: -6119685435236521563
+      MiniDwarfDemolitionist_15: -318210065803697558
+      MiniDwarfDemolitionist_16: -3803308264831906144
+      MiniDwarfDemolitionist_17: 8954618687313672046
+      MiniDwarfDemolitionist_18: 1827441901896026562
+      MiniDwarfDemolitionist_19: -1493021151488076631
+      MiniDwarfDemolitionist_2: -8647706758758548524
+      MiniDwarfDemolitionist_20: 1884525826154216100
+      MiniDwarfDemolitionist_21: -645678812400233985
+      MiniDwarfDemolitionist_22: -284366912949199742
+      MiniDwarfDemolitionist_23: 1129415459470767902
+      MiniDwarfDemolitionist_24: -2459324026732678118
+      MiniDwarfDemolitionist_25: 5887968524443773111
+      MiniDwarfDemolitionist_26: -4848828510816590443
+      MiniDwarfDemolitionist_27: 43001710379943717
+      MiniDwarfDemolitionist_28: 4229604149731021207
+      MiniDwarfDemolitionist_29: 9131171089286024109
+      MiniDwarfDemolitionist_3: 7434673075378603479
+      MiniDwarfDemolitionist_30: -6671826866722110295
+      MiniDwarfDemolitionist_31: -4785203454522095781
+      MiniDwarfDemolitionist_32: 695705914001595410
+      MiniDwarfDemolitionist_33: 4647842130414623081
+      MiniDwarfDemolitionist_34: -784441370832694815
+      MiniDwarfDemolitionist_4: -7713367803214120754
+      MiniDwarfDemolitionist_5: -8962133439478262024
+      MiniDwarfDemolitionist_6: 7825569223366905082
+      MiniDwarfDemolitionist_7: -9068671101201502439
+      MiniDwarfDemolitionist_8: -5444805942366218544
+      MiniDwarfDemolitionist_9: 4836232919463454743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

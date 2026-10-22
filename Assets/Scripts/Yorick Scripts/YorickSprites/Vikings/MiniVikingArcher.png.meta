@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: e9773d706f0dab74bb358d5dfb0dd368
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6641048175228795817
+    second: MiniVikingArcher_0
+  - first:
+      213: -6804356966576760659
+    second: MiniVikingArcher_1
+  - first:
+      213: -884134501315041034
+    second: MiniVikingArcher_2
+  - first:
+      213: -3193648558196224636
+    second: MiniVikingArcher_3
+  - first:
+      213: 528876516843034656
+    second: MiniVikingArcher_4
+  - first:
+      213: -3350391232419960375
+    second: MiniVikingArcher_5
+  - first:
+      213: 516647206893659218
+    second: MiniVikingArcher_6
+  - first:
+      213: -5380058482651797943
+    second: MiniVikingArcher_7
+  - first:
+      213: -193727469870638274
+    second: MiniVikingArcher_8
+  - first:
+      213: -1342209067058075975
+    second: MiniVikingArcher_9
+  - first:
+      213: 2148197671280175284
+    second: MiniVikingArcher_10
+  - first:
+      213: -3926629203394444238
+    second: MiniVikingArcher_11
+  - first:
+      213: -6227342226940543118
+    second: MiniVikingArcher_12
+  - first:
+      213: -7044047684983529399
+    second: MiniVikingArcher_13
+  - first:
+      213: 2508370896833592715
+    second: MiniVikingArcher_14
+  - first:
+      213: -3590847420959633503
+    second: MiniVikingArcher_15
+  - first:
+      213: -7966235088494388354
+    second: MiniVikingArcher_16
+  - first:
+      213: 2599614198449069018
+    second: MiniVikingArcher_17
+  - first:
+      213: -5799927356435141163
+    second: MiniVikingArcher_18
+  - first:
+      213: -1259881585483460190
+    second: MiniVikingArcher_19
+  - first:
+      213: -5515792509549594104
+    second: MiniVikingArcher_20
+  - first:
+      213: -8327419844022694263
+    second: MiniVikingArcher_21
+  - first:
+      213: 997644863997677532
+    second: MiniVikingArcher_22
+  - first:
+      213: -7807014801290468563
+    second: MiniVikingArcher_23
+  - first:
+      213: -678930186735764968
+    second: MiniVikingArcher_24
+  - first:
+      213: 958672338249571053
+    second: MiniVikingArcher_25
+  - first:
+      213: -2875329243837180271
+    second: MiniVikingArcher_26
+  - first:
+      213: 4431931559271434183
+    second: MiniVikingArcher_27
+  - first:
+      213: 8982731579995865328
+    second: MiniVikingArcher_28
+  - first:
+      213: 7267188554171320583
+    second: MiniVikingArcher_29
+  - first:
+      213: 1854429251633513279
+    second: MiniVikingArcher_30
+  - first:
+      213: -3105779181744201343
+    second: MiniVikingArcher_31
+  - first:
+      213: -8944461588573402924
+    second: MiniVikingArcher_32
+  - first:
+      213: -6735513387756298152
+    second: MiniVikingArcher_33
+  - first:
+      213: 5879700429344939627
+    second: MiniVikingArcher_34
+  - first:
+      213: 693598332848602045
+    second: MiniVikingArcher_35
+  - first:
+      213: 1210174947770689819
+    second: MiniVikingArcher_36
+  - first:
+      213: 8863755984266313078
+    second: MiniVikingArcher_37
+  - first:
+      213: -757179259750973927
+    second: MiniVikingArcher_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniVikingArcher_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 192
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abb4cc212eb92c50800000000000000
+      internalID: 6641048175228795817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8dc32d3611291a0800000000000000
+      internalID: -6804356966576760659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 192
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8237bfa5ceab3f0800000000000000
+      internalID: -884134501315041034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 192
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d86479e81eda3d0800000000000000
+      internalID: -3193648558196224636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 161
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0289974d362f65700800000000000000
+      internalID: 528876516843034656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 160
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9660ddce40181d0800000000000000
+      internalID: -3350391232419960375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 160
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2542819b5ef7b2700800000000000000
+      internalID: 516647206893659218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 161
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94666b690513655b0800000000000000
+      internalID: -5380058482651797943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 160
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b102f74edbf4df0800000000000000
+      internalID: -193727469870638274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 160
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6e1bff6f38f5de0800000000000000
+      internalID: -1342209067058075975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 129
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8e9ff766eefcd10800000000000000
+      internalID: 2148197671280175284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 129
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234cffe2b8fc189c0800000000000000
+      internalID: -3926629203394444238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 128
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f3b6c0d390499a0800000000000000
+      internalID: -6227342226940543118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940e4a393f38e3e90800000000000000
+      internalID: -7044047684983529399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 96
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8db1be6a068fc220800000000000000
+      internalID: 2508370896833592715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afc217bb4fba2ec0800000000000000
+      internalID: -3590847420959633503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 96
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b1a09d46f327190800000000000000
+      internalID: -7966235088494388354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 96
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb5e93175fa31420800000000000000
+      internalID: 2599614198449069018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_18
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ddec947cc4828fa0800000000000000
+      internalID: -5799927356435141163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_19
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 96
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1d3368f50048ee0800000000000000
+      internalID: -1259881585483460190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_20
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 96
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a398dbfe7f373b0800000000000000
+      internalID: -5515792509549594104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_21
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e0d7db5cf0f6c80800000000000000
+      internalID: -8327419844022694263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_22
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 96
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf0392d7b858dd00800000000000000
+      internalID: 997644863997677532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_23
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 64
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d236ddcc669e7a390800000000000000
+      internalID: -7807014801290468563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_24
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 64
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a3350a794f396f0800000000000000
+      internalID: -678930186735764968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_25
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deadb519963ed4d00800000000000000
+      internalID: 958672338249571053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_26
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196dac07947c818d0800000000000000
+      internalID: -2875329243837180271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_27
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c787339542618d30800000000000000
+      internalID: 4431931559271434183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_28
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 64
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f0465a87c219ac70800000000000000
+      internalID: 8982731579995865328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_29
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7098a2f9c7d3ad460800000000000000
+      internalID: 7267188554171320583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_30
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3385b444914cb910800000000000000
+      internalID: 1854429251633513279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_31
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18165511a4e06e4d0800000000000000
+      internalID: -3105779181744201343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_32
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 64
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8c4f13393eed380800000000000000
+      internalID: -8944461588573402924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_33
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850e5e69246a682a0800000000000000
+      internalID: -6735513387756298152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_34
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e11d47364e89150800000000000000
+      internalID: 5879700429344939627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb7e36420820a900800000000000000
+      internalID: 693598332848602045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_36
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19e2f504b76bc010800000000000000
+      internalID: 1210174947770689819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_37
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67dbfe10b13620b70800000000000000
+      internalID: 8863755984266313078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingArcher_38
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 55
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91eff379975fd75f0800000000000000
+      internalID: -757179259750973927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniVikingArcher_0: 6641048175228795817
+      MiniVikingArcher_1: -6804356966576760659
+      MiniVikingArcher_10: 2148197671280175284
+      MiniVikingArcher_11: -3926629203394444238
+      MiniVikingArcher_12: -6227342226940543118
+      MiniVikingArcher_13: -7044047684983529399
+      MiniVikingArcher_14: 2508370896833592715
+      MiniVikingArcher_15: -3590847420959633503
+      MiniVikingArcher_16: -7966235088494388354
+      MiniVikingArcher_17: 2599614198449069018
+      MiniVikingArcher_18: -5799927356435141163
+      MiniVikingArcher_19: -1259881585483460190
+      MiniVikingArcher_2: -884134501315041034
+      MiniVikingArcher_20: -5515792509549594104
+      MiniVikingArcher_21: -8327419844022694263
+      MiniVikingArcher_22: 997644863997677532
+      MiniVikingArcher_23: -7807014801290468563
+      MiniVikingArcher_24: -678930186735764968
+      MiniVikingArcher_25: 958672338249571053
+      MiniVikingArcher_26: -2875329243837180271
+      MiniVikingArcher_27: 4431931559271434183
+      MiniVikingArcher_28: 8982731579995865328
+      MiniVikingArcher_29: 7267188554171320583
+      MiniVikingArcher_3: -3193648558196224636
+      MiniVikingArcher_30: 1854429251633513279
+      MiniVikingArcher_31: -3105779181744201343
+      MiniVikingArcher_32: -8944461588573402924
+      MiniVikingArcher_33: -6735513387756298152
+      MiniVikingArcher_34: 5879700429344939627
+      MiniVikingArcher_35: 693598332848602045
+      MiniVikingArcher_36: 1210174947770689819
+      MiniVikingArcher_37: 8863755984266313078
+      MiniVikingArcher_38: -757179259750973927
+      MiniVikingArcher_4: 528876516843034656
+      MiniVikingArcher_5: -3350391232419960375
+      MiniVikingArcher_6: 516647206893659218
+      MiniVikingArcher_7: -5380058482651797943
+      MiniVikingArcher_8: -193727469870638274
+      MiniVikingArcher_9: -1342209067058075975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

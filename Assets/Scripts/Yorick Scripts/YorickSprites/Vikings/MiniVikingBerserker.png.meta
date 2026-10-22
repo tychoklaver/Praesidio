@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: f5d8d2c9d40b21f43a522dbc906fb5d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4570546733270189486
+    second: MiniVikingBerserker_0
+  - first:
+      213: 3907936369726461761
+    second: MiniVikingBerserker_1
+  - first:
+      213: 589930042587604692
+    second: MiniVikingBerserker_2
+  - first:
+      213: -2979151468562152269
+    second: MiniVikingBerserker_3
+  - first:
+      213: -3408603354186736960
+    second: MiniVikingBerserker_4
+  - first:
+      213: -6195539312481744770
+    second: MiniVikingBerserker_5
+  - first:
+      213: 3788301683135081995
+    second: MiniVikingBerserker_6
+  - first:
+      213: -1105257203980128529
+    second: MiniVikingBerserker_7
+  - first:
+      213: 4823437475256858130
+    second: MiniVikingBerserker_8
+  - first:
+      213: -5815504458077273365
+    second: MiniVikingBerserker_9
+  - first:
+      213: -2932020136683082060
+    second: MiniVikingBerserker_10
+  - first:
+      213: 1495478639656809050
+    second: MiniVikingBerserker_11
+  - first:
+      213: -3286394472510256809
+    second: MiniVikingBerserker_12
+  - first:
+      213: -8825916302540726897
+    second: MiniVikingBerserker_13
+  - first:
+      213: 9087689881603513754
+    second: MiniVikingBerserker_14
+  - first:
+      213: 3766004885704883637
+    second: MiniVikingBerserker_15
+  - first:
+      213: 9192117134358228620
+    second: MiniVikingBerserker_16
+  - first:
+      213: -2791816601548598491
+    second: MiniVikingBerserker_17
+  - first:
+      213: -4714461694018020323
+    second: MiniVikingBerserker_18
+  - first:
+      213: -905512638601797426
+    second: MiniVikingBerserker_19
+  - first:
+      213: -1657574786838121860
+    second: MiniVikingBerserker_20
+  - first:
+      213: -4645628252913392499
+    second: MiniVikingBerserker_21
+  - first:
+      213: -3892713543837355715
+    second: MiniVikingBerserker_22
+  - first:
+      213: -7274298767508041235
+    second: MiniVikingBerserker_23
+  - first:
+      213: 5522807637981567247
+    second: MiniVikingBerserker_24
+  - first:
+      213: -278768069085186677
+    second: MiniVikingBerserker_25
+  - first:
+      213: 4014960260489273020
+    second: MiniVikingBerserker_26
+  - first:
+      213: -4475242264404600407
+    second: MiniVikingBerserker_27
+  - first:
+      213: 4483055681916450114
+    second: MiniVikingBerserker_28
+  - first:
+      213: -545299464418483900
+    second: MiniVikingBerserker_29
+  - first:
+      213: -722346653712984480
+    second: MiniVikingBerserker_30
+  - first:
+      213: -6461533829206837292
+    second: MiniVikingBerserker_31
+  - first:
+      213: 7909489216332668838
+    second: MiniVikingBerserker_32
+  - first:
+      213: 6717737385583859140
+    second: MiniVikingBerserker_33
+  - first:
+      213: 2760071392060265322
+    second: MiniVikingBerserker_34
+  - first:
+      213: -8879890459575957915
+    second: MiniVikingBerserker_35
+  - first:
+      213: -7329724814444332320
+    second: MiniVikingBerserker_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MiniVikingBerserker_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 224
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25abb1e36f72290c0800000000000000
+      internalID: -4570546733270189486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 224
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14710625c67cb3630800000000000000
+      internalID: 3907936369726461761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 224
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6e3c68f3adf2800800000000000000
+      internalID: 589930042587604692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 224
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b40548068de7a6d0800000000000000
+      internalID: -2979151468562152269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 193
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca9e751f4532b0d0800000000000000
+      internalID: -3408603354186736960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 192
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78ce8712d5050aa0800000000000000
+      internalID: -6195539312481744770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 192
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ee74d3f40c29430800000000000000
+      internalID: 3788301683135081995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 193
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feea25bcd6659a0f0800000000000000
+      internalID: -1105257203980128529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 192
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216fdfcf3da40f240800000000000000
+      internalID: 4823437475256858130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 192
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be28a9ad18d2b4fa0800000000000000
+      internalID: -5815504458077273365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 161
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be66be583f5f47d0800000000000000
+      internalID: -2932020136683082060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 161
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52bded36e101c410800000000000000
+      internalID: 1495478639656809050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 160
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759083aa3a16462d0800000000000000
+      internalID: -3286394472510256809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 128
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d1bb172eb048580800000000000000
+      internalID: -8825916302540726897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_14
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d93e57cc5fd1e70800000000000000
+      internalID: 9087689881603513754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 128
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd33da8d79834430800000000000000
+      internalID: 3766004885704883637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 128
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e243fe4d5f09f70800000000000000
+      internalID: 9192117134358228620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 128
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52358a2b7997149d0800000000000000
+      internalID: -2791816601548598491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 128
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c9edc411ed29eb0800000000000000
+      internalID: -4714461694018020323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_19
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec063848d09fe63f0800000000000000
+      internalID: -905512638601797426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 96
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72bed9738c1ff8e0800000000000000
+      internalID: -1657574786838121860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 96
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d842492b7b9678fb0800000000000000
+      internalID: -4645628252913392499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_22
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 96
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31f83708ad4af9c0800000000000000
+      internalID: -3892713543837355715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 96
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de11f94dfcf7c0b90800000000000000
+      internalID: -7274298767508041235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_24
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 96
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0994b02944f4ac40800000000000000
+      internalID: 5522807637981567247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_25
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 64
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85b47b0bed912cf0800000000000000
+      internalID: -278768069085186677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_26
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 64
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbed5c1b51108b730800000000000000
+      internalID: 4014960260489273020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_27
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a959521fdeb4e1c0800000000000000
+      internalID: -4475242264404600407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_28
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 64
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2453de4f363073e30800000000000000
+      internalID: 4483055681916450114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_29
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4412027b605be68f0800000000000000
+      internalID: -545299464418483900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_30
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 066debcab85b9f5f0800000000000000
+      internalID: -722346653712984480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_31
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7f4fd87350456a0800000000000000
+      internalID: -6461533829206837292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_32
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af9a46398624cd60800000000000000
+      internalID: 7909489216332668838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_33
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c556126f823a3d50800000000000000
+      internalID: 6717737385583859140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_34
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63587ebe4ebd4620800000000000000
+      internalID: 2760071392060265322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_35
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5664898bcaa44c480800000000000000
+      internalID: -8879890459575957915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MiniVikingBerserker_36
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eafda5ad16974a90800000000000000
+      internalID: -7329724814444332320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MiniVikingBerserker_0: -4570546733270189486
+      MiniVikingBerserker_1: 3907936369726461761
+      MiniVikingBerserker_10: -2932020136683082060
+      MiniVikingBerserker_11: 1495478639656809050
+      MiniVikingBerserker_12: -3286394472510256809
+      MiniVikingBerserker_13: -8825916302540726897
+      MiniVikingBerserker_14: 9087689881603513754
+      MiniVikingBerserker_15: 3766004885704883637
+      MiniVikingBerserker_16: 9192117134358228620
+      MiniVikingBerserker_17: -2791816601548598491
+      MiniVikingBerserker_18: -4714461694018020323
+      MiniVikingBerserker_19: -905512638601797426
+      MiniVikingBerserker_2: 589930042587604692
+      MiniVikingBerserker_20: -1657574786838121860
+      MiniVikingBerserker_21: -4645628252913392499
+      MiniVikingBerserker_22: -3892713543837355715
+      MiniVikingBerserker_23: -7274298767508041235
+      MiniVikingBerserker_24: 5522807637981567247
+      MiniVikingBerserker_25: -278768069085186677
+      MiniVikingBerserker_26: 4014960260489273020
+      MiniVikingBerserker_27: -4475242264404600407
+      MiniVikingBerserker_28: 4483055681916450114
+      MiniVikingBerserker_29: -545299464418483900
+      MiniVikingBerserker_3: -2979151468562152269
+      MiniVikingBerserker_30: -722346653712984480
+      MiniVikingBerserker_31: -6461533829206837292
+      MiniVikingBerserker_32: 7909489216332668838
+      MiniVikingBerserker_33: 6717737385583859140
+      MiniVikingBerserker_34: 2760071392060265322
+      MiniVikingBerserker_35: -8879890459575957915
+      MiniVikingBerserker_36: -7329724814444332320
+      MiniVikingBerserker_4: -3408603354186736960
+      MiniVikingBerserker_5: -6195539312481744770
+      MiniVikingBerserker_6: 3788301683135081995
+      MiniVikingBerserker_7: -1105257203980128529
+      MiniVikingBerserker_8: 4823437475256858130
+      MiniVikingBerserker_9: -5815504458077273365
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
