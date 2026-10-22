@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum ResourceType { Wood, Stone, Iron, Gold }
+public enum ResourceType { Wood, Stone, Iron, Gold, Food }
 
 [Serializable]
 public struct ResourceCost
@@ -18,6 +18,7 @@ public class ResourceManager : MonoBehaviour
     public int stone = 50;
     public int iron = 0;
     public int gold = 0;
+    public int food = 0;
 
     public event Action OnResourcesChanged;
 
@@ -30,6 +31,7 @@ public class ResourceManager : MonoBehaviour
         ResourceType.Stone => stone,
         ResourceType.Iron => iron,
         ResourceType.Gold => gold,
+        ResourceType.Food => food,
         _ => 0
     };
 
@@ -53,6 +55,7 @@ public class ResourceManager : MonoBehaviour
             case ResourceType.Stone: stone += amount; break;
             case ResourceType.Iron: iron += amount; break;
             case ResourceType.Gold: gold += amount; break;
+            case ResourceType.Food: food += amount; break;
         }
         OnResourcesChanged?.Invoke();
     }
