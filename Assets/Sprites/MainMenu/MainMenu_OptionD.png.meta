@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: f9d8cf96c09840778147d5e24c38fd24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4256507528070587094
+    second: Panel
+  - first:
+      213: 8638369469229109773
+    second: Title
+  - first:
+      213: -3918335825040874501
+    second: Continue_Bar
+  - first:
+      213: -4895925794397360905
+    second: NewGame_Bar
+  - first:
+      213: -3008789985904810097
+    second: SkillTree_Bar
+  - first:
+      213: 788794163017299388
+    second: Achievements_Bar
+  - first:
+      213: 8150427095260798359
+    second: Settings_Bar
+  - first:
+      213: -6635966682893130182
+    second: Quit_Bar
+  - first:
+      213: -3367054119823714520
+    second: Quit_Text
+  - first:
+      213: 7400423646881227146
+    second: Quit_TextHover
+  - first:
+      213: -1353282459137057022
+    second: Continue_Text
+  - first:
+      213: 1851688927429780921
+    second: Continue_TextHover
+  - first:
+      213: -7752340640426698464
+    second: NewGame_Text
+  - first:
+      213: 7287352201478985261
+    second: NewGame_TextHover
+  - first:
+      213: 532968763109683085
+    second: SkillTree_Text
+  - first:
+      213: -1105533888376508498
+    second: SkillTree_TextHover
+  - first:
+      213: 819131495454584182
+    second: Achievements_Text
+  - first:
+      213: -7698562562191919645
+    second: Achievements_TextHover
+  - first:
+      213: 1748088345391922096
+    second: Settings_Text
+  - first:
+      213: 4455271668030702864
+    second: Settings_TextHover
+  - first:
+      213: -2188693586665761634
+    second: Tagline
+  - first:
+      213: 3288884345835308447
+    second: Ornament
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 1
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panel
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117
+        width: 740
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: effd7ebf2d4545748386550b7ce8033d
+      internalID: -4256507528070587094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1045
+        width: 625
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961ead17c5144b86b6fd2848a30d050a
+      internalID: 8638369469229109773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue_Bar
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1111
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48aeb0662d2a4955ba20e70302426c51
+      internalID: -3918335825040874501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewGame_Bar
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 1111
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a36167758444099a50b95847c7057fe
+      internalID: -4895925794397360905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillTree_Bar
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 1111
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2224def98e3f49c0bb903def97d9f376
+      internalID: -3008789985904810097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_Bar
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 1111
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2334e53eb5d41688f1f6553199005f1
+      internalID: 788794163017299388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings_Bar
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 1111
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7de9a5a3dd42b8823a0455f29f3319
+      internalID: 8150427095260798359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_Bar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 481
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa2b4dbd4d441cbbd386f980d0e6b74
+      internalID: -6635966682893130182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_Text
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 46
+        width: 142
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1dbb716da0b495b8f01ad07679f63b8
+      internalID: -3367054119823714520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_TextHover
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 46
+        width: 142
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1643144edd1a4f749c673383eba52706
+      internalID: 7400423646881227146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue_Text
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 55
+        width: 268
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d516f678386a49b390185d25d4e5bf5c
+      internalID: -1353282459137057022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue_TextHover
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 55
+        width: 268
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3d2617985147329d7db407770aaf04
+      internalID: 1851688927429780921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewGame_Text
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 55
+        width: 266
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b343c8489d704708a040193985e61f9f
+      internalID: -7752340640426698464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewGame_TextHover
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 55
+        width: 266
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d265d4c5d51c41d59fab856f25c1132e
+      internalID: 7287352201478985261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillTree_Text
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 55
+        width: 278
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6261661b3d624cfe99b7af7bc8df9b52
+      internalID: 532968763109683085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillTree_TextHover
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 55
+        width: 278
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b625e25bb8514fbcacfcfd810855f913
+      internalID: -1105533888376508498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_Text
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 55
+        width: 375
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1af5e0727b94d43a74df06f286515bf
+      internalID: 819131495454584182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievements_TextHover
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 55
+        width: 375
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bc574e98044c2ea3e741de6e2a27ed
+      internalID: -7698562562191919645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings_Text
+      rect:
+        serializedVersion: 2
+        x: 3161
+        y: 55
+        width: 244
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ee6084b1274e1ca484fc635292380a
+      internalID: 1748088345391922096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings_TextHover
+      rect:
+        serializedVersion: 2
+        x: 3407
+        y: 55
+        width: 244
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99d126c8b2c43618aa0a75fab86cff2
+      internalID: 4455271668030702864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tagline
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 69
+        width: 373
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2eef4f512744c60a8e447bd1d03f872
+      internalID: -2188693586665761634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ornament
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 550
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7024fc3b60b44ed495a2ec4ea37d2b7a
+      internalID: 3288884345835308447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Panel: -4256507528070587094
+      Title: 8638369469229109773
+      Continue_Bar: -3918335825040874501
+      NewGame_Bar: -4895925794397360905
+      SkillTree_Bar: -3008789985904810097
+      Achievements_Bar: 788794163017299388
+      Settings_Bar: 8150427095260798359
+      Quit_Bar: -6635966682893130182
+      Quit_Text: -3367054119823714520
+      Quit_TextHover: 7400423646881227146
+      Continue_Text: -1353282459137057022
+      Continue_TextHover: 1851688927429780921
+      NewGame_Text: -7752340640426698464
+      NewGame_TextHover: 7287352201478985261
+      SkillTree_Text: 532968763109683085
+      SkillTree_TextHover: -1105533888376508498
+      Achievements_Text: 819131495454584182
+      Achievements_TextHover: -7698562562191919645
+      Settings_Text: 1748088345391922096
+      Settings_TextHover: 4455271668030702864
+      Tagline: -2188693586665761634
+      Ornament: 3288884345835308447
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
