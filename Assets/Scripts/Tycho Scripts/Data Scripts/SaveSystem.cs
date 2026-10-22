@@ -3,14 +3,14 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SaveSystem : MonoBehaviour
 {
     private const string LogTag = "[SaveSystem]";
-    private const int KeyLengthBytes = 32; // AES-256 = 256-bit key = 32 bytes
 
     [Header("Security Settings")]
-    // Symmetric key: the same secret both encrypts and decrypts.
+    // One secret; separate encryption and signing keys are derived from it.
     [SerializeField] private string encryptionSecret = "K!ysLj4isd@F8j9l^SKTPfNxL1B1jJ12";
 
     [Header("File Settings")]
@@ -20,23 +20,27 @@ public class SaveSystem : MonoBehaviour
     private string _mainFilePath;
     private string _backupFilePath;
     private string _tempFilePath;
-    private byte[] _keyBytes;
+    private byte[] _encKey, _macKey;
 
     private string MainFilePath => _mainFilePath ??= Path.Combine(Application.persistentDataPath, fileName);
     private string BackupFilePath => _backupFilePath ??= MainFilePath + ".bak";
     private string TempFilePath => _tempFilePath ??= MainFilePath + ".tmp";
-    private byte[] KeyBytes => _keyBytes ??= Encoding.UTF8.GetBytes(encryptionSecret);
-
+    private byte[] EncKey => _encKey ??= DeriveKey("enc");
+    private byte[] MacKey => _macKey ??= DeriveKey("mac");
+    
     private void OnValidate()
     {
         // Inspector edits must invalidate the caches.
         _mainFilePath = _backupFilePath = _tempFilePath = null;
-        _keyBytes = null;
+        _encKey = _macKey = null; 
+    }
 
-        // Aes.Key throws at runtime unless the key is exactly 32 bytes.
-        if (Encoding.UTF8.GetByteCount(encryptionSecret) != KeyLengthBytes)
-            Debug.LogWarning($"{LogTag} encryptionSecret must be exactly {KeyLengthBytes} bytes (ASCII characters).");
-        
+    // Derives two independent 32-byte keys from one secret (HMAC-SHA256 as key derivation),
+    // so the encryption key and the signing key are never the same.
+    private byte[] DeriveKey(string pPurpose)
+    {
+        using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(encryptionSecret));
+        return hmac.ComputeHash(Encoding.UTF8.GetBytes(pPurpose));
     }
 
     /// <returns>True if data was written succesfully.</returns>
@@ -48,11 +52,12 @@ public class SaveSystem : MonoBehaviour
             string json = JsonUtility.ToJson(pData);
             string cipherText = Encrypt(json, out byte[] iv);
 
-            // The container keeps the cipherText and its IV together; decryption needs both.
+            // The container keeps cipherText, IV and signature together; loading needs all three.
             var container = new EncryptedSaveContainer
             {
                 cipherTextBase64 = cipherText,
-                ivBase64 = Convert.ToBase64String(iv)
+                ivBase64 = Convert.ToBase64String(iv),
+                hmacSignature = Convert.ToBase64String(ComputeHmac(iv, Convert.FromBase64String(cipherText)))
             };
 
             WriteAtomically(JsonUtility.ToJson(container));
@@ -130,14 +135,27 @@ public class SaveSystem : MonoBehaviour
 
             if (container == null
                 || string.IsNullOrEmpty(container.cipherTextBase64)
-                || string.IsNullOrEmpty(container.ivBase64))
+                || string.IsNullOrEmpty(container.ivBase64)
+                || string.IsNullOrEmpty(container.hmacSignature))
                 return false;
             
             byte[] iv = Convert.FromBase64String(container.ivBase64);
-            string json = Decrypt(container.cipherTextBase64, iv);
+            byte[] cipherBytes = Convert.FromBase64String(container.cipherTextBase64);
+            byte[] storedHmac = Convert.FromBase64String(container.hmacSignature);
+
+            // Verify before decrypting: tampered data never reaches the decryptor.
+            // FixedTimeEquals compares in constant time; a normal == leaks timing information.
+            if (!CryptographicOperations.FixedTimeEquals(ComputeHmac(iv, cipherBytes), storedHmac))
+            {
+                Debug.LogWarning($"{LogTag} Signature mismatch for {pFilePath}. File was tampered with.");
+                return false;
+            }
+
+            string json = Decrypt(cipherBytes, iv);
 
             pData = JsonUtility.FromJson<PlayerData>(json);
             return pData != null;
+
         }
         catch (CryptographicException)
         {
@@ -152,10 +170,20 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    // HMAC: keyed hash over IV + ciphertext. Changing any byte changes the signature,
+    // and without the key a valid signature can't be produced.
+    private byte[] ComputeHmac(byte[] pIv, byte[] pCipherBytes)
+    {
+        using var hmac = new HMACSHA256(MacKey);
+        hmac.TransformBlock(pIv, 0, pIv.Length, null, 0);
+        hmac.TransformFinalBlock(pCipherBytes, 0, pCipherBytes.Length);
+        return hmac.Hash;
+    }
+
     private Aes CreateAes()
     {
         var aes = Aes.Create();
-        aes.Key = KeyBytes;
+        aes.Key = EncKey; // AES-256 = 256-bit key = 32 bytes.
 
         // CBC (Cipher Block Chaining): each 16-byte block is mixed with the previous
         // encrypted block, so identical plaintext blocks don't produce identical output.
@@ -185,13 +213,12 @@ public class SaveSystem : MonoBehaviour
         return Convert.ToBase64String(encryptor.TransformFinalBlock(plainBytes, 0, plainBytes.Length));
     }
 
-    private string Decrypt(string pCipherTextBase64, byte[] pIv)
+    private string Decrypt(byte[] pCipherBytes, byte[] pIv)
     {
         using var aes = CreateAes();
         aes.IV = pIv; // Must be the same IV that was used to decrypt.
 
         using var decryptor = aes.CreateDecryptor();
-        byte[] cipherBytes = Convert.FromBase64String(pCipherTextBase64);
-        return Encoding.UTF8.GetString(decryptor.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length));
+        return Encoding.UTF8.GetString(decryptor.TransformFinalBlock(pCipherBytes, 0, pCipherBytes.Length));
     }
 }
