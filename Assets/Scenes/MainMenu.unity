@@ -909,26 +909,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexSystem
   layers:
-  - target: {fileID: 2016372598}
-    strength: 0.5
-  - target: {fileID: 2025599885}
-    strength: 1
-  - target: {fileID: 1771557818}
-    strength: 1.5
-  - target: {fileID: 117114385}
-    strength: 2
-  - target: {fileID: 332556343}
-    strength: 2.5
-  - target: {fileID: 923060161}
-    strength: 3
-  - target: {fileID: 2100450849}
-    strength: 3.5
-  - target: {fileID: 1421353117}
-    strength: 4
-  - target: {fileID: 1106031566}
-    strength: 4.5
-  - target: {fileID: 74039973}
-    strength: 5
+  - target: {fileID: 625565014}
+    strength: 0.025
+  - target: {fileID: 359960211}
+    strength: 0.05
+  - target: {fileID: 1096340487}
+    strength: 0.075
+  - target: {fileID: 775794196}
+    strength: 0.1
+  - target: {fileID: 1462563894}
+    strength: 0.125
+  - target: {fileID: 812417686}
+    strength: 0.15
+  - target: {fileID: 1432833448}
+    strength: 0.175
+  - target: {fileID: 644608108}
+    strength: 0.2
+  - target: {fileID: 127666043}
+    strength: 0.225
+  - target: {fileID: 479063640}
+    strength: 0.25
   maxOffset: 2
   smoothSpeed: 5
 --- !u!4 &673449576
