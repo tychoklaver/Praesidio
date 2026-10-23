@@ -3,43 +3,25 @@ using UnityEngine.InputSystem;
 
 public class TestManager : MonoBehaviour
 {
-    [SerializeField] private SaveSystem saveSystem;
-    private PlayerData currentData;
-
-    void Start()
+    private void Start()
     {
-        if (saveSystem != null)
-        {
-            currentData = saveSystem.Load();
-        } else
-        {
-            Debug.LogError($"[ScoreTest] Didn't couple savesystem in inspector.");
-        }
+        Debug.Log($"[TestManager] Space = +50 wood_gathered | V = +1 vikings_killed | S = save now");
     }
 
-    void Update()
+    private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame) AddScore();
+        Keyboard kb = Keyboard.current;
+        if (kb == null || StatsTracker.Instance == null) return;
+
+        if (kb.spaceKey.wasPressedThisFrame) StatsTracker.Instance.AddStat("wood_gathered", 50);
+        if (kb.vKey.wasPressedThisFrame) StatsTracker.Instance.AddStat("vikings_killed", 1);
+        if (kb.sKey.wasPressedThisFrame) StatsTracker.Instance.SaveNow();
     }
 
-    public void AddScore()
+    [ContextMenu("Test: Print profile JSON in console.")]
+    public void TestPrintProfile()
     {
-        if (currentData == null) return;
-
-        currentData.totalScore += 1;
-
-        saveSystem.Save(currentData);
-
-        Debug.Log($"[ScoreTest] Current score: {currentData.totalScore}");
-    }
-
-    [ContextMenu("Test: Print decrypted JSON in console.")]
-    public void TestPrintDecryptedData()
-    {
-        if (currentData != null)
-        {
-            string json = JsonUtility.ToJson(currentData, true);
-            Debug.Log($"\n{json}");
-        }
+        if (StatsTracker.Instance == null) return;
+        Debug.Log($"\n{JsonUtility.ToJson(StatsTracker.Instance.Data, true)}");
     }
 }
