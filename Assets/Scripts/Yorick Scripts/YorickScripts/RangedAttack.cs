@@ -30,6 +30,6 @@ public class RangedAttack : UnitAttackBase
         Vector3 pos = firePoint != null ? firePoint.position : transform.position;
         Projectile p = Instantiate(projectilePrefab, pos, Quaternion.identity);
         print("Projectile Instantiated");
-        p.Initialize(currentTarget, detector.unitData.unitDamage);
+        p.Launch(currentTarget, detector.unitData.unitDamage);
     }
 }

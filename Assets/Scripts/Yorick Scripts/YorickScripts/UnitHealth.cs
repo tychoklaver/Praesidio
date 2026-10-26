@@ -1,11 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitHealth : MonoBehaviour, IDamageable
+public class UnitHealth : MonoBehaviour, IDamageable, ITargetable
 {
+    public static List<UnitHealth> all =  new List<UnitHealth>();
+    
     [SerializeField] EnemyUnitSO unitData;
     [SerializeField] float health;
     [SerializeField] Animator animator;
     public bool isDead = false;
+    [SerializeField] int priority = 0;
+    
+    void OnEnable()
+    {
+        all.Add(this);  
+    }
+ 
+    void OnDisable()
+    {
+        all.Remove(this);
+    }
 
     private void Awake()
     {
@@ -16,6 +30,10 @@ public class UnitHealth : MonoBehaviour, IDamageable
     {
         health = unitData.unitHealth;
     }
+
+    public Transform TargetTransform => transform;
+    public int Priority => priority;
+    public bool IsAlive => health > 0;
 
     public void TakeDamage(float amount)
     {
