@@ -22,7 +22,7 @@ public class AchievementDefinition : ScriptableObject
     public string StatKey => statKey;
     public long Target => target;
 
-    private void Oalidate()
+    private void OnValidate()
     {
         if (string.IsNullOrEmpty(id)) id = name;
     }
