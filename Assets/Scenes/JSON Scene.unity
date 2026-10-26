@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 147977678}
   - component: {fileID: 147977677}
   - component: {fileID: 147977676}
+  - component: {fileID: 147977680}
   - component: {fileID: 147977675}
   m_Layer: 0
   m_Name: GameSystems
@@ -164,9 +165,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AchievementManager
   definitions:
-  - {fileID: 11400000, guid: 07d5e16c68c85594284cb9593370f0f6, type: 2}
   - {fileID: 11400000, guid: 50eb7c1c4c4e8384998ee12717cd0341, type: 2}
-  - {fileID: 11400000, guid: 3de0ebdba67400b4383386ddd634afed, type: 2}
+  - {fileID: 11400000, guid: fe2c2e89d31eb484bbe2dd63a276ed79, type: 2}
+  - {fileID: 11400000, guid: 67d7355ea3ae32d4ba84927d861a7ce4, type: 2}
+  - {fileID: 11400000, guid: 74093dbbf24a7ee48818bd78899c5da1, type: 2}
+  - {fileID: 11400000, guid: 80ca0bc6eb23dc74e813f26b766e3954, type: 2}
+  - {fileID: 11400000, guid: 59a6dbae6e375414fb34bbc53a135670, type: 2}
+  - {fileID: 11400000, guid: 522a908c31361b74189f868f67d0a8dc, type: 2}
+  - {fileID: 11400000, guid: ae178325b7289924fb7c61f035495767, type: 2}
+  - {fileID: 11400000, guid: 5a98388e74e3316488f7a785dd253467, type: 2}
+  - {fileID: 11400000, guid: 322801ca1f621b449bdb90183bbde2a4, type: 2}
 --- !u!114 &147977677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +217,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147977680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147977674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2b58ee929b6449b339bd3065130bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AchievementPopup
+  slideInSeconds: 0.5
+  holdSeconds: 3
+  slideOutSeconds: 0.4
+  unlockSound: {fileID: 0}
 --- !u!1 &222711687
 GameObject:
   m_ObjectHideFlags: 0
