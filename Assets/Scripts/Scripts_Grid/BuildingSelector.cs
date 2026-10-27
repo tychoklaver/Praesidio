@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildingSelector : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class BuildingSelector : MonoBehaviour
             return;
         }
         if (!Input.GetMouseButtonDown(0)) return;
+        
+        bool overUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+        if (overUI || buildingPanel.IsPointerOverHUD(Input.mousePosition)) return;
+
         
         Vector2 world = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Collider2D hit = Physics2D.OverlapPoint(world);

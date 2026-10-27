@@ -82,6 +82,22 @@ public class BuildingPanel : MonoBehaviour
         if (current != null) current.RemoveWorker();
     }
     
+    public bool IsPointerOverHUD(Vector2 screenPos)
+    {
+        if (current == null || !root.activeInHierarchy) return false;
+ 
+        foreach (var g in root.GetComponentsInChildren<Graphic>())
+        {
+            if (!g.enabled || !g.raycastTarget || !g.gameObject.activeInHierarchy) continue;
+ 
+            Camera uiCam = g.canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : g.canvas.worldCamera;
+            if (RectTransformUtility.RectangleContainsScreenPoint(g.rectTransform, screenPos, uiCam))
+                return true;
+        }
+        return false;
+    }
+
+    
     void LateUpdate()
     {
         if (current == null)
@@ -128,7 +144,7 @@ public class BuildingPanel : MonoBehaviour
 
         UpdateSlots();
     }
-
+    
     void BuildSlots(int count)
     {
         foreach (var s in slots) Destroy(s.background.gameObject);

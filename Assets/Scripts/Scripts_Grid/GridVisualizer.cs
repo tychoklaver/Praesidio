@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(GridManager))]
@@ -7,62 +6,118 @@ public class GridVisualizer : MonoBehaviour
     public static GridVisualizer Instance { get; private set; }
 
     [SerializeField, Min(0.001f)] float lineWidth = 0.04f;
+    [SerializeField] int textureSize = 128;
+
+    [SerializeField] bool mipmaps = true;
     [SerializeField] int sortingOrder = 100;
     [SerializeField] bool alwaysVisible = true;
-
+    
     GameObject lines;
+    Mesh mesh;
+    Texture2D texture;
+    Material material;
+    bool visible;
 
     void Awake()
     {
         Instance = this;
-        BuildMesh();
+        Build();
         SetVisible(false);
     }
 
-    public void SetVisible(bool visible) => lines.SetActive(visible || alwaysVisible);
+    public void SetVisible(bool value)
+    {
+        visible = value;
+        if (lines != null) lines.SetActive(visible || alwaysVisible);
+    }
+    
+    public void Rebuild()
+    {
+        Cleanup();
+        Build();
+        lines.SetActive(visible || alwaysVisible);
+    }
 
-    void BuildMesh()
+    void Build()
     {
         var grid = GetComponent<GridManager>();
         Vector3 o = grid.Origin;
         float cs = grid.CellSize;
-        int w = grid.GridSize.x, h = grid.GridSize.y;
-        float hw = lineWidth * 0.5f;
+        Vector2Int size = grid.GridSize;
+        
+        int halfBand = Mathf.Clamp(Mathf.RoundToInt(lineWidth / cs * textureSize * 0.5f), 1, textureSize / 4);
+        texture = CreateCellTexture(textureSize, halfBand);
+        
+        float padCells = (float)halfBand / textureSize;
+        float pad = padCells * cs;
 
-        var verts = new List<Vector3>();
-        var tris = new List<int>();
-
-        void Quad(float x0, float y0, float x1, float y1)
+        mesh = new Mesh { name = "GridQuad" };
+        mesh.vertices = new[]
         {
-            int i = verts.Count;
-            verts.Add(o + new Vector3(x0, y0, 0));
-            verts.Add(o + new Vector3(x1, y0, 0));
-            verts.Add(o + new Vector3(x1, y1, 0));
-            verts.Add(o + new Vector3(x0, y1, 0));
-            tris.AddRange(new[] { i, i + 2, i + 1, i, i + 3, i + 2 });
-        }
-        
-        for (int j = 0; j <= h; j++)
-            Quad(-hw, j * cs - hw, w * cs + hw, j * cs + hw);
-        
-        for (int i = 0; i <= w; i++)
-            for (int r = 0; r < h; r++)
-                Quad(i * cs - hw, r * cs + hw, i * cs + hw, (r + 1) * cs - hw);
+            o + new Vector3(-pad, -pad, 0f),
+            o + new Vector3(size.x * cs + pad, -pad, 0f),
+            o + new Vector3(size.x * cs + pad, size.y * cs + pad, 0f),
+            o + new Vector3(-pad, size.y * cs + pad, 0f)
+        };
 
-        var mesh = new Mesh();
-        mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-        mesh.SetVertices(verts);
-        mesh.SetTriangles(tris, 0);
+        mesh.uv = new[]
+        {
+            new Vector2(-padCells, -padCells),
+            new Vector2(size.x + padCells, -padCells),
+            new Vector2(size.x + padCells, size.y + padCells),
+            new Vector2(-padCells, size.y + padCells)
+        };
+        mesh.triangles = new[] { 0, 2, 1, 0, 3, 2 };
+
+        material = new Material(Shader.Find("Sprites/Default"))
+        {
+            mainTexture = texture,
+            color = grid.LineColor
+        };
         
         lines = new GameObject("GridLines");
-        lines.AddComponent<MeshFilter>().mesh = mesh;
+        lines.AddComponent<MeshFilter>().sharedMesh = mesh;
         var mr = lines.AddComponent<MeshRenderer>();
-        mr.material = new Material(Shader.Find("Sprites/Default")) { color = grid.LineColor };
+        mr.sharedMaterial = material;
         mr.sortingOrder = sortingOrder;
     }
 
-    void OnDestroy()
+    Texture2D CreateCellTexture(int size, int halfBand)
+    {
+        var tex = new Texture2D(size, size, TextureFormat.RGBA32, mipmaps)
+        {
+            name = "GridCell",
+            wrapMode = TextureWrapMode.Repeat,
+            filterMode = mipmaps ? FilterMode.Trilinear : FilterMode.Bilinear,
+            anisoLevel = 4
+        };
+
+        var pixels = new Color32[size * size];
+        var line = new Color32(255, 255, 255, 255);
+        var empty = new Color32(255, 255, 255, 0);
+
+        for (int y = 0; y < size; y++)
+        {
+            for (int x = 0; x < size; x++)
+            {
+                bool isLine = x < halfBand || x >= size - halfBand
+                           || y < halfBand || y >= size - halfBand;
+                pixels[y * size + x] = isLine ? line : empty;
+            }
+        }
+
+        tex.SetPixels32(pixels);
+        tex.Apply(mipmaps);
+        return tex;
+    }
+
+    void Cleanup()
     {
         if (lines != null) Destroy(lines);
+        if (mesh != null) Destroy(mesh);
+        if (texture != null) Destroy(texture);
+        if (material != null) Destroy(material);
     }
+
+    void OnDestroy() => Cleanup();
 }

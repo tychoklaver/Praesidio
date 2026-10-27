@@ -2,29 +2,48 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float speed = 8f;
-    [SerializeField] float hitDistance = 0.15f;
+    [SerializeField] float speed = 10f;
+    [SerializeField] float hitDistance = 0.1f;
 
-    Transform target;
+    Transform targetTransform;
+    IDamageable targetDamageable;
+    Collider2D targetCollider;
     float damage;
-
-    public void Initialize(Transform target, float damage)
+    Vector3 lastKnownPosition;
+    
+    public void Launch(Transform target, float damage)
     {
-        this.target = target;
+        targetTransform = target;
+        targetDamageable = target.GetComponentInParent<IDamageable>();
+        targetCollider = target.GetComponentInChildren<Collider2D>();
         this.damage = damage;
+        lastKnownPosition = target.position;
     }
+    
+    public void Launch(UnitHealth target, float damage) => Launch(target.TargetTransform, damage);
+
     void Update()
     {
-        if (target == null) { Destroy(gameObject); return; }
+        bool targetAlive = targetTransform != null;
+        if (targetAlive) lastKnownPosition = targetTransform.position;
 
-        Vector3 toTarget = target.position - transform.position;
-        if (toTarget.magnitude <= hitDistance)
+        Vector3 to = lastKnownPosition - transform.position;
+        to.z = 0f;
+
+        float distance = targetAlive && targetCollider != null
+            ? Vector2.Distance(transform.position, targetCollider.ClosestPoint(transform.position))
+            : to.magnitude;
+
+        if (distance <= hitDistance)
         {
-            target.GetComponentInParent<IDamageable>()?.TakeDamage(damage);
+            if (targetAlive && targetDamageable != null) targetDamageable.TakeDamage(damage);
             Destroy(gameObject);
             return;
         }
 
-        transform.position += toTarget.normalized * speed * Time.deltaTime;
+        float angle = Mathf.Atan2(to.y, to.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        transform.position += to.normalized * (speed * Time.deltaTime);
     }
 }

@@ -30,6 +30,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/BuildingHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/FlamethrowerBuilding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/XPManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4188a0f79dff4b4191dbeaff03bfe462213200/a7/99091809/Object.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -49,6 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -109,6 +113,14 @@
       <workItem from="1791475601258" duration="445000" />
       <workItem from="1791481551885" duration="755000" />
       <workItem from="1791482516695" duration="671000" />
+      <workItem from="1791565295465" duration="1494000" />
+      <workItem from="1792359196412" duration="1697000" />
+      <workItem from="1792410952218" duration="2015000" />
+      <workItem from="1792569561376" duration="4088000" />
+      <workItem from="1792654483281" duration="7156000" />
+      <workItem from="1792676684561" duration="634000" />
+      <workItem from="1792744128304" duration="2192000" />
+      <workItem from="1793009035892" duration="4004000" />
     </task>
     <servers />
   </component>
