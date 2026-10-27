@@ -81,4 +81,21 @@ public class AchievementManager : MonoBehaviour
         AchievementProgress progress = StatsTracker.Instance.Data.FindAchievement(pDef.Id);
         return progress != null && progress.unlocked;
     }
+
+    public long GetCurrentValue(AchievementDefinition pDef) => StatsTracker.Instance.GetStat(pDef.StatKey);
+
+    public bool TryGetUnlockedAt(AchievementDefinition pDef, out DateTime pLocalTime)
+    {
+        pLocalTime = default;
+ 
+        AchievementProgress progress = StatsTracker.Instance.Data.FindAchievement(pDef.Id);
+        if (progress == null || !progress.unlocked) return false;
+ 
+        if (!DateTime.TryParse(progress.unlockedAtUtc, CultureInfo.InvariantCulture,
+                DateTimeStyles.RoundtripKind, out DateTime utc))
+            return false;
+ 
+        pLocalTime = utc.ToLocalTime();
+        return true;
+    }
 }
