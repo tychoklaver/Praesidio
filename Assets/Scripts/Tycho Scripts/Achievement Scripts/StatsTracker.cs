@@ -68,7 +68,7 @@ public class StatsTracker : MonoBehaviour
         if (_saveRequested) SaveNow();
     }
 
-    private void OicationPause(bool pPaused)
+    private void OnApplicationPause(bool pPaused)
     {
         if (pPaused) SaveNow();
     }
