@@ -29,7 +29,14 @@ public class AchievementRowUI : MonoBehaviour
     [SerializeField] private Color lockedIconColor = new(0.3f, 0.3f, 0.3f, 1f);
  
     public AchievementDefinition Definition { get; private set; }
- 
+
+    private void Awake()
+    {
+        if (progressRoot != null && progressFill == null)
+            Debug.LogWarning("[AchievementRowUI] 'Progress Fill' is not assigned on the row prefab, so the bar can't change.", this);
+    }
+
+    /// <summary>Fills the row from the current state. Safe to call again whenever something changes.</summary>
     public void Bind(AchievementDefinition pDef, AchievementManager pManager)
     {
         Definition = pDef;
@@ -47,42 +54,43 @@ public class AchievementRowUI : MonoBehaviour
         if (iconImage != null)
         {
             iconImage.sprite = pDef.Icon;
-            iconImage.enabled = pDef.Icon != null;
+            iconImage.enabled = !hidden && pDef.Icon != null;
             iconImage.color = unlocked ? Color.white : lockedIconColor;
         }
- 
-        if (unlockedAtText != null)
-        {
-            DateTime unlockTime = default;
-            bool hasDate = unlocked && pManager.TryGetUnlockedAt(pDef, out unlockTime);
- 
-            unlockedAtText.gameObject.SetActive(hasDate);
-            if (hasDate) unlockedAtText.text = $"Unlocked\n{unlockTime:dd-MM-yyyy HH:mm}";
-        }
- 
+
+        BindUnlockDate(pDef, pManager, unlocked);
+
         // A progress bar only makes sense for achievements with a real range (not "reach 1").
         bool showProgress = !unlocked && !hidden && pDef.Target > 1;
- 
         if (progressRoot != null) progressRoot.SetActive(showProgress);
-        if (!showProgress) return;
- 
+        if (showProgress) BindProgress(pDef, pManager);
+    }
+
+    private void BindUnlockDate(AchievementDefinition pDef, AchievementManager pManager, bool pUnlocked)
+    {
+        if (unlockedAtText == null) return;
+
+        DateTime time = default;
+        bool hasDate = pUnlocked && pManager.TryGetUnlockedAt(pDef, out time);
+
+        unlockedAtText.gameObject.SetActive(hasDate);
+        if (hasDate) unlockedAtText.text = $"Unlocked\n{time:dd-MM-yyyy HH:mm}";
+    }
+
+    private void BindProgress(AchievementDefinition pDef, AchievementManager pManager)
+    {
         long current = Math.Min(pManager.GetCurrentValue(pDef), pDef.Target);
- 
-        if (progressFill == null)
-        {
-            Debug.LogWarning("[AchievementRowUI] 'Progress Fill' is not assigned on the row prefab, so the bar can't change.", this);
-        }
-        else
+
+        if (progressFill != null)
         {
             // Force a stretch rect that only differs in its right edge, whatever the prefab had set.
-            float ratio = Mathf.Clamp01((float)current / pDef.Target);
             progressFill.anchorMin = Vector2.zero;
-            progressFill.anchorMax = new Vector2(ratio, 1f);
+            progressFill.anchorMax = new Vector2(Mathf.Clamp01((float)current / pDef.Target), 1f);
             progressFill.offsetMin = Vector2.zero;
             progressFill.offsetMax = Vector2.zero;
         }
- 
-        if (progressText != null)
+
+        if (progressFill != null) 
             progressText.text = $"{current} / {pDef.Target}";
     }
 }

@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 /// <summary>
-/// Handles 2D orthographic camera movement, zooming, bounds clamping and target tracking.
-/// Designed to work with the modern Unity Input system.
+/// 2D orthographic camera: WASD panning, scroll-wheel zoom, 'H' to jump to the headquarters,
+/// and clamping to a bounds box. Uses the new Input System.
+/// Input only changes a TARGET position/zoom; the camera then eases towards it in LateUpdate.
 /// </summary>
-
-
 [RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour
 {
@@ -28,123 +28,101 @@ public class CameraController : MonoBehaviour
     [Tooltip("BoxCollider2D defining the outer boundaries the camera cannot leave.")]
     [SerializeField] private BoxCollider2D boundsBox;
 
+    [Tooltip("The camera jumps here when 'H' is pressed.")]
     [SerializeField] private Transform headquartersTransform;
 
-    private Camera cam;
-    private Vector3 targetPos;
-    private float targetZoom;
+    private Camera _cam;
+    private Vector3 _targetPos;
+    private float _targetZoom;
 
     private void Awake()
     {
-        cam = GetComponent<Camera>();
-        targetPos = transform.position;
-        targetZoom = cam.orthographicSize;
+        _cam = GetComponent<Camera>();
+        _targetPos = transform.position;
+        _targetZoom = _cam.orthographicSize;
     }
 
-
-    void Update()
+    private void Update()
     {
-        // Gather the user input for movement and zooming.
         HandleInput();
         HandleZoom();
 
-        // Ensure calculated target positions remain inside the allowed world bounds.
-        if (boundsBox != null)
-            ApplyBounds();
+        // Clamp the TARGET (not the camera itself), so the smoothing can never overshoot the bounds.
+        if (boundsBox != null) ApplyBounds();
     }
 
-    void LateUpdate()
-    {
-        // Apply smooth interpolation in LateUpdate to prevent jittering from objects moving in Update.
-        ApplyMovement();
-    }
+    // Smoothing runs in LateUpdate so objects that move in Update don't make the camera jitter.
+    private void LateUpdate() => ApplyMovement();
 
-    /// <summary>
-    /// Processes keyboard inputs for WASD panning and snapping to objects.
-    /// </summary>
+    /// <summary>WASD pans the target; 'H' snaps it to the headquarters.</summary>
     private void HandleInput()
     {
-        if (Keyboard.current == null) return;
-
-        // Instantly target the HQ position when 'H' is pressed.
-        if (Keyboard.current.hKey.wasPressedThisFrame && headquartersTransform != null)
+        Keyboard kb = Keyboard.current;
+        if (kb == null) return;
+ 
+        if (kb.hKey.wasPressedThisFrame && headquartersTransform != null)
         {
-            targetPos = new Vector3(headquartersTransform.position.x, headquartersTransform.position.y, transform.position.z);
+            Vector3 hq = headquartersTransform.position;
+            _targetPos = new Vector3(hq.x, hq.y, transform.position.z);
             return;
         }
-
-        Vector3 inputDirection = Vector3.zero;
-
-        if (Keyboard.current.wKey.isPressed) inputDirection.y += 1f;
-        if (Keyboard.current.sKey.isPressed) inputDirection.y -= 1f;
-        if (Keyboard.current.aKey.isPressed) inputDirection.x -= 1f;
-        if (Keyboard.current.dKey.isPressed) inputDirection.x += 1f;
-
-        // Prevent diagonal movement from exceeding a magnitude of 1 (faster speed vector)/
-        inputDirection = Vector3.ClampMagnitude(inputDirection, 1f);
-
-        // Accumulate movement velocity onto target destination.
-        targetPos += inputDirection * movementSpeed * Time.deltaTime;
+ 
+        var direction = new Vector3(Axis(kb.dKey, kb.aKey), Axis(kb.wKey, kb.sKey));
+ 
+        // Clamping the length keeps diagonal movement from being faster than straight movement.
+        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * Time.deltaTime);
     }
 
-    /// <summary>
-    /// Reads mouse scroll wheel delta to adjust target orthographic size.
-    /// </summary>
+    /// <summary>Returns +1, -1 or 0 from a pair of opposing keys.</summary>
+    private static float Axis(KeyControl pPositive, KeyControl pNegative) =>
+        (pPositive.isPressed ? 1f : 0f) - (pNegative.isPressed ? 1f : 0f);
+    
+    /// <summary>Scroll wheel changes the target orthographic size.</summary>
     private void HandleZoom()
     {
         if (Mouse.current == null) return;
-
-        // Read scroll delta y-axis value
-        float scrollDelta = Mouse.current.scroll.ReadValue().y;
-
-        if (Mathf.Abs(scrollDelta) > 0.01f)
-        {
-            // Normalize scroll values across platforms.
-            float normalizedScroll = Mathf.Sign(scrollDelta);
-
-            targetZoom -= normalizedScroll * zoomSpeed;
-            targetZoom = Mathf.Clamp(targetZoom, minOrthographicSize, maxOrthographicSize);
-        }
+ 
+        float scroll = Mouse.current.scroll.ReadValue().y;
+        if (Mathf.Abs(scroll) < 0.01f) return;
+ 
+        // Only the direction is used: scroll values differ per platform and device.
+        _targetZoom = Mathf.Clamp(_targetZoom - Mathf.Sign(scroll) * zoomSpeed, minOrthographicSize, maxOrthographicSize);
     }
 
     /// <summary>
-    /// Calculates camera view extents dynamically based on zoom and aspect ratio,
-    /// clamping target position to stay within the boundaries.
+    /// Keeps the whole camera view inside the bounds box: the camera CENTER may only move within
+    /// the box shrunk by half the view size (which depends on zoom and aspect ratio).
     /// </summary>
     private void ApplyBounds()
     {
-        Bounds boxBounds = boundsBox.bounds;
-        
-        // Calculate half extents of the camera view in world units.
-        float vertExtent = targetZoom;
-        float horizontalExtent = vertExtent * cam.aspect;
-
-        // Derive inner clamping boundaries accounting for viewport scale.
-        float minX = boxBounds.min.x + horizontalExtent;
-        float maxX = boxBounds.max.x - horizontalExtent;
-        float minY = boxBounds.min.y + vertExtent;
-        float maxY = boxBounds.max.y - vertExtent;
-
-        // Handle cases where the camera view is larger than the bounds box itself.
-        if (minX > maxX) minX = maxX = boxBounds.center.x;
-        if (minY > maxY) minY = maxY = boxBounds.center.y;
-
-        // Enforce boundaries on desired position.
-        targetPos.x = Mathf.Clamp(targetPos.x, minX, maxX);
-        targetPos.y = Mathf.Clamp(targetPos.y, minY, maxY);
+        Bounds box = boundsBox.bounds;
+ 
+        float halfHeight = _targetZoom;
+        float halfWidth = halfHeight * _cam.aspect;
+ 
+        float minX = box.min.x + halfWidth;
+        float maxX = box.max.x - halfWidth;
+        float minY = box.min.y + halfHeight;
+        float maxY = box.max.y - halfHeight;
+ 
+        // View larger than the box on an axis: no valid range, so center on the box.
+        if (minX > maxX) minX = maxX = box.center.x;
+        if (minY > maxY) minY = maxY = box.center.y;
+ 
+        _targetPos.x = Mathf.Clamp(_targetPos.x, minX, maxX);
+        _targetPos.y = Mathf.Clamp(_targetPos.y, minY, maxY);
     }
 
     /// <summary>
-    /// Smoothly interpolates the camera position and zoom towards target values,
-    /// using frame-rate independent dampening.
+    /// Eases position and zoom towards their targets. 1 - e^(-k*dt) is a frame-rate independent
+    /// lerp factor: the camera feels the same at 30 and 144 FPS.
     /// </summary>
     private void ApplyMovement()
     {
-        // Frame-rate independent exponential smoothing factor.
         float moveAlpha = 1f - Mathf.Exp(-movementSmoothness * Time.deltaTime);
         float zoomAlpha = 1f - Mathf.Exp(-zoomSmoothness * Time.deltaTime);
-
-        transform.position = Vector3.Lerp(transform.position, targetPos, moveAlpha);
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomAlpha);
+ 
+        transform.position = Vector3.Lerp(transform.position, _targetPos, moveAlpha);
+        _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, _targetZoom, zoomAlpha);
     }
 }
