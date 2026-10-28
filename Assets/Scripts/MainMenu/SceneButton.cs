@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneButton : MonoBehaviour
@@ -20,7 +19,6 @@ public class SceneButton : MonoBehaviour
             return;
         }
 
-        Time.timeScale = 1;
-        SceneManager.LoadScene(sceneName);
+        SceneTransition.Load(sceneName);
     }
 }
