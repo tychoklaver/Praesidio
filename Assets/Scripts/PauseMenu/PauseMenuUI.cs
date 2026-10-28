@@ -12,7 +12,6 @@ public class PauseMenuUI : MonoBehaviour
     [SerializeField] GameObject confirmPopup;
     [SerializeField] CanvasGroup confirmGroup;
     [SerializeField] RectTransform confirmPanel;
-    [SerializeField] GameObject settingsMenu;
 
     [Header("Buttons")]
     [SerializeField] Button resumeButton;
@@ -23,7 +22,8 @@ public class PauseMenuUI : MonoBehaviour
     [SerializeField] Button noButton;
 
     [Header("Settings")]
-    [SerializeField] string mainMenuScene = "";
+    [SerializeField] string mainMenuScene = "MainMenu";
+    [SerializeField] string settingsScene = "SettingsMenu";
     [SerializeField] bool openOnStart;
     [SerializeField] float speed = 12f;
 
@@ -58,6 +58,12 @@ public class PauseMenuUI : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetSceneByName(settingsScene).isLoaded)
+        {
+            Animate();
+            return;
+        }
+
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (confirmPopup.activeSelf)
@@ -134,16 +140,15 @@ public class PauseMenuUI : MonoBehaviour
 
     void OpenSettings()
     {
-        if (settingsMenu != null)
+        if (!SceneManager.GetSceneByName(settingsScene).isLoaded)
         {
-            settingsMenu.SetActive(true);
+            SceneManager.LoadSceneAsync(settingsScene, LoadSceneMode.Additive);
         }
     }
 
     void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneTransition.Load(SceneManager.GetActiveScene().name);
     }
 
     void AskExit()
@@ -160,7 +165,6 @@ public class PauseMenuUI : MonoBehaviour
 
     void ExitToMainMenu()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(mainMenuScene);
+        SceneTransition.Load(mainMenuScene);
     }
 }
