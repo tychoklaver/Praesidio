@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class CameraIntroZoom : MonoBehaviour
 {
-    [SerializeField] float startSize = 25f;
+    [SerializeField] float startSize = 60f;
     [SerializeField] float duration = 3f;
     [SerializeField] float delay = 0f;
+    [SerializeField] float controlAt = 0.45f;
 
     IEnumerator Start()
     {
@@ -31,6 +32,13 @@ public class CameraIntroZoom : MonoBehaviour
             float t = 1 - Mathf.Pow(1 - progress, 4);
             float logSize = Mathf.Lerp(Mathf.Log(startSize), Mathf.Log(endSize), t);
             cam.orthographicSize = Mathf.Exp(logSize);
+
+            if (progress >= controlAt && controller != null)
+            {
+                controller.enabled = true;
+                yield break;
+            }
+
             yield return null;
         }
         cam.orthographicSize = endSize;
