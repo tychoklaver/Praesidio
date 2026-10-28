@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,16 +10,10 @@ using UnityEngine.UI;
 /// The look (background, fonts, layout) is NOT in code: it is built in the editor,
 /// so it can be redesigned without touching this script.
 /// Place the panel where it should END UP; it slides in from above to that position.
+/// Several unlocks at once are queued and shown one after another.
 /// </summary>
 public class AchievementPopup : MonoBehaviour
 {
-    private struct PopupRequest
-    {
-        public string title;
-        public string description;
-        public Sprite icon;
-    }
-
     public static AchievementPopup Instance { get; private set; }
 
     [Header("Design (assign in the Inspector)")]
@@ -43,7 +38,7 @@ public class AchievementPopup : MonoBehaviour
     [Header("Audio (optional)")]
     [SerializeField] private AudioClip unlockSound;
 
-    private readonly Queue<PopupRequest> _queue = new();
+    private readonly Queue<(string title, string description, Sprite icon)> _queue = new();
     private bool _showing;
 
     private Vector2 _shownPosition;
@@ -51,7 +46,7 @@ public class AchievementPopup : MonoBehaviour
     private AudioSource _audioSource;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    private static void ResetStatics() => Instance = null;
+    private static void ResetStats() => Instance = null;
 
     private void Awake()
     {
@@ -79,8 +74,7 @@ public class AchievementPopup : MonoBehaviour
         // The pop-up must never block clicks on the UI underneath.
         group.blocksRaycasts = false;
         group.interactable = false;
-
-        SetHidden();
+        ApplySlideOut(1f); // Start hidden.
 
         if (unlockSound != null)
         {
@@ -103,7 +97,7 @@ public class AchievementPopup : MonoBehaviour
 
     public void Show(string pTitle, string pDescription, Sprite pIcon)
     {
-        _queue.Enqueue(new PopupRequest { title = pTitle, description = pDescription, icon = pIcon });
+        _queue.Enqueue((pTitle, pDescription, pIcon));
         if (!_showing) StartCoroutine(ShowQueue());
     }
 
@@ -116,77 +110,62 @@ public class AchievementPopup : MonoBehaviour
 
         while (_queue.Count > 0)
         {
-            PopupRequest request = _queue.Dequeue();
+            (string title, string description, Sprite icon) = _queue.Dequeue();
 
-            titleText.text = request.title;
-            descriptionText.text = request.description;
+            titleText.text = title;
+            descriptionText.text = description;
 
             if (iconImage != null)
             {
-                Sprite sprite = request.icon != null ? request.icon : fallbackIcon;
-                iconImage.sprite = sprite;
-                iconImage.enabled = sprite != null;
+                iconImage.sprite = icon != null ? icon : fallbackIcon;
+                iconImage.enabled = iconImage.sprite != null;
             }
 
             if (_audioSource != null) _audioSource.PlayOneShot(unlockSound);
 
-            yield return SlideIn();
-            yield return Hold();
-            yield return SlideOut();
+            yield return Tween(slideInSeconds, ApplySlideIn);
+            yield return Tween(holdSeconds, ApplyHold);
+            SetIconScale(1f);
+            yield return Tween(slideOutSeconds, ApplySlideOut);
         }
 
         _showing = false;
     }
 
-    // All timing uses unscaled time, so the pop-up also works while the game is paused.
-    private IEnumerator SlideIn()
+    /// <summary>
+    /// Calls pStep with progress 0..1 once per frame, and a final time with exactly 1 so every
+    /// animation ends in a clean slate. Uses unscaled time, so the pop-up also works while the game is paused.
+    /// </summary>
+    private static IEnumerator Tween(float pSeconds, Action<float> pStep)
     {
-        for (float t = 0f; t < slideInSeconds; t += Time.unscaledDeltaTime)
+        for (float t = 0f; t < pSeconds; t += Time.unscaledDeltaTime)
         {
-            float progress = t / slideInSeconds;
-            group.alpha = Mathf.Clamp01(progress * 3f); // Fades in over the first third.
-            panel.anchoredPosition = Vector2.LerpUnclamped(_hiddenPosition, _shownPosition, EaseOutBack(progress));
+            pStep(t / pSeconds);
             yield return null;
         }
 
-        group.alpha = 1f;
-        panel.anchoredPosition = _shownPosition;
+        pStep(1f);
     }
 
-    private IEnumerator Hold()
+    private void ApplySlideIn(float pProgress)
     {
-        // Icon pulses slightly so the pop-up feels alive.
-        for (float t = 0f; t < holdSeconds; t += Time.unscaledDeltaTime)
-        {
-            if (iconImage != null)
-            {
-                float scale = 1f + 0.08f * Mathf.Sin(t * 6f);
-                iconImage.rectTransform.localScale = new Vector3(scale, scale, 1f);
-            }
-
-            yield return null;
-        }
-
-        if (iconImage != null) iconImage.rectTransform.localScale = Vector3.one;
+        group.alpha = Mathf.Clamp01(pProgress * 3f); // Fades in over the first third.
+        panel.anchoredPosition = Vector2.LerpUnclamped(_hiddenPosition, _shownPosition, EaseOutBack(pProgress));
     }
 
-    private IEnumerator SlideOut()
-    {
-        for (float t = 0f; t < slideOutSeconds; t += Time.unscaledDeltaTime)
-        {
-            float progress = t / slideOutSeconds;
-            group.alpha = 1f - progress;
-            panel.anchoredPosition = Vector2.Lerp(_shownPosition, _hiddenPosition, progress * progress * progress);
-            yield return null;
-        }
+    // The icon pulses slightly so the pop-up feels alive.
+    private void ApplyHold(float pProgress) => SetIconScale(1f + 0.08f * Mathf.Sin(pProgress * holdSeconds * 6f));
 
-        SetHidden();
+    private void ApplySlideOut(float pProgress)
+    {
+        group.alpha = 1f - pProgress;
+        // Cubic ease-in: starts slow, accelerate out of view.
+        panel.anchoredPosition = Vector2.Lerp(_shownPosition, _hiddenPosition, pProgress * pProgress * pProgress);
     }
 
-    private void SetHidden()
+    private void SetIconScale(float pScale)
     {
-        group.alpha = 0f;
-        panel.anchoredPosition = _hiddenPosition;
+        if (iconImage != null) iconImage.rectTransform.localScale = new Vector3(pScale, pScale, 1f);
     }
 
     // Overshoots slightly past the target before settling: gives the slide-in a bouncy feel.
