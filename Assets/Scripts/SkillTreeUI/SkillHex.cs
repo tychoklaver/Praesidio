@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     [SerializeField] float hoverScale = 1.04f;
     [SerializeField] float speed = 12f;
@@ -13,6 +13,8 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] Color selectedColor = new Color32(226, 178, 92, 255);
     [SerializeField] float holdTime = 0.8f;
     [SerializeField] float holdAlpha = 0.7f;
+
+    public static bool isHolding;
 
     public float appearDelay;
     public bool learned;
@@ -39,7 +41,6 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     float holdAmount;
     float holdFade;
     float squeeze;
-    Vector2 holdStart;
     float timer;
     float scale;
     float hover;
@@ -184,12 +185,9 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     void UpdateHold(float dt)
     {
-        if (holding && Mouse.current != null)
+        if (holding && Mouse.current != null && !Mouse.current.leftButton.isPressed)
         {
-            if (Vector2.Distance(Mouse.current.position.ReadValue(), holdStart) > 10)
-            {
-                holding = false;
-            }
+            StopHold();
         }
 
         if (holding)
@@ -198,7 +196,7 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             if (holdAmount >= 1)
             {
                 holdAmount = 1;
-                holding = false;
+                StopHold();
                 holdFade = 1;
                 tree.LearnSkill(index);
             }
@@ -235,14 +233,23 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (canLearn)
         {
             holding = true;
+            isHolding = true;
             holdFade = 0;
-            holdStart = eventData.position;
         }
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    void OnDisable()
     {
-        holding = false;
+        StopHold();
+    }
+
+    void StopHold()
+    {
+        if (holding)
+        {
+            holding = false;
+            isHolding = false;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
