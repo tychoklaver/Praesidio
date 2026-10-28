@@ -2,9 +2,15 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
+/// <summary>
+/// Saves and loads <see cref="PlayerData"/> as an encrypted, tamper-evident file (encrypt-then-MAC):
+///     JSON -> AES-256-CBC encrypt -> HMAC-SHA256 over IV + ciphertext -> stored as an EncryptedSaveContainer.
+/// Three files are used: the main save, a .bak (the previous good save) and a .tmp (only while writing).
+///  NOTE: The secret ships inside the game, so this stops casual save editing, not a determind attacker.
+/// </summary>
 public class SaveSystem : MonoBehaviour
 {
     private const string LogTag = "[SaveSystem]";
@@ -28,15 +34,15 @@ public class SaveSystem : MonoBehaviour
     private byte[] EncKey => _encKey ??= DeriveKey("enc");
     private byte[] MacKey => _macKey ??= DeriveKey("mac");
     
+    // Inspector edits must invalidate the caches.
     private void OnValidate()
     {
-        // Inspector edits must invalidate the caches.
         _mainFilePath = _backupFilePath = _tempFilePath = null;
         _encKey = _macKey = null; 
     }
 
-    // Derives two independent 32-byte keys from one secret (HMAC-SHA256 as key derivation),
-    // so the encryption key and the signing key are never the same.
+    // Uses HMAC-SHA256 as a simple key-derivation function: the same secret with a different
+    // purpose label gives an unrelated 32-byte key, so the encryption and signing keys are never the same.
     private byte[] DeriveKey(string pPurpose)
     {
         using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(encryptionSecret));
@@ -48,50 +54,48 @@ public class SaveSystem : MonoBehaviour
     {
         try
         {
-            // No pretty-print: payload is encrypted anyway, whitespace is just wasted file size.
-            string json = JsonUtility.ToJson(pData);
-            string cipherText = Encrypt(json, out byte[] iv);
+            // No pretty-print: the payload is encrypted anyway, whitespace is just wasted size.
+            byte[] cipher = Encrypt(JsonUtility.ToJson(pData), out byte[] iv);
 
-            // The container keeps cipherText, IV and signature together; loading needs all three.
             var container = new EncryptedSaveContainer
             {
-                cipherTextBase64 = cipherText,
+                cipherTextBase64 = Convert.ToBase64String(cipher),
                 ivBase64 = Convert.ToBase64String(iv),
-                hmacSignature = Convert.ToBase64String(ComputeHmac(iv, Convert.FromBase64String(cipherText)))
+                hmacSignature = Convert.ToBase64String(ComputeHmac(iv, cipher))
             };
 
             WriteAtomically(JsonUtility.ToJson(container));
-            Debug.Log($"{LogTag} Data saved succesfully: {MainFilePath}");
+            Debug.Log($"{LogTag} Saved: {MainFilePath}");
             return true;
-        }
+        } 
         catch (Exception ex)
         {
-            Debug.Log($"{LogTag} Saving failed: {ex}");
+            Debug.LogError($"{LogTag} Saving failed: {ex}");
             return false;
         }
     }
 
+    /// <summary>
+    /// Loads the main file, falls back to the backup, and only then starts a fresh profile.
+    /// </summary>
     public PlayerData Load()
     {
-        bool hasMain = File.Exists(MainFilePath);
-
-        // Checking the backup too: a crash mid-save can leave only the .bak behind,
+        // The backup counts too: a crash mid-save can leave only the .bak behind,
         // and treating that as "no save" would overwrite recoverable data.
-        if (!hasMain && !File.Exists(BackupFilePath))
+        if (!File.Exists(MainFilePath) && !File.Exists(BackupFilePath))
         {
             Debug.Log($"{LogTag} No save file found. Creating new profile.");
             return CreateNewProfile();
         }
 
-        if (hasMain && TryLoadFile(MainFilePath, out PlayerData data))
-            return data;
+        if (TryLoadFile(MainFilePath, out PlayerData data)) return data;
 
-        Debug.Log($"{LogTag} Main file missing or corrupted. Attempting backup recovery...");
+        Debug.LogWarning($"{LogTag} Main file missing or unusable. Trying backup...");
 
-        if (File.Exists(BackupFilePath) && TryLoadFile(BackupFilePath, out data))
+        if (TryLoadFile(BackupFilePath, out data))
         {
-            // Restore byte-for-byte instead of calling Save, Save would first copy
-            // the corrupted main file over the good backup.
+            // Restore byte-for-byte instead of calling Save: Save would first copy
+            // the broken main file over the good backup.
             try { File.Copy(BackupFilePath, MainFilePath, true); }
             catch (Exception ex) { Debug.LogWarning($"{LogTag} Backup loaded, but restoring main failed: {ex}"); }
 
@@ -112,26 +116,23 @@ public class SaveSystem : MonoBehaviour
 
     private void WriteAtomically(string pContents)
     {
-        // Write to a temp file first so a crash mid-write can't leave a half-written main file.
+        // Write to a temp file first, so a crash mid-write can't leave a half-written main file.
         File.WriteAllText(TempFilePath, pContents);
 
-        if(File.Exists(MainFilePath))
-        {
-            File.Copy(MainFilePath, BackupFilePath, true);
-            File.Delete(MainFilePath);
-        }
-
-        File.Move(TempFilePath, MainFilePath);
+        // Replace swaps the temp file in and keeps the old main as .bak in one OS operation.
+        // It needs an existing target, so the very first save is a plain move.
+        if (File.Exists(MainFilePath)) File.Replace(TempFilePath, MainFilePath, BackupFilePath);
+        else File.Move(TempFilePath, MainFilePath);
     }
 
     private bool TryLoadFile(string pFilePath, out PlayerData pData)
     {
         pData = null;
+        if (!File.Exists(pFilePath)) return false;
 
         try
         {
-            string containerJson = File.ReadAllText(pFilePath);
-            var container = JsonUtility.FromJson<EncryptedSaveContainer>(containerJson);
+            var container = JsonUtility.FromJson<EncryptedSaveContainer>(File.ReadAllText(pFilePath));
 
             if (container == null
                 || string.IsNullOrEmpty(container.cipherTextBase64)
@@ -147,23 +148,15 @@ public class SaveSystem : MonoBehaviour
             // FixedTimeEquals compares in constant time; a normal == leaks timing information.
             if (!CryptographicOperations.FixedTimeEquals(ComputeHmac(iv, cipherBytes), storedHmac))
             {
-                Debug.LogWarning($"{LogTag} Signature mismatch for {pFilePath}. File was tampered with.");
+                Debug.LogWarning($"{LogTag} Signature mismatch for {pFilePath}. File was tampered with or corrupted.");
                 return false;
             }
 
-            string json = Decrypt(cipherBytes, iv);
-
-            pData = JsonUtility.FromJson<PlayerData>(json);
+            pData = JsonUtility.FromJson<PlayerData>(Decrypt(cipherBytes, iv));
             return pData != null;
 
         }
-        catch (CryptographicException)
-        {
-            // Thrown for a wrong key, invalid padding, or damaged ciphertext.
-            Debug.LogWarning($"{LogTag} Decryption failed for {pFilePath}. File was modified or corrupted.");
-            return false;
-        }
-        catch (Exception ex)
+        catch (Exception ex) // Bad JSON/Base64, wrong key, damaged ciphertext, I/O errors: all mean "unusable".
         {
             Debug.LogWarning($"{LogTag} Failed to load {pFilePath}: {ex.Message}");
             return false;
@@ -197,20 +190,18 @@ public class SaveSystem : MonoBehaviour
         return aes;
     }
 
-    private string Encrypt(string pPlainText, out byte[] pIv)
+    private byte[] Encrypt(string pPlainText, out byte[] pIv)
     {
         using var aes = CreateAes();
 
         // IV (Initialisation Vector): random 16 bytes that seed the first block, so the same
         // data encrypts differently each save. Not secret, but must be new for every save.
-        aes.GenerateIV(); // Fresh IV per save.
+        aes.GenerateIV();
         pIv = aes.IV;
 
         using var encryptor = aes.CreateEncryptor();
         byte[] plainBytes = Encoding.UTF8.GetBytes(pPlainText);
-
-        // Encrypts the whole buffer in one call; Base64 turns the raw bytes into JSON-safe text.
-        return Convert.ToBase64String(encryptor.TransformFinalBlock(plainBytes, 0, plainBytes.Length));
+        return encryptor.TransformFinalBlock(plainBytes, 0, plainBytes.Length);
     }
 
     private string Decrypt(byte[] pCipherBytes, byte[] pIv)

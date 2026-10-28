@@ -1,6 +1,11 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// The single entry point for player statistics: owns the loaded <see cref="PlayerData"/>,
+/// announces stat changes (the achievements listen to those) and decides when to save.
+/// Lives on the persistent GameSystems prefab and survives scene loads.
+/// </summary>
 [RequireComponent(typeof(SaveSystem))]
 public class StatsTracker : MonoBehaviour
 {
@@ -10,6 +15,7 @@ public class StatsTracker : MonoBehaviour
 
     public PlayerData Data { get; private set; }
 
+    /// <summary>Raised with the stat key after a stat actually changed.</summary>
     public event Action<string> OnStatChanged;
 
     private bool _saveRequested;
@@ -19,6 +25,7 @@ public class StatsTracker : MonoBehaviour
 
     private void Awake()
     {
+        // A second GameSystems object (e.g. from reloading the first scene) must not replace the first.
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -34,16 +41,13 @@ public class StatsTracker : MonoBehaviour
 
     public long GetStat(string pKey) => Data.GetStat(pKey);
 
-    public void AddStat(string pKey, long pAmount)
-    {
-        if (pAmount == 0) return;
+    public void AddStat(string pKey, long pAmount) => SetStat(pKey, GetStat(pKey) + pAmount);
 
-        Data.AddStat(pKey, pAmount);
-        OnStatChanged?.Invoke(pKey);
-    }
-
+    /// <summary>Sets a stat, e.g. for streaks. Does nothing (and raises no event) if the value is unchanged.</summary>
     public void SetStat(string pKey, long pValue)
     {
+        if (GetStat(pKey) == pValue) return;
+
         Data.SetStat(pKey, pValue);
         OnStatChanged?.Invoke(pKey);
     }
@@ -57,7 +61,7 @@ public class StatsTracker : MonoBehaviour
 
     public void SaveNow()
     {
-        if (Data == null) return;
+        if (Data == null) return; // A destroyed duplicate never loaded any data.
 
         _saveRequested = false;
         saveSystem.Save(Data);
