@@ -136,7 +136,10 @@ public class SkillTreeUI : MonoBehaviour
 
         hex.transform.Find("Border").GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
         int distance = (Mathf.Abs(skill.q) + Mathf.Abs(skill.r) + Mathf.Abs(skill.q + skill.r)) / 2;
-        hex.GetComponent<SkillHex>().appearDelay = 0.2f + distance * 0.12f;
+        SkillHex skillHex = hex.GetComponent<SkillHex>();
+        skillHex.appearDelay = 0.2f + distance * 0.12f;
+        skillHex.tree = this;
+        skillHex.index = index;
 
         hex.GetComponent<Button>().onClick.AddListener(() => Select(index));
         return hex;
@@ -207,6 +210,7 @@ public class SkillTreeUI : MonoBehaviour
         skillHex.learned = skill.learned;
         skillHex.selected = index == selected;
         skillHex.locked = locked;
+        skillHex.canLearn = CanLearn(skill);
     }
 
     bool IsAvailable(Skill skill)
@@ -272,12 +276,18 @@ public class SkillTreeUI : MonoBehaviour
     {
         if (selected < 0) return;
 
-        Skill skill = skills[selected];
+        LearnSkill(selected);
+    }
+
+    public void LearnSkill(int index)
+    {
+        Skill skill = skills[index];
         if (CanLearn(skill))
         {
             skillPoints -= skill.cost;
             skill.learned = true;
-            hexes[selected].GetComponent<SkillHex>().LearnEffect();
+            selected = index;
+            hexes[index].GetComponent<SkillHex>().LearnEffect();
             pointsScale = 1.4f;
             Refresh();
         }

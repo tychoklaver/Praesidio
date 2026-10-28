@@ -1809,7 +1809,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1342177279
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: d3af88723c9f749a581d53535b8f62e4, type: 2}
   m_TargetDisplay: 0
@@ -2574,6 +2574,7 @@ GameObject:
   - component: {fileID: 882103258}
   - component: {fileID: 882103260}
   - component: {fileID: 882103259}
+  - component: {fileID: 882103300}
   m_Layer: 5
   m_Name: Minimap
   m_TagString: Untagged
@@ -17556,6 +17557,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &882103300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882103257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c67e95f3f7545b28fae778688f85295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimapCamera: {fileID: 660883982}
+  minimap: {fileID: 882103258}
+  unitSprite: {fileID: 21300000, guid: 3babe48bcc314762b457ac06f221073a, type: 3}
+  buildingSprite: {fileID: 21300000, guid: b0ccfd2e399e4acd84895376ba376c4f, type: 3}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 2147483648
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

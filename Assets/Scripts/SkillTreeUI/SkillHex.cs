@@ -1,15 +1,18 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] float hoverScale = 1.04f;
     [SerializeField] float speed = 12f;
     [SerializeField] float changeTime = 0.25f;
     [SerializeField] float glowAlpha = 0.45f;
     [SerializeField] Color selectedColor = new Color32(226, 178, 92, 255);
+    [SerializeField] float holdTime = 0.8f;
+    [SerializeField] float holdAlpha = 0.7f;
 
     public float appearDelay;
     public bool learned;
@@ -20,6 +23,9 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Color iconColor;
     public Color labelColor;
     public Color glowColor;
+    public bool canLearn;
+    public SkillTreeUI tree;
+    public int index;
 
     Image border;
     Image fill;
@@ -28,6 +34,12 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     Image glow;
     Image ring;
     Image lockIcon;
+    Image holdFill;
+    bool holding;
+    float holdAmount;
+    float holdFade;
+    float squeeze;
+    Vector2 holdStart;
     float timer;
     float scale;
     float hover;
@@ -57,6 +69,17 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         ring = transform.Find("Selected").GetComponent<Image>();
         lockIcon = transform.Find("Lock").GetComponent<Image>();
         lockIcon.gameObject.SetActive(true);
+
+        GameObject fillCopy = Instantiate(fill.gameObject, transform);
+        fillCopy.name = "HoldFill";
+        fillCopy.transform.SetSiblingIndex(fill.transform.GetSiblingIndex() + 1);
+        holdFill = fillCopy.GetComponent<Image>();
+        holdFill.type = Image.Type.Filled;
+        holdFill.fillMethod = Image.FillMethod.Vertical;
+        holdFill.fillOrigin = (int)Image.OriginVertical.Bottom;
+        holdFill.fillAmount = 0;
+        holdFill.raycastTarget = false;
+
         glow.gameObject.SetActive(true);
         ring.gameObject.SetActive(true);
         transform.localScale = Vector3.zero;
@@ -103,6 +126,8 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             change = 0;
         }
 
+        UpdateHold(dt);
+
         float hoverTarget = 0;
         if (hovered)
         {
@@ -113,7 +138,13 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         pop = Mathf.Sin(popTime * Mathf.PI) * popAmount;
         scale = Mathf.Lerp(scale, 1, dt * speed);
         float hoverSize = Mathf.Lerp(1, hoverScale, hover);
-        transform.localScale = Vector3.one * scale * (hoverSize + pop);
+        float squeezeTarget = 0;
+        if (holding)
+        {
+            squeezeTarget = holdAmount * 0.06f;
+        }
+        squeeze = Mathf.Lerp(squeeze, squeezeTarget, dt * speed);
+        transform.localScale = Vector3.one * scale * (hoverSize + pop - squeeze);
 
         change = Mathf.Min(change + dt / changeTime, 1);
         float t = Mathf.SmoothStep(0, 1, change);
@@ -149,6 +180,69 @@ public class SkillHex : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         ringAlpha = Mathf.Lerp(ringAlpha, ringTarget, dt * speed);
         ring.color = new Color(selectedColor.r, selectedColor.g, selectedColor.b, ringAlpha);
+    }
+
+    void UpdateHold(float dt)
+    {
+        if (holding && Mouse.current != null)
+        {
+            if (Vector2.Distance(Mouse.current.position.ReadValue(), holdStart) > 10)
+            {
+                holding = false;
+            }
+        }
+
+        if (holding)
+        {
+            holdAmount += dt / holdTime;
+            if (holdAmount >= 1)
+            {
+                holdAmount = 1;
+                holding = false;
+                holdFade = 1;
+                tree.LearnSkill(index);
+            }
+        }
+        else if (holdFade > 0)
+        {
+            holdFade = Mathf.MoveTowards(holdFade, 0, dt * 4);
+            if (holdFade == 0)
+            {
+                holdAmount = 0;
+            }
+        }
+        else
+        {
+            holdAmount = Mathf.MoveTowards(holdAmount, 0, dt * 4);
+        }
+
+        float alpha = holdAlpha;
+        if (holdFade > 0)
+        {
+            alpha = holdAlpha * holdFade;
+        }
+        holdFill.fillAmount = holdAmount;
+        holdFill.color = new Color(glowColor.r, glowColor.g, glowColor.b, alpha);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return;
+        }
+
+        if (canLearn)
+        {
+            holding = true;
+            holdFade = 0;
+            holdStart = eventData.position;
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        holding = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -826,8 +826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: 0}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchoredPosition: {x: 18, y: 1.518}
+  m_SizeDelta: {x: 160, y: 36.964}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &600000028
 CanvasRenderer:
@@ -963,8 +963,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: 0}
-  m_SizeDelta: {x: 80, y: 40}
+  m_AnchoredPosition: {x: -18, y: 4.554}
+  m_SizeDelta: {x: 80, y: 30.891}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &600000032
 CanvasRenderer:
@@ -2600,11 +2600,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillHex
   hoverScale: 1.04
   speed: 12
+  changeTime: 0.25
+  glowAlpha: 0.45
   selectedColor: {r: 0.8862745, g: 0.69803923, b: 0.36078432, a: 1}
   appearDelay: 0
   learned: 0
   selected: 0
+  locked: 0
   borderColor: {r: 1, g: 1, b: 1, a: 1}
+  fillColor: {r: 0, g: 0, b: 0, a: 0}
+  iconColor: {r: 0, g: 0, b: 0, a: 0}
+  labelColor: {r: 0, g: 0, b: 0, a: 0}
+  glowColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &600000093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,6 +5188,7 @@ MonoBehaviour:
   learnButton: {fileID: 600000126}
   resetButton: {fileID: 600000179}
   closeButton: {fileID: 600000038}
+  backScene: MainMenu
 --- !u!223 &600000187
 Canvas:
   m_ObjectHideFlags: 0
