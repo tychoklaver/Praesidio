@@ -9245,6 +9245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: SettingsMenu
   quitGame: 0
+  openOnTop: 1
 --- !u!114 &950000011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9259,6 +9260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: SettingsMenu
   quitGame: 0
+  openOnTop: 1
 --- !u!114 &950000012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9299,7 +9301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8e0cd8742a401986d9433a13540dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  sceneName: 
+  sceneName: AchievementMenu
   quitGame: 0
 --- !u!114 &950000015
 MonoBehaviour:
@@ -9315,6 +9317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   sceneName: SettingsMenu
   quitGame: 0
+  openOnTop: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

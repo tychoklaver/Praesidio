@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsMenuUI : MonoBehaviour
@@ -82,9 +83,25 @@ public class SettingsMenuUI : MonoBehaviour
     int[] defaultOptions;
     float[] defaultSliders;
     int vsyncIndex;
+    bool openedOnTop;
 
     void Start()
     {
+        if (gameObject.scene != SceneManager.GetActiveScene())
+        {
+            openedOnTop = true;
+        }
+        else
+        {
+            foreach (GameObject root in gameObject.scene.GetRootGameObjects())
+            {
+                if (root.GetComponent<Camera>() != null || root.GetComponent<EventSystem>() != null)
+                {
+                    root.SetActive(true);
+                }
+            }
+        }
+
         for (int i = 0; i < tabButtons.Length; i++)
         {
             int index = i;
@@ -149,7 +166,6 @@ public class SettingsMenuUI : MonoBehaviour
         resetButton.onClick.AddListener(ResetToDefault);
 
         vsyncIndex = System.Array.IndexOf(toggles, vsyncToggle);
-        LoadDisplaySettings();
 
         SelectTab(0);
         menuGroup.alpha = 0;
@@ -163,7 +179,15 @@ public class SettingsMenuUI : MonoBehaviour
             menuGroup.alpha = Mathf.MoveTowards(menuGroup.alpha, 0, dt * 6);
             if (menuGroup.alpha == 0)
             {
-                settingsMenu.SetActive(false);
+                closing = false;
+                if (openedOnTop)
+                {
+                    SceneManager.UnloadSceneAsync(gameObject.scene);
+                }
+                else
+                {
+                    settingsMenu.SetActive(false);
+                }
             }
         }
         else
@@ -346,23 +370,6 @@ public class SettingsMenuUI : MonoBehaviour
         appliedTimer = 1.5f;
     }
 
-    void LoadDisplaySettings()
-    {
-        int vsync = 0;
-        if (toggleStates[vsyncIndex])
-        {
-            vsync = 1;
-        }
-
-        SelectResolution(PlayerPrefs.GetInt("Resolution", resolutionIndex));
-        SelectOption(windowModeGroup, PlayerPrefs.GetInt("WindowMode", optionGroups[windowModeGroup].selected));
-        SetToggle(vsyncIndex, PlayerPrefs.GetInt("VSync", vsync) == 1);
-        SelectOption(frameRateGroup, PlayerPrefs.GetInt("FrameRate", optionGroups[frameRateGroup].selected));
-        uiScaleSlider.value = PlayerPrefs.GetFloat("UIScale", uiScaleSlider.value);
-
-        ApplyDisplaySettings();
-    }
-
     void ApplyDisplaySettings()
     {
         string[] parts = resolutionText.text.Split('x');
@@ -398,18 +405,6 @@ public class SettingsMenuUI : MonoBehaviour
         {
             scaler.referenceResolution = referenceResolution / scale;
         }
-
-        int vsync = 0;
-        if (toggleStates[vsyncIndex])
-        {
-            vsync = 1;
-        }
-        PlayerPrefs.SetInt("Resolution", resolutionIndex);
-        PlayerPrefs.SetInt("WindowMode", windowMode);
-        PlayerPrefs.SetInt("VSync", vsync);
-        PlayerPrefs.SetInt("FrameRate", frameRate);
-        PlayerPrefs.SetFloat("UIScale", uiScaleSlider.value);
-        PlayerPrefs.Save();
     }
 
     void ResetToDefault()

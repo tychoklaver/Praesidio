@@ -82,9 +82,12 @@ public class SceneTransition : MonoBehaviour
 
         Time.timeScale = 1;
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneName);
-        while (!loading.isDone)
+        if (loading != null)
         {
-            yield return null;
+            while (!loading.isDone)
+            {
+                yield return null;
+            }
         }
 
         yield return new WaitForSecondsRealtime(holdTime);

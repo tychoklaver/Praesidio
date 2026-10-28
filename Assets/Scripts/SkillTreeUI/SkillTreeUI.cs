@@ -65,6 +65,7 @@ public class SkillTreeUI : MonoBehaviour
     [SerializeField] Button learnButton;
     [SerializeField] Button resetButton;
     [SerializeField] Button closeButton;
+    [SerializeField] string backScene = "MainMenu";
 
     GameObject[] hexes;
     int selected = -1;
@@ -298,6 +299,6 @@ public class SkillTreeUI : MonoBehaviour
 
     void Close()
     {
-        closing = true;
+        SceneTransition.Load(backScene);
     }
 }
