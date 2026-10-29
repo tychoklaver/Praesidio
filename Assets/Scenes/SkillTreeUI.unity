@@ -226,6 +226,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &365768436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365768439}
+  - component: {fileID: 365768438}
+  - component: {fileID: 365768437}
+  m_Layer: 0
+  m_Name: Save
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &365768437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365768436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59d2989ee4cc444d981f8bc25ce97a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatsTracker
+  saveSystem: {fileID: 365768438}
+--- !u!114 &365768438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365768436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c329ee298defe8f4db87a068e74df2da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveSystem
+  encryptionSecret: K!ysLj4isd@F8j9l^SKTPfNxL1B1jJ12
+  fileName: profile_stats.json
+--- !u!4 &365768439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365768436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.47082, y: 0.262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &484398768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,6 +2663,8 @@ MonoBehaviour:
   changeTime: 0.25
   glowAlpha: 0.45
   selectedColor: {r: 0.8862745, g: 0.69803923, b: 0.36078432, a: 1}
+  holdTime: 0.8
+  holdAlpha: 0.7
   appearDelay: 0
   learned: 0
   selected: 0
@@ -2612,6 +2674,9 @@ MonoBehaviour:
   iconColor: {r: 0, g: 0, b: 0, a: 0}
   labelColor: {r: 0, g: 0, b: 0, a: 0}
   glowColor: {r: 0, g: 0, b: 0, a: 0}
+  canLearn: 0
+  tree: {fileID: 0}
+  index: 0
 --- !u!1 &600000093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,6 +5071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600000185}
   - component: {fileID: 600000186}
+  - component: {fileID: 600000191}
   m_Layer: 0
   m_Name: SkillTreeController
   m_TagString: Untagged
@@ -5271,6 +5337,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &600000191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600000184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36d6457663d70c448690b1be4c0e64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeSaver
+  tree: {fileID: 600000186}
 --- !u!114 &677832216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6133,3 +6212,4 @@ SceneRoots:
   - {fileID: 600000002}
   - {fileID: 362247956}
   - {fileID: 600000185}
+  - {fileID: 365768439}
