@@ -29,6 +29,7 @@ public class PlayerData
 
     public List<StatEntry> stats = new();
     public List<AchievementProgress> achievements = new();
+    public SkillTreeData skillTree = new();
 
     public long GetStat(string pKey) => FindStat(pKey)?.value ?? 0;
 
