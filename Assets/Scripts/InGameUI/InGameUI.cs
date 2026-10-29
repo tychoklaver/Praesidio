@@ -36,10 +36,6 @@ public class InGameUI : MonoBehaviour
     [SerializeField] Transform productionContent;
 
     [Header("Resources")]
-    [SerializeField] int wood;
-    [SerializeField] int stone;
-    [SerializeField] int iron;
-    [SerializeField] int gold;
     [SerializeField] int workers;
     [SerializeField] int maxWorkers;
     [SerializeField] int lowAmount;
@@ -118,16 +114,65 @@ public class InGameUI : MonoBehaviour
             ShowOverview();
         }
 
+        if (Time.timeScale > 0)
+        {
+            HandleKeybinds();
+        }
+
         Refresh();
+    }
+
+    void HandleKeybinds()
+    {
+        if (Keybinds.WasPressed(Keybinds.NormalSpeed))
+        {
+            SetSpeed(1);
+        }
+        if (Keybinds.WasPressed(Keybinds.FastSpeed))
+        {
+            SetSpeed(2);
+        }
+        if (Keybinds.WasPressed(Keybinds.TowersTab))
+        {
+            SelectTab(0);
+        }
+        if (Keybinds.WasPressed(Keybinds.ProductionTab))
+        {
+            SelectTab(1);
+        }
     }
 
     void Refresh()
     {
+        int wood = 0;
+        int stone = 0;
+        int iron = 0;
+        int gold = 0;
+        int maxWorker = 0;
+        int freeWorker = 0;
+        ResourceManager resources = ResourceManager.Instance;
+        WorkerManager work = WorkerManager.Instance;
+        if (resources != null)
+        {
+            wood = resources.wood;
+            stone = resources.stone;
+            iron = resources.iron;
+            gold = resources.gold;
+        }
+        if (work != null)
+        {
+            maxWorker = work.workers.Count;
+            freeWorker = work.IdleCount;
+        }
+
+        print(work.workers.Count);
+        print(work.IdleCount);
+
         SetResource(woodText, wood);
         SetResource(stoneText, stone);
         SetResource(ironText, iron);
         SetResource(goldText, gold);
-        workerText.text = workers + " / " + maxWorkers;
+        workerText.text = freeWorker.ToString() + " / " + maxWorker.ToString();
 
         levelText.text = "Level " + level;
         xpText.text = xp + " / " + xpNeeded + " XP";
