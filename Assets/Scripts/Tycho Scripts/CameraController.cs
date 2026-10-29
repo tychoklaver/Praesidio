@@ -67,7 +67,7 @@ public class CameraController : MonoBehaviour
         var direction = new Vector3(Axis(Keybinds.MoveRight, Keybinds.MoveLeft), Axis(Keybinds.MoveUp, Keybinds.MoveDown));
  
         // Clamping the length keeps diagonal movement from being faster than straight movement.
-        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * Time.deltaTime);
+        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * CameraSettings.moveSpeed * Time.deltaTime);
     }
 
     /// <summary>Returns +1, -1 or 0 from a pair of opposing keys.</summary>
@@ -83,7 +83,7 @@ public class CameraController : MonoBehaviour
         if (Mathf.Abs(scroll) < 0.01f) return;
  
         // Only the direction is used: scroll values differ per platform and device.
-        _targetZoom = Mathf.Clamp(_targetZoom - Mathf.Sign(scroll) * zoomSpeed, minOrthographicSize, maxOrthographicSize);
+        _targetZoom = Mathf.Clamp(_targetZoom - Mathf.Sign(scroll) * zoomSpeed * CameraSettings.zoomSpeed, minOrthographicSize, maxOrthographicSize);
     }
 
     /// <summary>

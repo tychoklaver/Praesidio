@@ -49,6 +49,10 @@ public class SettingsMenuUI : MonoBehaviour
     [SerializeField] Slider[] sliders;
     [SerializeField] TMP_Text[] sliderTexts;
 
+    [Header("Camera")]
+    [SerializeField] int cameraSpeedSlider = 5;
+    [SerializeField] int zoomSpeedSlider = 6;
+
     [Header("Resolution")]
     [SerializeField] Button resolutionButton;
     [SerializeField] TMP_Text resolutionText;
@@ -146,6 +150,11 @@ public class SettingsMenuUI : MonoBehaviour
             sliders[i].onValueChanged.AddListener(value => sliderTexts[index].text = value + "%");
             defaultSliders[i] = sliders[i].value;
         }
+
+        sliders[cameraSpeedSlider].value = CameraSettings.moveSpeed * defaultSliders[cameraSpeedSlider];
+        sliders[zoomSpeedSlider].value = CameraSettings.zoomSpeed * defaultSliders[zoomSpeedSlider];
+        sliders[cameraSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
+        sliders[zoomSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
 
         resolutionButton.onClick.AddListener(ToggleResolutionList);
         for (int i = 0; i < resolutionOptions.Length; i++)
@@ -352,6 +361,18 @@ public class SettingsMenuUI : MonoBehaviour
                 text.color = tabTextColor;
             }
         }
+    }
+
+    void UpdateCameraSettings(float value)
+    {
+        CameraSettings.moveSpeed = GetMultiplier(cameraSpeedSlider);
+        CameraSettings.zoomSpeed = GetMultiplier(zoomSpeedSlider);
+    }
+
+    float GetMultiplier(int index)
+    {
+        float multiplier = sliders[index].value / defaultSliders[index];
+        return Mathf.Max(0.1f, multiplier);
     }
 
     void ToggleResolutionList()
