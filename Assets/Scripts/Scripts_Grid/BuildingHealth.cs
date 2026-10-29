@@ -4,7 +4,7 @@ using UnityEngine;
 public class BuildingHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] float maxHealth = 100f;
-
+    
     float health;
 
     public float Health => health;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Building : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Building : MonoBehaviour
     
     public BuildingType buildingType;
     public ResourceCost[] cost;
+    [SerializeField] List<Sprite> BuildingSprites = new List<Sprite>();
     public Vector2Int size = Vector2Int.one;
 
     [SerializeField] float buildWorkNeeded = 1f;
@@ -19,6 +21,14 @@ public class Building : MonoBehaviour
     private float _progress;
     private bool _placed;
     SpriteRenderer[] _renderers;
+    
+    private void Awake()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        int r = Random.Range(0, BuildingSprites.Count);
+        spriteRenderer.sprite = BuildingSprites[r];
+    }
+
     
     public void Place(Vector2Int cell)
     {
