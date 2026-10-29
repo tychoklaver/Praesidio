@@ -64,7 +64,8 @@ public class PauseMenuUI : MonoBehaviour
             return;
         }
 
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        bool escapePressed = Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame;
+        if (escapePressed || Keybinds.WasPressed(Keybinds.Pause))
         {
             if (confirmPopup.activeSelf)
             {
