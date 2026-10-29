@@ -85,7 +85,7 @@ public class InGameUI : MonoBehaviour
     [SerializeField] Sprite buttonSprite;
     [SerializeField] Sprite buttonSelectedSprite;
 
-    float[] speeds = { 0f, 1f, 2f };
+    float[] speeds = { 0.5f, 1f, 2f };
     List<Button> cards = new List<Button>();
 
     void Start()
