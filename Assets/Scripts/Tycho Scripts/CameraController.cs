@@ -57,25 +57,22 @@ public class CameraController : MonoBehaviour
     /// <summary>WASD pans the target; 'H' snaps it to the headquarters.</summary>
     private void HandleInput()
     {
-        Keyboard kb = Keyboard.current;
-        if (kb == null) return;
- 
-        if (kb.hKey.wasPressedThisFrame && headquartersTransform != null)
+        if (Keybinds.WasPressed(Keybinds.JumpToHeadquarters) && headquartersTransform != null)
         {
             Vector3 hq = headquartersTransform.position;
             _targetPos = new Vector3(hq.x, hq.y, transform.position.z);
             return;
         }
  
-        var direction = new Vector3(Axis(kb.dKey, kb.aKey), Axis(kb.wKey, kb.sKey));
+        var direction = new Vector3(Axis(Keybinds.MoveRight, Keybinds.MoveLeft), Axis(Keybinds.MoveUp, Keybinds.MoveDown));
  
         // Clamping the length keeps diagonal movement from being faster than straight movement.
-        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * Time.deltaTime);
+        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * CameraSettings.moveSpeed * Time.deltaTime);
     }
 
     /// <summary>Returns +1, -1 or 0 from a pair of opposing keys.</summary>
-    private static float Axis(KeyControl pPositive, KeyControl pNegative) =>
-        (pPositive.isPressed ? 1f : 0f) - (pNegative.isPressed ? 1f : 0f);
+    private static float Axis(int pPositive, int pNegative) =>
+        (Keybinds.IsHeld(pPositive) ? 1f : 0f) - (Keybinds.IsHeld(pNegative) ? 1f : 0f);
     
     /// <summary>Scroll wheel changes the target orthographic size.</summary>
     private void HandleZoom()
@@ -86,7 +83,7 @@ public class CameraController : MonoBehaviour
         if (Mathf.Abs(scroll) < 0.01f) return;
  
         // Only the direction is used: scroll values differ per platform and device.
-        _targetZoom = Mathf.Clamp(_targetZoom - Mathf.Sign(scroll) * zoomSpeed, minOrthographicSize, maxOrthographicSize);
+        _targetZoom = Mathf.Clamp(_targetZoom - Mathf.Sign(scroll) * zoomSpeed * CameraSettings.zoomSpeed, minOrthographicSize, maxOrthographicSize);
     }
 
     /// <summary>

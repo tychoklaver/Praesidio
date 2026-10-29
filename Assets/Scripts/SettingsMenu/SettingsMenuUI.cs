@@ -49,6 +49,10 @@ public class SettingsMenuUI : MonoBehaviour
     [SerializeField] Slider[] sliders;
     [SerializeField] TMP_Text[] sliderTexts;
 
+    [Header("Camera")]
+    [SerializeField] int cameraSpeedSlider = 5;
+    [SerializeField] int zoomSpeedSlider = 6;
+
     [Header("Resolution")]
     [SerializeField] Button resolutionButton;
     [SerializeField] TMP_Text resolutionText;
@@ -77,7 +81,7 @@ public class SettingsMenuUI : MonoBehaviour
     float appliedTimer;
     TMP_Text applyText;
 
-    string[] defaultKeys;
+    Key[] chosenKeys;
     bool[] toggleStates;
     bool[] defaultToggles;
     int[] defaultOptions;
@@ -108,12 +112,13 @@ public class SettingsMenuUI : MonoBehaviour
             tabButtons[i].onClick.AddListener(() => SelectTab(index));
         }
 
-        defaultKeys = new string[keyButtons.Length];
+        chosenKeys = (Key[])Keybinds.keys.Clone();
         for (int i = 0; i < keyButtons.Length; i++)
         {
             int index = i;
             keyButtons[i].onClick.AddListener(() => StartListening(index));
-            defaultKeys[i] = keyTexts[i].text;
+            keyTexts[i].text = Keybinds.GetName(chosenKeys[i]);
+            UpdateKeyButton(i);
         }
 
         toggleStates = new bool[toggles.Length];
@@ -145,6 +150,11 @@ public class SettingsMenuUI : MonoBehaviour
             sliders[i].onValueChanged.AddListener(value => sliderTexts[index].text = value + "%");
             defaultSliders[i] = sliders[i].value;
         }
+
+        sliders[cameraSpeedSlider].value = CameraSettings.moveSpeed * defaultSliders[cameraSpeedSlider];
+        sliders[zoomSpeedSlider].value = CameraSettings.zoomSpeed * defaultSliders[zoomSpeedSlider];
+        sliders[cameraSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
+        sliders[zoomSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
 
         resolutionButton.onClick.AddListener(ToggleResolutionList);
         for (int i = 0; i < resolutionOptions.Length; i++)
@@ -258,11 +268,28 @@ public class SettingsMenuUI : MonoBehaviour
         {
             if (key != null && key.wasPressedThisFrame)
             {
-                keyTexts[listening].text = key.displayName;
+                SetKey(listening, key.keyCode);
                 StopListening();
                 return;
             }
         }
+    }
+
+    void SetKey(int index, Key key)
+    {
+        for (int i = 0; i < chosenKeys.Length; i++)
+        {
+            if (i != index && chosenKeys[i] == key)
+            {
+                chosenKeys[i] = Key.None;
+                keyTexts[i].text = Keybinds.GetName(Key.None);
+                UpdateKeyButton(i);
+            }
+        }
+
+        chosenKeys[index] = key;
+        keyTexts[index].text = Keybinds.GetName(key);
+        Keybinds.keys = (Key[])chosenKeys.Clone();
     }
 
     void StopListening()
@@ -334,6 +361,18 @@ public class SettingsMenuUI : MonoBehaviour
                 text.color = tabTextColor;
             }
         }
+    }
+
+    void UpdateCameraSettings(float value)
+    {
+        CameraSettings.moveSpeed = GetMultiplier(cameraSpeedSlider);
+        CameraSettings.zoomSpeed = GetMultiplier(zoomSpeedSlider);
+    }
+
+    float GetMultiplier(int index)
+    {
+        float multiplier = sliders[index].value / defaultSliders[index];
+        return Mathf.Max(0.1f, multiplier);
     }
 
     void ToggleResolutionList()
@@ -409,9 +448,11 @@ public class SettingsMenuUI : MonoBehaviour
 
     void ResetToDefault()
     {
+        chosenKeys = (Key[])Keybinds.defaultKeys.Clone();
+        Keybinds.keys = (Key[])chosenKeys.Clone();
         for (int i = 0; i < keyTexts.Length; i++)
         {
-            keyTexts[i].text = defaultKeys[i];
+            keyTexts[i].text = Keybinds.GetName(chosenKeys[i]);
             UpdateKeyButton(i);
         }
         listening = -1;
