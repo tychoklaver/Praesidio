@@ -14979,6 +14979,7 @@ MonoBehaviour:
   - {fileID: 8690560121568317822, guid: 9250f41f209398b4288207dc789a6f44, type: 3}
   - {fileID: 4843808645811790236, guid: 060f38b40e30a344396610e3dceac086, type: 3}
   - {fileID: 3356479238209377399, guid: e3a7ada2ffe38ab4eb3b4e06c84ac4d9, type: 3}
+  - {fileID: 8912023205643511850, guid: f0a6ce238e275614780ebfea5f4c4878, type: 3}
 --- !u!114 &1673104200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16126,10 +16127,6 @@ MonoBehaviour:
   cardTemplate: {fileID: 286289409}
   defenseContent: {fileID: 771000011}
   productionContent: {fileID: 772000006}
-  wood: 0
-  stone: 0
-  iron: 0
-  gold: 0
   workers: 0
   maxWorkers: 0
   lowAmount: 0
