@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-ExtraBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Archer Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Archer Tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Building.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/BuildingHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/BuildingHealth.cs" afterDir="false" />
@@ -134,7 +133,8 @@
       <workItem from="1793009035892" duration="4004000" />
       <workItem from="1793176531955" duration="9987000" />
       <workItem from="1793193451338" duration="1338000" />
-      <workItem from="1793266231499" duration="1373000" />
+      <workItem from="1793266231499" duration="2791000" />
+      <workItem from="1793282304276" duration="1975000" />
     </task>
     <servers />
   </component>

@@ -27,6 +27,7 @@ public class InGameUI : MonoBehaviour
         public BuildTab tab;
         public string cost;
         public Stat[] stats;
+        public BuildingType type;
     }
 
     [Header("Buildings")]
@@ -34,7 +35,8 @@ public class InGameUI : MonoBehaviour
     [SerializeField] GameObject cardTemplate;
     [SerializeField] Transform defenseContent;
     [SerializeField] Transform productionContent;
-
+    [SerializeField] BuildMenu menu;
+    
     [Header("Resources")]
     [SerializeField] int workers;
     [SerializeField] int maxWorkers;
@@ -238,6 +240,7 @@ public class InGameUI : MonoBehaviour
         Button button = card.GetComponent<Button>();
         cards.Add(button);
         button.onClick.AddListener(() => SelectCard(button, building));
+        button.onClick.AddListener(() => menu.SelectBuilding(building.type));
     }
 
     void SelectCard(Button selected, Building building)
@@ -265,6 +268,7 @@ public class InGameUI : MonoBehaviour
 
         overviewPanel.SetActive(false);
         infoPanel.SetActive(true);
+        
     }
 
     string StatLine(string label, string value)
