@@ -147,6 +147,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: 677832216}
   m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+--- !u!1001 &99277380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.47082
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425525181204396150, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
+      propertyPath: m_Name
+      value: GameSystems
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
 --- !u!1 &362247953
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,9 +381,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 600000007}
-  - {fileID: 600000011}
   - {fileID: 600000044}
   - {fileID: 600000062}
+  - {fileID: 600000011}
   - {fileID: 600000094}
   - {fileID: 600000132}
   - {fileID: 600000176}
@@ -826,8 +883,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: 0}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchoredPosition: {x: 18, y: 1.518}
+  m_SizeDelta: {x: 160, y: 36.964}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &600000028
 CanvasRenderer:
@@ -963,8 +1020,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: 0}
-  m_SizeDelta: {x: 80, y: 40}
+  m_AnchoredPosition: {x: -18, y: 4.554}
+  m_SizeDelta: {x: 80, y: 30.891}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &600000032
 CanvasRenderer:
@@ -2600,11 +2657,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillHex
   hoverScale: 1.04
   speed: 12
+  changeTime: 0.25
+  glowAlpha: 0.45
   selectedColor: {r: 0.8862745, g: 0.69803923, b: 0.36078432, a: 1}
+  holdTime: 0.8
+  holdAlpha: 0.7
   appearDelay: 0
   learned: 0
   selected: 0
+  locked: 0
   borderColor: {r: 1, g: 1, b: 1, a: 1}
+  fillColor: {r: 0, g: 0, b: 0, a: 0}
+  iconColor: {r: 0, g: 0, b: 0, a: 0}
+  labelColor: {r: 0, g: 0, b: 0, a: 0}
+  glowColor: {r: 0, g: 0, b: 0, a: 0}
+  canLearn: 0
+  tree: {fileID: 0}
+  index: 0
 --- !u!1 &600000093
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600000185}
   - component: {fileID: 600000186}
+  - component: {fileID: 600000191}
   m_Layer: 0
   m_Name: SkillTreeController
   m_TagString: Untagged
@@ -5181,6 +5251,7 @@ MonoBehaviour:
   learnButton: {fileID: 600000126}
   resetButton: {fileID: 600000179}
   closeButton: {fileID: 600000038}
+  backScene: MainMenu
 --- !u!223 &600000187
 Canvas:
   m_ObjectHideFlags: 0
@@ -5263,6 +5334,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &600000191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600000184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36d6457663d70c448690b1be4c0e64a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeSaver
+  tree: {fileID: 600000186}
 --- !u!114 &677832216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,3 +6209,4 @@ SceneRoots:
   - {fileID: 600000002}
   - {fileID: 362247956}
   - {fileID: 600000185}
+  - {fileID: 99277380}

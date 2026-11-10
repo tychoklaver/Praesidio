@@ -70,7 +70,7 @@ public class AchievementMenuUI : MonoBehaviour
     }
  
     /// <summary>Hook this up to the Back button's OnClick.</summary>
-    public void BackToMainMenu() => SceneManager.LoadScene(mainMenuSceneName);
+    public void BackToMainMenu() => SceneTransition.Load(mainMenuSceneName);
  
     private void HandleUnlocked(AchievementDefinition pDef) => Refresh();
  

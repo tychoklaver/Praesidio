@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsMenuUI : MonoBehaviour
@@ -48,6 +49,10 @@ public class SettingsMenuUI : MonoBehaviour
     [SerializeField] Slider[] sliders;
     [SerializeField] TMP_Text[] sliderTexts;
 
+    [Header("Camera")]
+    [SerializeField] int cameraSpeedSlider = 5;
+    [SerializeField] int zoomSpeedSlider = 6;
+
     [Header("Resolution")]
     [SerializeField] Button resolutionButton;
     [SerializeField] TMP_Text resolutionText;
@@ -76,27 +81,44 @@ public class SettingsMenuUI : MonoBehaviour
     float appliedTimer;
     TMP_Text applyText;
 
-    string[] defaultKeys;
+    Key[] chosenKeys;
     bool[] toggleStates;
     bool[] defaultToggles;
     int[] defaultOptions;
     float[] defaultSliders;
     int vsyncIndex;
+    bool openedOnTop;
 
     void Start()
     {
+        if (gameObject.scene != SceneManager.GetActiveScene())
+        {
+            openedOnTop = true;
+        }
+        else
+        {
+            foreach (GameObject root in gameObject.scene.GetRootGameObjects())
+            {
+                if (root.GetComponent<Camera>() != null || root.GetComponent<EventSystem>() != null)
+                {
+                    root.SetActive(true);
+                }
+            }
+        }
+
         for (int i = 0; i < tabButtons.Length; i++)
         {
             int index = i;
             tabButtons[i].onClick.AddListener(() => SelectTab(index));
         }
 
-        defaultKeys = new string[keyButtons.Length];
+        chosenKeys = (Key[])Keybinds.keys.Clone();
         for (int i = 0; i < keyButtons.Length; i++)
         {
             int index = i;
             keyButtons[i].onClick.AddListener(() => StartListening(index));
-            defaultKeys[i] = keyTexts[i].text;
+            keyTexts[i].text = Keybinds.GetName(chosenKeys[i]);
+            UpdateKeyButton(i);
         }
 
         toggleStates = new bool[toggles.Length];
@@ -129,6 +151,11 @@ public class SettingsMenuUI : MonoBehaviour
             defaultSliders[i] = sliders[i].value;
         }
 
+        sliders[cameraSpeedSlider].value = CameraSettings.moveSpeed * defaultSliders[cameraSpeedSlider];
+        sliders[zoomSpeedSlider].value = CameraSettings.zoomSpeed * defaultSliders[zoomSpeedSlider];
+        sliders[cameraSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
+        sliders[zoomSpeedSlider].onValueChanged.AddListener(UpdateCameraSettings);
+
         resolutionButton.onClick.AddListener(ToggleResolutionList);
         for (int i = 0; i < resolutionOptions.Length; i++)
         {
@@ -149,7 +176,6 @@ public class SettingsMenuUI : MonoBehaviour
         resetButton.onClick.AddListener(ResetToDefault);
 
         vsyncIndex = System.Array.IndexOf(toggles, vsyncToggle);
-        LoadDisplaySettings();
 
         SelectTab(0);
         menuGroup.alpha = 0;
@@ -163,7 +189,15 @@ public class SettingsMenuUI : MonoBehaviour
             menuGroup.alpha = Mathf.MoveTowards(menuGroup.alpha, 0, dt * 6);
             if (menuGroup.alpha == 0)
             {
-                settingsMenu.SetActive(false);
+                closing = false;
+                if (openedOnTop)
+                {
+                    SceneManager.UnloadSceneAsync(gameObject.scene);
+                }
+                else
+                {
+                    settingsMenu.SetActive(false);
+                }
             }
         }
         else
@@ -234,11 +268,28 @@ public class SettingsMenuUI : MonoBehaviour
         {
             if (key != null && key.wasPressedThisFrame)
             {
-                keyTexts[listening].text = key.displayName;
+                SetKey(listening, key.keyCode);
                 StopListening();
                 return;
             }
         }
+    }
+
+    void SetKey(int index, Key key)
+    {
+        for (int i = 0; i < chosenKeys.Length; i++)
+        {
+            if (i != index && chosenKeys[i] == key)
+            {
+                chosenKeys[i] = Key.None;
+                keyTexts[i].text = Keybinds.GetName(Key.None);
+                UpdateKeyButton(i);
+            }
+        }
+
+        chosenKeys[index] = key;
+        keyTexts[index].text = Keybinds.GetName(key);
+        Keybinds.keys = (Key[])chosenKeys.Clone();
     }
 
     void StopListening()
@@ -312,6 +363,18 @@ public class SettingsMenuUI : MonoBehaviour
         }
     }
 
+    void UpdateCameraSettings(float value)
+    {
+        CameraSettings.moveSpeed = GetMultiplier(cameraSpeedSlider);
+        CameraSettings.zoomSpeed = GetMultiplier(zoomSpeedSlider);
+    }
+
+    float GetMultiplier(int index)
+    {
+        float multiplier = sliders[index].value / defaultSliders[index];
+        return Mathf.Max(0.1f, multiplier);
+    }
+
     void ToggleResolutionList()
     {
         resolutionList.SetActive(!resolutionList.activeSelf);
@@ -344,23 +407,6 @@ public class SettingsMenuUI : MonoBehaviour
         ApplyDisplaySettings();
         applyText.text = "Applied!";
         appliedTimer = 1.5f;
-    }
-
-    void LoadDisplaySettings()
-    {
-        int vsync = 0;
-        if (toggleStates[vsyncIndex])
-        {
-            vsync = 1;
-        }
-
-        SelectResolution(PlayerPrefs.GetInt("Resolution", resolutionIndex));
-        SelectOption(windowModeGroup, PlayerPrefs.GetInt("WindowMode", optionGroups[windowModeGroup].selected));
-        SetToggle(vsyncIndex, PlayerPrefs.GetInt("VSync", vsync) == 1);
-        SelectOption(frameRateGroup, PlayerPrefs.GetInt("FrameRate", optionGroups[frameRateGroup].selected));
-        uiScaleSlider.value = PlayerPrefs.GetFloat("UIScale", uiScaleSlider.value);
-
-        ApplyDisplaySettings();
     }
 
     void ApplyDisplaySettings()
@@ -398,25 +444,15 @@ public class SettingsMenuUI : MonoBehaviour
         {
             scaler.referenceResolution = referenceResolution / scale;
         }
-
-        int vsync = 0;
-        if (toggleStates[vsyncIndex])
-        {
-            vsync = 1;
-        }
-        PlayerPrefs.SetInt("Resolution", resolutionIndex);
-        PlayerPrefs.SetInt("WindowMode", windowMode);
-        PlayerPrefs.SetInt("VSync", vsync);
-        PlayerPrefs.SetInt("FrameRate", frameRate);
-        PlayerPrefs.SetFloat("UIScale", uiScaleSlider.value);
-        PlayerPrefs.Save();
     }
 
     void ResetToDefault()
     {
+        chosenKeys = (Key[])Keybinds.defaultKeys.Clone();
+        Keybinds.keys = (Key[])chosenKeys.Clone();
         for (int i = 0; i < keyTexts.Length; i++)
         {
-            keyTexts[i].text = defaultKeys[i];
+            keyTexts[i].text = Keybinds.GetName(chosenKeys[i]);
             UpdateKeyButton(i);
         }
         listening = -1;

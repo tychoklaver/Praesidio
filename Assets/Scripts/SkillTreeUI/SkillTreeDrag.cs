@@ -26,6 +26,11 @@ public class SkillTreeDrag : MonoBehaviour, IDragHandler, IScrollHandler
             return;
         }
 
+        if (SkillHex.isHolding)
+        {
+            return;
+        }
+
         Vector2 position = content.anchoredPosition + eventData.delta / canvas.scaleFactor;
         position.x = Mathf.Clamp(position.x, -maxDistance, maxDistance);
         position.y = Mathf.Clamp(position.y, -maxDistance, maxDistance);

@@ -5,8 +5,8 @@ public class ResourceNode : MonoBehaviour
 {
     public static readonly List<ResourceNode> All = new List<ResourceNode>();
 
+    [SerializeField] List<Sprite> resourceSprite = new List<Sprite>();
     public ResourceType type = ResourceType.Wood;
-
     [Header("Grid")]
     [SerializeField] Vector2Int size = Vector2Int.one;
     [SerializeField] bool snapToGrid = true;
@@ -17,6 +17,8 @@ public class ResourceNode : MonoBehaviour
     Vector2Int cell;
     bool occupied;
     
+    public Vector2Int Size => size;
+    
     public float Reach
     {
         get
@@ -25,7 +27,24 @@ public class ResourceNode : MonoBehaviour
             return Mathf.Max(size.x, size.y) * 0.5f * cs + extraReach;
         }
     }
+    
+    public void PlaceAt(Vector2Int origin)
+    {
+        var grid = GridManager.Instance;
+        if (grid == null || occupied) return;
+ 
+        cell = origin;
+        transform.position = grid.CellToWorld(cell, size);
+        grid.Occupy(cell, size);
+        occupied = true;
+    }
 
+    private void Awake()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        int r = Random.Range(0, resourceSprite.Count);
+        spriteRenderer.sprite = resourceSprite[r];
+    }
     void OnEnable() => All.Add(this);
     void OnDisable() => All.Remove(this);
 

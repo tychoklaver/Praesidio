@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b77854-8cb8-4d57-893b-adb7c4664cda" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Praesidio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Praesidio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/ProductionBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/ProductionBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Worker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/LilitaOne SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/LilitaOne SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Texturina-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Texturina-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Archer Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Archer Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/BuildingHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/BuildingHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Flamethrower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/Flamethrower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/LumberJack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/LumberJack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/ResourceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/ResourceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/StoneGatherer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/StoneGatherer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/TreeNode.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts_Grid/TreeNode.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +131,10 @@
       <workItem from="1792676684561" duration="634000" />
       <workItem from="1792744128304" duration="2192000" />
       <workItem from="1793009035892" duration="4004000" />
+      <workItem from="1793176531955" duration="9987000" />
+      <workItem from="1793193451338" duration="1338000" />
+      <workItem from="1793266231499" duration="2791000" />
+      <workItem from="1793282304276" duration="1975000" />
     </task>
     <servers />
   </component>

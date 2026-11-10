@@ -1,10 +1,11 @@
 using System.Text;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
 /// Temporary test harness. Keys 1-9 and 0 each push one achievement's stat to its target value,
-/// so every achievement can be unlocked on demand. Remove before shipping.
+/// so every achievement can be unlocked on demand. Disables itself in release builds; remove before shipping.
 /// </summary>
 public class TestManager : MonoBehaviour
 {
@@ -41,6 +42,12 @@ public class TestManager : MonoBehaviour
         new(Key.Digit0, "gold_rush",      "gold_gathered",            1000),
     };
 
+    // isDebugBuild is true in the editor and in Development Builds only. A disabled component skips Start/Update.
+    private void Awake()
+    {
+        if (!Debug.isDebugBuild) enabled = false;
+    }
+
     private void Start()
     {
         var sb = new StringBuilder("[TestManager] Controls:\n");
@@ -73,6 +80,7 @@ public class TestManager : MonoBehaviour
     }
 
     // Wipes stats and unlocks so every achievement can be tested again without deleting the save file.
+    // The data is cleared in place without raising events, so an open achievements menu refreshes on the next change.
     private void ResetProfile()
     {
         PlayerData data = StatsTracker.Instance.Data;
