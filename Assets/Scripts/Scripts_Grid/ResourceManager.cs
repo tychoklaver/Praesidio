@@ -51,7 +51,7 @@ public class ResourceManager : MonoBehaviour
     {
         switch (type)
         {
-            case ResourceType.Wood: wood += amount; break;
+            case ResourceType.Wood: wood += amount; StatsTracker.Instance.AddStat("wood_gathered", amount); break;
             case ResourceType.Stone: stone += amount; break;
             case ResourceType.Iron: iron += amount; break;
             case ResourceType.Gold: gold += amount; break;

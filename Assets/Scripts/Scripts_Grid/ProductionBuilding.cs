@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class ProductionBuilding : Building
@@ -40,6 +41,7 @@ public class ProductionBuilding : Building
 
         w.AssignTo(this);
         workers.Add(w);
+        StatsTracker.Instance.AddStat("workers_assigned", 1);
         return true;
     }
 
