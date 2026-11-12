@@ -147,63 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: 677832216}
   m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
---- !u!1001 &99277380
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -18.47082
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.262
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8425525181204396150, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_Name
-      value: GameSystems
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
 --- !u!1 &362247953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1255,7 @@ MonoBehaviour:
   m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
-  m_sharedMaterial: {fileID: -2126764378525648066, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
+  m_sharedMaterial: {fileID: 2850579157037116230, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2974,7 +2917,7 @@ MonoBehaviour:
   m_text: Not learned
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
-  m_sharedMaterial: {fileID: -2126764378525648066, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
+  m_sharedMaterial: {fileID: 2850579157037116230, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3460,7 +3403,7 @@ MonoBehaviour:
   m_text: 1 Skill Point
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
-  m_sharedMaterial: {fileID: -2126764378525648066, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
+  m_sharedMaterial: {fileID: 2850579157037116230, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3718,7 +3661,7 @@ MonoBehaviour:
   m_text: Learn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
-  m_sharedMaterial: {fileID: -2126764378525648066, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
+  m_sharedMaterial: {fileID: 2850579157037116230, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4989,7 +4932,7 @@ MonoBehaviour:
   m_text: Reset Points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
-  m_sharedMaterial: {fileID: -2126764378525648066, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
+  m_sharedMaterial: {fileID: 2850579157037116230, guid: 6f5510bbe6a444ad889ce961bf4afdbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6209,4 +6152,3 @@ SceneRoots:
   - {fileID: 600000002}
   - {fileID: 362247956}
   - {fileID: 600000185}
-  - {fileID: 99277380}
