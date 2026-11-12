@@ -3938,6 +3938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552690023}
   - component: {fileID: 552690022}
+  - component: {fileID: 552690024}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3976,6 +3977,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552690024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552690021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf7987f68a9f434aaba1a17e1d85c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::XPManager
+  maxLevel: 5
+  xpForFirstLevelUp: 50
+  xpGrowth: 1.5
 --- !u!1 &580501690
 GameObject:
   m_ObjectHideFlags: 0
@@ -16121,13 +16137,37 @@ MonoBehaviour:
     stats: []
     type: 1
   - name: Lumberjack Hut
-    icon: {fileID: 21300000, guid: d93ffe9e74f03417ab9437cba8b02121, type: 3}
+    icon: {fileID: 1754378458, guid: 7849c2565fe389f47a687f81508a2405, type: 3}
     tab: 1
     cost: 
     stats:
     - label: Max workers
       value: 
     type: 2
+  - name: Forage hut
+    icon: {fileID: -1331837479, guid: 7849c2565fe389f47a687f81508a2405, type: 3}
+    tab: 1
+    cost: 
+    stats:
+    - label: Max workers
+      value: 
+    type: 3
+  - name: Stone Gatherer
+    icon: {fileID: 2007014271573638513, guid: 89a7ce3787fa24a4f81fba2d1acfda72, type: 3}
+    tab: 1
+    cost: 
+    stats:
+    - label: Max workers
+      value: 
+    type: 6
+  - name: House
+    icon: {fileID: 1299423171, guid: a61572aaf89cc104da0798dc1c1e0760, type: 3}
+    tab: 1
+    cost: 
+    stats:
+    - label: Max workers
+      value: 
+    type: 5
   cardTemplate: {fileID: 286289409}
   defenseContent: {fileID: 771000011}
   productionContent: {fileID: 772000006}

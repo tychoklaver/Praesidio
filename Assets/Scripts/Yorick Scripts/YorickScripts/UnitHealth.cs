@@ -46,6 +46,7 @@ public class UnitHealth : MonoBehaviour, IDamageable, ITargetable
     void Die()
     {
         isDead = true;
+        XPManager.Instance.AddXP(25);
         UnitAttackBase attack = GetComponent<UnitAttackBase>();
         if (animator != null && attack != null)
             animator.ResetTrigger(attack.attackAnimationTrigger);

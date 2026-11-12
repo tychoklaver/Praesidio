@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class XPManager : MonoBehaviour
 {
+    public static XPManager Instance { get; private set; }
+    
     [Header("Levels")]
     [SerializeField, Min(1)] int maxLevel = 5;
     [SerializeField, Min(1)] int xpForFirstLevelUp = 50;
@@ -20,6 +22,8 @@ public class XPManager : MonoBehaviour
 
     public event Action<int, int> OnXPChanged;
     public event Action<int> OnLevelUp;
+
+    private void Awake() => Instance = this;
 
     public void AddXP(int amount)
     {

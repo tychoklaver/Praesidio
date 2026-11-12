@@ -167,20 +167,18 @@ public class InGameUI : MonoBehaviour
             freeWorker = work.IdleCount;
         }
 
-        print(work.workers.Count);
-        print(work.IdleCount);
-
         SetResource(woodText, wood);
         SetResource(stoneText, stone);
         SetResource(ironText, iron);
         SetResource(goldText, gold);
         workerText.text = freeWorker.ToString() + " / " + maxWorker.ToString();
 
-        levelText.text = "Level " + level;
-        xpText.text = xp + " / " + xpNeeded + " XP";
-        if (xpNeeded > 0)
+        levelText.text = $"Level {XPManager.Instance.Level}";
+        xpText.text = XPManager.Instance.XP + " / " + XPManager.Instance.XPToNextLevel + " XP";
+        if (XPManager.Instance.XPToNextLevel > 0)
         {
-            xpFill.fillAmount = Mathf.Clamp01((float)xp / xpNeeded);
+            xpFill.fillAmount = XPManager.Instance.Progress;
+            //Mathf.Clamp01((float)XPManager.Instance.XP / XPManager.Instance.XPToNextLevel);
         }
         else
         {
