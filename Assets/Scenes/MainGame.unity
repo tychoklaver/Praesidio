@@ -3938,6 +3938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552690023}
   - component: {fileID: 552690022}
+  - component: {fileID: 552690024}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3976,6 +3977,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552690024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552690021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8902c709b1e679f448cb04b043ad32ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillPointsRewarder
+  pointsPerLevel: 1
 --- !u!1 &580501690
 GameObject:
   m_ObjectHideFlags: 0
@@ -10928,64 +10942,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993450268}
   m_CullTransparentMesh: 1
---- !u!1001 &998208259
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.00593
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.02419
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471289963596166333, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8425525181204396150, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-      propertyPath: m_Name
-      value: GameSystems
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8413750880313915780, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 639075f6f44724445ba36e2f7d798372, type: 3}
 --- !u!1 &1003937365
 GameObject:
   m_ObjectHideFlags: 0
@@ -17587,6 +17543,7 @@ GameObject:
   - component: {fileID: 2127374445}
   - component: {fileID: 2127374444}
   - component: {fileID: 2127374448}
+  - component: {fileID: 2127374449}
   m_Layer: 0
   m_Name: GridManager
   m_TagString: Untagged
@@ -17686,6 +17643,21 @@ MonoBehaviour:
   seed: 12345
   spawnOnStart: 1
   parent: {fileID: 0}
+--- !u!114 &2127374449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127374443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf7987f68a9f434aaba1a17e1d85c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::XPManager
+  maxLevel: 5
+  xpForFirstLevelUp: 50
+  xpGrowth: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -17712,4 +17684,3 @@ SceneRoots:
   - {fileID: 600000002}
   - {fileID: 600000116}
   - {fileID: 1938132417}
-  - {fileID: 998208259}

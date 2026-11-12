@@ -1,17 +1,17 @@
 using System.Reflection;
-using System.Xml;
 using UnityEngine;
 
 /// <summary>
 /// Saves and restores the skill tree (learned skills + unspent skill points) WITHOUT changing SkillTreeUI.
 /// Add it to any object in the skill tree scene and assign the SkillTreeUI.
-/// 
+///
 /// SkillTreeUI keeps its data in private fields, so this script reaches them through reflection
 /// (the C# way to read and write private members). That is why the field names "skills" and
 /// "skillPoints" are hard-coded below: if SkillTreeUI ever renames them, this script logs an error
 /// and does nothing, instead of failing silently.
-/// 
+///
 /// Load: in Awake. All Awakes run before any Start, so SkillTreeUI builds its hexes from the restored data.
+/// Points earned in other scenes (SkillPoints.Award) are stored in the save data and picked up here.
 /// Save: SkillTreeUI has no events, so the state is checked twice a second; it is only written when it changed.
 /// </summary>
 
@@ -27,7 +27,7 @@ public class SkillTreeSaver : MonoBehaviour
     private SkillTreeUI.Skill[] _skills;
 
     // Cheap change detection: learning or resetting always changes the points or the learned count.
-    private int _lastPoints, _lastLearned;
+    private (int points, int learned) _lastState;
     private float _timer;
 
     private void Awake()
@@ -69,17 +69,19 @@ public class SkillTreeSaver : MonoBehaviour
 
     private void Load()
     {
-        SkillTreeData saved = StatsTracker.Instance.Data.skillTree;
+        PlayerData playerData = StatsTracker.Instance.Data;
+        playerData.skillTree ??= new SkillTreeData();
+        SkillTreeData saved = playerData.skillTree;
 
-        if (saved != null && saved.hasSaved)
+        _pointsField.SetValue(tree, saved.skillPoints);
+
+        if (saved.hasSaved)
         {
-            _pointsField.SetValue(tree, saved.skillPoints);
-
-            foreach (SkillTreeUI.Skill skill in _skills) 
+            foreach (SkillTreeUI.Skill skill in _skills)
                 skill.learned = saved.learned.Contains(skill.name);
         }
 
-        (_lastPoints, _lastLearned) = ReadState();
+        _lastState = ReadState();
     }
 
     private (int points, int learned) ReadState()
@@ -95,16 +97,22 @@ public class SkillTreeSaver : MonoBehaviour
     {
         if (_skills == null || StatsTracker.Instance == null) return;
 
-        (int points, int learned) = ReadState();
-        if (points == _lastPoints && learned == _lastLearned) return;
+        (int points, int learned) state = ReadState();
+        if (state == _lastState) return;
 
-        (_lastPoints, _lastLearned) = (points, learned);
+        Write(state, pImmediate);
+    }
 
-        var data = new SkillTreeData { hasSaved = true, skillPoints = points };
+    private void Write((int points, int learned) pState, bool pImmediate)
+    {
+        _lastState = pState;
+
+        SkillTreeData data = StatsTracker.Instance.Data.skillTree;
+        data.hasSaved = true;
+        data.skillPoints = pState.points;
+        data.learned.Clear();
         foreach (SkillTreeUI.Skill skill in _skills)
             if (skill.learned) data.learned.Add(skill.name);
-
-        StatsTracker.Instance.Data.skillTree = data;
 
         if (pImmediate) StatsTracker.Instance.SaveNow();
         else StatsTracker.Instance.RequestSave();
