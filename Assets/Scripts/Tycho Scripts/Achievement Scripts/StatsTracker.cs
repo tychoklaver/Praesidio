@@ -41,7 +41,12 @@ public class StatsTracker : MonoBehaviour
 
     public long GetStat(string pKey) => Data.GetStat(pKey);
 
-    public void AddStat(string pKey, long pAmount) => SetStat(pKey, GetStat(pKey) + pAmount);
+    /// <summary>Adds to a stat. Stats only count up: a negative amount (e.g. spending wood) is ignored.</summary>
+    public void AddStat(string pKey, long pAmount)
+    {
+        if (pAmount <= 0) return;
+        SetStat(pKey, GetStat(pKey) + pAmount);
+    }
 
     /// <summary>Sets a stat, e.g. for streaks. Does nothing (and raises no event) if the value is unchanged.</summary>
     public void SetStat(string pKey, long pValue)
