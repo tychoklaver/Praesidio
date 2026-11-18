@@ -7,7 +7,7 @@ public class EnemySoldierTargetManager : MonoBehaviour
 
     [SerializeField] float refreshInterval = 1f;
 
-    [SerializeField] private DBTest[] buildings = new DBTest[0];
+    [SerializeField] private BuildingHealth[] buildings = new BuildingHealth[0];
 
     void Awake()
     {
@@ -21,7 +21,7 @@ public class EnemySoldierTargetManager : MonoBehaviour
 
     private void RefreshBuildings()
     {
-        buildings = FindObjectsByType<DBTest>(FindObjectsSortMode.None);
+        buildings = FindObjectsByType<BuildingHealth>(FindObjectsSortMode.None);
     }
 
     public Transform GetClosest(Vector2 position)
@@ -29,7 +29,7 @@ public class EnemySoldierTargetManager : MonoBehaviour
         Transform closest = null;
         float closestDistance = float.MaxValue;
 
-        foreach (DBTest building in buildings)
+        foreach (BuildingHealth building in buildings)
         {
             if (building == null) continue;
 
