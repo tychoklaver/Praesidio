@@ -19,7 +19,6 @@ public class UnitMovementManager : MonoBehaviour
 
     void Update()
     {
-        
         FlowfieldManager fm = FlowfieldManager.Instance;
         if (fm == null) return;
 
@@ -36,6 +35,7 @@ public class UnitMovementManager : MonoBehaviour
             {
                 u.nextRetargetTime = now + retargetInterval;
                 Retarget(u, fm);
+                u.OnRetargeted();
             }
 
             Move(u, fm, dt);
@@ -72,10 +72,19 @@ public class UnitMovementManager : MonoBehaviour
         else
         {
             u.hasUnitInRange = false;
-            Transform goal = fm.GetGoal(pos, u.TargetType);
-            u.currentTarget = goal != null ? goal : u.GetFallbackTarget();
+
+            // Staat er een breakable muur op het pad? Dan is die het target (alleen voor units die muren mogen slopen).
+            if (fm.CanBreach(u.TargetType) &&
+                fm.TryGetBlockingWall(pos, u.TargetType, out Transform wall))
+                u.currentTarget = wall;
+            else
+            {
+                Transform goal = fm.GetGoal(pos, u.TargetType);
+                u.currentTarget = goal != null ? goal : u.GetFallbackTarget();
+            }
         }
     }
+
     Vector2 ClosestPointOnTarget(UnitAIBase u, Vector2 from)
     {
         Transform t = u.currentTarget;
@@ -89,13 +98,14 @@ public class UnitMovementManager : MonoBehaviour
 
         return u.cachedCollider ? u.cachedCollider.ClosestPoint(from) : (Vector2)t.position;
     }
+
     void Move(UnitAIBase unitBase, FlowfieldManager fm, float dt)
     {
         Transform target = unitBase.currentTarget;
 
         if (target == null)
         {
-            unitBase.SetWalking(false);      // NIEUW
+            unitBase.SetWalking(false);
             unitBase.nextRetargetTime = 0f; // target weg: meteen opnieuw zoeken
             return;
         }
@@ -146,7 +156,6 @@ public class UnitMovementManager : MonoBehaviour
         unitBase.transform.position = newPos;
         unitBase.SetWalking(newPos != pos);
         unitBase.FaceDirection(velocity.x);
-        
     }
 
     void BuildGrid()

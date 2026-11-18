@@ -67,7 +67,7 @@ public abstract class UnitAIBase : MonoBehaviour
     }
     void OnEnable() { UnitMovementManager.Units.Add(this); }
     void OnDisable() { UnitMovementManager.Units.Remove(this); }
-
+    public virtual void OnRetargeted() { }
     void OnDrawGizmosSelected()
     {
         if (showGizmos)

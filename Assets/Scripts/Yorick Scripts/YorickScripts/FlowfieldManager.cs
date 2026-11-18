@@ -6,7 +6,15 @@ public class FlowfieldManager : MonoBehaviour
     public static FlowfieldManager Instance { get; private set; }
 
     // Voeg hier later gewoon meer doelen aan toe
-    public enum TargetType { DefenseBuilding, EnemyTarget, PlayerVillager }
+    public enum TargetType
+    {
+        DefenseBuilding,
+        EnemyTarget,
+        PlayerVillager,
+        DefenseBuildingBreach,  // Vikings: muren slopen is de kortste route
+        DefenseBuildingSiege,   // soldiers: muur slopen alleen als er geen open pad is
+        PlayerVillagerSiege     // bandits: idem
+    }
 
     public bool showAllPaths;
 
@@ -21,15 +29,23 @@ public class FlowfieldManager : MonoBehaviour
     public struct LayerCost
     {
         public LayerMask layer;
-        public byte cost;//255 is een tile waar je niet doorheen kunt.
+        public byte cost;        // 255 is een tile waar je niet doorheen kunt.
+        public bool breakable;   // vink aan bij de muur-layer: dicht voor iedereen, behalve in de pad-planning van breakers
     }
 
     [Header("Cost Settings")]
     public LayerCost[] layerCosts;
 
+    [Header("Breach Settings")]
+    public byte wallBreachCost = 1;    // Vikings: muur = even goedkoop als open grond
+    public byte wallSiegeCost = 200;   // soldiers/bandits: muur = enorme omweg (max 254)
+
     const byte Impassable = 255;
 
     [SerializeField] byte[] costField;
+    byte[] breachCostField;
+    byte[] siegeCostField;
+    int breakableMask;
 
     // Per TargetType een eigen veld (index = (int)TargetType)
     int[][] distance;
@@ -49,6 +65,8 @@ public class FlowfieldManager : MonoBehaviour
 
         typeCount = System.Enum.GetValues(typeof(TargetType)).Length;
         costField = new byte[width * height];
+        breachCostField = new byte[width * height];
+        siegeCostField = new byte[width * height];
         distance = new int[typeCount][];
         flow = new Vector2[typeCount][];
         goal = new Transform[typeCount][];
@@ -58,6 +76,15 @@ public class FlowfieldManager : MonoBehaviour
             distance[t] = new int[width * height];
             flow[t] = new Vector2[width * height];
             goal[t] = new Transform[width * height];
+        }
+
+        breakableMask = 0;
+        foreach (var lc in layerCosts)
+        {
+            if (lc.layer.value == 0)
+                Debug.LogWarning("Een layerCost heeft geen layer ingesteld.");
+
+            if (lc.breakable) breakableMask |= lc.layer.value;
         }
     }
 
@@ -83,20 +110,33 @@ public class FlowfieldManager : MonoBehaviour
             BuildFlow((TargetType)t);
     }
 
-    bool CanStep(int x, int y, Vector2Int d)
+    bool CanStep(int x, int y, Vector2Int d, byte[] costs)
     {
         int nx = x + d.x, ny = y + d.y;
-        if (!InBounds(nx, ny) || costField[Idx(nx, ny)] == Impassable) return false;
+        if (!InBounds(nx, ny) || costs[Idx(nx, ny)] == Impassable) return false;
 
         if (d.x != 0 && d.y != 0)
-            if (costField[Idx(x + d.x, y)] == Impassable || costField[Idx(x, y + d.y)] == Impassable)
+            if (costs[Idx(x + d.x, y)] == Impassable || costs[Idx(x, y + d.y)] == Impassable)
                 return false;
 
         return true;
     }
 
+    // Welk kostenveld hoort bij dit type?
+    byte[] CostsFor(TargetType type) => type switch
+    {
+        TargetType.DefenseBuildingBreach => breachCostField,
+        TargetType.DefenseBuildingSiege or TargetType.PlayerVillagerSiege => siegeCostField,
+        _ => costField
+    };
+
+    // Mag dit type muren als target kiezen?
+    public bool CanBreach(TargetType type) =>
+        type == TargetType.DefenseBuildingBreach ||
+        type == TargetType.DefenseBuildingSiege ||
+        type == TargetType.PlayerVillagerSiege;
+
     // ---------- Publiek (gebruikt door de units) ----------
-    // type is standaard DefenseBuilding, dus bestaande enemy-code werkt ongewijzigd.
 
     public bool TryGetNextPoint(Vector3 worldPos, out Vector3 point, TargetType type = TargetType.DefenseBuilding)
     {
@@ -118,6 +158,7 @@ public class FlowfieldManager : MonoBehaviour
         return InBounds(c.x, c.y) ? goal[(int)type][Idx(c.x, c.y)] : null;
     }
 
+    // Fysieke blokkade: geldt voor alle units
     public bool IsBlocked(Vector3 worldPos)
     {
         Vector2Int c = WorldToCell(worldPos);
@@ -136,6 +177,42 @@ public class FlowfieldManager : MonoBehaviour
         return true;
     }
 
+    // Staat er een breakable muur op de volgende stap van het pad?
+    public bool TryGetBlockingWall(Vector3 worldPos, TargetType type, out Transform wall)
+    {
+        wall = null;
+        Vector2Int c = WorldToCell(worldPos);
+        if (!InBounds(c.x, c.y)) return false;
+
+        Vector2 dir = flow[(int)type][Idx(c.x, c.y)];
+        if (dir == Vector2.zero) return false;
+
+        int dx = Mathf.RoundToInt(dir.x), dy = Mathf.RoundToInt(dir.y);
+
+        // Doelcel, en bij een diagonaal ook de twee zijcellen
+        if (TryWallAt(c.x + dx, c.y + dy, out wall)) return true;
+
+        if (dx != 0 && dy != 0)
+        {
+            if (TryWallAt(c.x + dx, c.y, out wall)) return true;
+            if (TryWallAt(c.x, c.y + dy, out wall)) return true;
+        }
+
+        return false;
+    }
+
+    bool TryWallAt(int x, int y, out Transform wall)
+    {
+        wall = null;
+        if (!InBounds(x, y) || costField[Idx(x, y)] != Impassable) return false;
+
+        Collider2D col = Physics2D.OverlapBox(CellToWorld(x, y), Vector2.one * cellSize * 0.9f, 0f, breakableMask);
+        if (col == null) return false;
+
+        wall = col.transform;
+        return true;
+    }
+
     // ---------- Opbouwen ----------
 
     void BuildCosts()
@@ -145,21 +222,38 @@ public class FlowfieldManager : MonoBehaviour
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++)
             {
-                byte cost = 1;
+                byte cost = 1, breachCost = 1, siegeCost = 1;
+
                 foreach (var lc in layerCosts)
-                    if (lc.cost > cost && Physics2D.OverlapBox(CellToWorld(x, y), size, 0f, lc.layer))
-                        cost = lc.cost;
+                {
+                    byte c = lc.breakable ? Impassable : lc.cost;      // normale beweging: muur is altijd dicht
+                    byte bc = lc.breakable ? wallBreachCost : lc.cost;  // Vikings: muur is goedkoop
+                    byte sc = lc.breakable ? wallSiegeCost : lc.cost;   // soldiers/bandits: muur is heel duur
+
+                    if ((c > cost || bc > breachCost || sc > siegeCost) &&
+                        Physics2D.OverlapBox(CellToWorld(x, y), size, 0f, lc.layer))
+                    {
+                        if (c > cost) cost = c;
+                        if (bc > breachCost) breachCost = bc;
+                        if (sc > siegeCost) siegeCost = sc;
+                    }
+                }
 
                 costField[Idx(x, y)] = cost;
+                breachCostField[Idx(x, y)] = breachCost;
+                siegeCostField[Idx(x, y)] = siegeCost;
             }
     }
+
     List<Transform> GetTargets(TargetType type)
     {
         var list = new List<Transform>();
-        
+
         switch (type)
         {
             case TargetType.DefenseBuilding:
+            case TargetType.DefenseBuildingBreach:
+            case TargetType.DefenseBuildingSiege:
                 foreach (var t in FindObjectsByType<DBTest>(FindObjectsSortMode.None))
                     list.Add(t.transform);
                 break;
@@ -170,6 +264,7 @@ public class FlowfieldManager : MonoBehaviour
                 break;
 
             case TargetType.PlayerVillager:
+            case TargetType.PlayerVillagerSiege:
                 foreach (var t in FindObjectsByType<PVTest>(FindObjectsSortMode.None))
                     list.Add(t.transform);
                 break;
@@ -183,6 +278,7 @@ public class FlowfieldManager : MonoBehaviour
         int[] dist = distance[(int)type];
         Vector2[] fl = flow[(int)type];
         Transform[] gl = goal[(int)type];
+        byte[] costs = CostsFor(type);
 
         for (int i = 0; i < dist.Length; i++)
         {
@@ -193,7 +289,6 @@ public class FlowfieldManager : MonoBehaviour
 
         var queue = new Queue<Vector2Int>();
 
-        
         foreach (Transform t in GetTargets(type))
         {
             Collider2D col = t.GetComponent<Collider2D>();
@@ -219,9 +314,9 @@ public class FlowfieldManager : MonoBehaviour
             foreach (var d in Dirs)
             {
                 int nx = cur.x + d.x, ny = cur.y + d.y;
-                if (!CanStep(cur.x, cur.y, d)) continue;
+                if (!CanStep(cur.x, cur.y, d, costs)) continue;
 
-                int step = costField[Idx(nx, ny)] * (d.x != 0 && d.y != 0 ? 141 : 100);
+                int step = costs[Idx(nx, ny)] * (d.x != 0 && d.y != 0 ? 141 : 100);
                 int newDist = dist[Idx(cur.x, cur.y)] + step;
 
                 if (newDist < dist[Idx(nx, ny)])
@@ -243,7 +338,7 @@ public class FlowfieldManager : MonoBehaviour
                 {
                     int nx = x + d.x, ny = y + d.y;
                     if (!InBounds(nx, ny) || dist[Idx(nx, ny)] >= best) continue;
-                    if (dist[Idx(nx, ny)] != 0 && !CanStep(x, y, d)) continue;
+                    if (dist[Idx(nx, ny)] != 0 && !CanStep(x, y, d, costs)) continue;
                     best = dist[Idx(nx, ny)];
                     fl[Idx(x, y)] = ((Vector2)d).normalized;
                 }
@@ -252,7 +347,7 @@ public class FlowfieldManager : MonoBehaviour
 
     // ---------- Gizmos ----------
 
-    void OnDrawGizmos()//Gizmos puur voor het debuggen. laat de flowfield grid, de costfields en de paden van de units zien.
+    void OnDrawGizmos()// puur voor het debuggen
     {
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++)
@@ -269,22 +364,31 @@ public class FlowfieldManager : MonoBehaviour
         if (showAllPaths && Application.isPlaying)
         {
             foreach (var u in FindObjectsByType<EnemySoldierAI>(FindObjectsSortMode.None))
-                DrawPath(u.transform.position, TargetType.DefenseBuilding);
+                DrawPath(u.transform.position, u.TargetType);
 
             foreach (var u in FindObjectsByType<PlayerUnitTestAI>(FindObjectsSortMode.None))
                 DrawPath(u.transform.position, TargetType.EnemyTarget);
 
             foreach (var u in FindObjectsByType<EnemyBanditAI>(FindObjectsSortMode.None))
-                DrawPath(u.transform.position, TargetType.PlayerVillager);
+                DrawPath(u.transform.position, u.TargetType);
+
+            foreach (var u in FindObjectsByType<EnemyVikingAI>(FindObjectsSortMode.None))
+                DrawPath(u.transform.position, u.TargetType);
         }
     }
 
-    public void DrawPath(Vector3 start, TargetType type = TargetType.DefenseBuilding)//tekent het pad van de units (alleen voor testen).
+    public void DrawPath(Vector3 start, TargetType type = TargetType.DefenseBuilding)
     {
         if (flow == null) return;
 
         Vector2[] fl = flow[(int)type];
-        Gizmos.color = type == TargetType.DefenseBuilding ? Color.green : Color.cyan;
+        Gizmos.color = type switch
+        {
+            TargetType.DefenseBuilding or TargetType.DefenseBuildingSiege => Color.green,
+            TargetType.EnemyTarget => Color.cyan,
+            TargetType.PlayerVillager or TargetType.PlayerVillagerSiege => Color.magenta,
+            _ => Color.blue
+        };
 
         Vector2Int cell = WorldToCell(start);
         Vector3 prev = start;
