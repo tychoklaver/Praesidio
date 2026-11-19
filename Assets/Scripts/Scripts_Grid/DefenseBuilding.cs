@@ -16,7 +16,9 @@ public class DefenseBuilding : Building
 
     float cooldown;
     UnitHealth target;
-
+    protected Projectile ProjectilePrefab => projectilePrefab;
+    protected float Damage => damage;
+    protected Vector3 FirePosition => firePoint != null ? firePoint.position : transform.position;
     void Update()
     {
         if (!IsComplete) return;
@@ -53,7 +55,7 @@ public class DefenseBuilding : Building
         return best;
     }
 
-    void Fire(UnitHealth enemy)
+    protected virtual void Fire(UnitHealth enemy)
     {
         if (projectilePrefab == null)
         {
