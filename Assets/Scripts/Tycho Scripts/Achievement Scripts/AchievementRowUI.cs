@@ -90,7 +90,7 @@ public class AchievementRowUI : MonoBehaviour
             progressFill.offsetMax = Vector2.zero;
         }
 
-        if (progressFill != null) 
+        if (progressText != null) 
             progressText.text = $"{current} / {pDef.Target}";
     }
 }

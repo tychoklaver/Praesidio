@@ -2,14 +2,13 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
 /// Saves and loads <see cref="PlayerData"/> as an encrypted, tamper-evident file (encrypt-then-MAC):
 ///     JSON -> AES-256-CBC encrypt -> HMAC-SHA256 over IV + ciphertext -> stored as an EncryptedSaveContainer.
 /// Three files are used: the main save, a .bak (the previous good save) and a .tmp (only while writing).
-///  NOTE: The secret ships inside the game, so this stops casual save editing, not a determind attacker.
+///  NOTE: The secret ships inside the game, so this stops casual save editing, not a determined attacker.
 /// </summary>
 public class SaveSystem : MonoBehaviour
 {
@@ -49,7 +48,7 @@ public class SaveSystem : MonoBehaviour
         return hmac.ComputeHash(Encoding.UTF8.GetBytes(pPurpose));
     }
 
-    /// <returns>True if data was written succesfully.</returns>
+    /// <returns>True if data was written successfully.</returns>
     public bool Save(PlayerData pData)
     {
         try
@@ -207,7 +206,7 @@ public class SaveSystem : MonoBehaviour
     private string Decrypt(byte[] pCipherBytes, byte[] pIv)
     {
         using var aes = CreateAes();
-        aes.IV = pIv; // Must be the same IV that was used to decrypt.
+        aes.IV = pIv; // Must be the same IV that was used to encrypt.
 
         using var decryptor = aes.CreateDecryptor();
         return Encoding.UTF8.GetString(decryptor.TransformFinalBlock(pCipherBytes, 0, pCipherBytes.Length));

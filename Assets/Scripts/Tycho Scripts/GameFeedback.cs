@@ -46,6 +46,7 @@ public class GameFeedback : MonoBehaviour
     float _shakeLeft;
     float _keepMax, _keepLast;
     float _hitFlash;
+    float _scanTimer; // Buildings are looked up a few times per second, not every frame.
 
     void Awake()
     {
@@ -127,6 +128,10 @@ public class GameFeedback : MonoBehaviour
 
     void HookBuildings()
     {
+        _scanTimer -= Time.unscaledDeltaTime;
+        if (_scanTimer > 0f) return;
+        _scanTimer = 0.25f;
+
         foreach (BuildingHealth b in FindObjectsByType<BuildingHealth>(FindObjectsSortMode.None))
         {
             if (!_hooked.Add(b)) continue;

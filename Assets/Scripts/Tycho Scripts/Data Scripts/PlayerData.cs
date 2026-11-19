@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 // Unity's JsonUtility cannot serialize a Dictionary, so stats and achievements are lists of entries.
 // They are searched linearly: fine for a few dozen items.
@@ -24,7 +23,7 @@ public class AchievementProgress
 [Serializable]
 public class PlayerData
 {
-    /// <summary>Bump when the layout is changes, so old saves can be migrated on load.</summary>
+    /// <summary>Bump when the layout is changed, so old saves can be migrated on load.</summary>
     public int saveVersion = 1;
 
     public List<StatEntry> stats = new();

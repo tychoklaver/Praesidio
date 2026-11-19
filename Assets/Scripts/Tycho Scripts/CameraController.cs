@@ -67,7 +67,7 @@ public class CameraController : MonoBehaviour
         var direction = new Vector3(Axis(Keybinds.MoveRight, Keybinds.MoveLeft), Axis(Keybinds.MoveUp, Keybinds.MoveDown));
  
         // Clamping the length keeps diagonal movement from being faster than straight movement.
-        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * CameraSettings.moveSpeed * Time.deltaTime);
+        _targetPos += Vector3.ClampMagnitude(direction, 1f) * (movementSpeed * CameraSettings.moveSpeed * Time.unscaledDeltaTime);
     }
 
     /// <summary>Returns +1, -1 or 0 from a pair of opposing keys.</summary>
@@ -113,11 +113,12 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Eases position and zoom towards their targets. 1 - e^(-k*dt) is a frame-rate independent
     /// lerp factor: the camera feels the same at 30 and 144 FPS.
+    /// Uses unscaled time, so the camera moves at the same speed at 0.5x / 2x game speed and while paused.
     /// </summary>
     private void ApplyMovement()
     {
-        float moveAlpha = 1f - Mathf.Exp(-movementSmoothness * Time.deltaTime);
-        float zoomAlpha = 1f - Mathf.Exp(-zoomSmoothness * Time.deltaTime);
+        float moveAlpha = 1f - Mathf.Exp(-movementSmoothness * Time.unscaledDeltaTime);
+        float zoomAlpha = 1f - Mathf.Exp(-zoomSmoothness * Time.unscaledDeltaTime);
  
         transform.position = Vector3.Lerp(transform.position, _targetPos, moveAlpha);
         _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, _targetZoom, zoomAlpha);

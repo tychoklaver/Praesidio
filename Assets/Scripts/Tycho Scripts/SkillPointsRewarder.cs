@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 
+/// <summary>Gives the player skill points every time the XPManager of this scene reports a level-up.</summary>
 public class SkillPointsRewarder : MonoBehaviour
 {
     [SerializeField, Min(1)] private int pointsPerLevel = 1;

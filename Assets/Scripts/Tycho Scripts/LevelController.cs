@@ -7,8 +7,9 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Runs one level on top of the existing WaveManager: starts the waves on a timer, counts the
-/// living enemies, pays out kill rewards, makes later waves tougher, fills the HUD and decides
-/// victory or defeat.
+/// living enemies, pays out kill rewards, makes later waves tougher, spawns a boss in the last wave,
+/// shows a banner per wave, fills the HUD and the result screen, feeds the achievement stats
+/// and decides victory or defeat.
 ///   Victory: the last wave has spawned and every enemy is dead.
 ///   Defeat:  the keep (the object the enemies march towards) is destroyed.
 /// Nothing in other people's scripts is changed; their private fields are read by reflection.
@@ -64,6 +65,11 @@ public class LevelController : MonoBehaviour
     [SerializeField] InGameUI hud;
     [Tooltip("Optional. A text that shows the countdown to the next wave.")]
     [SerializeField] TMP_Text countdownText;
+
+    // Stat keys that the achievements watch (see the AchievementDefinition assets).
+    const string StatLevelsCompleted = "levels_completed";
+    const string StatManualWaveStarts = "manual_wave_starts";
+    const string StatVikingsKilled = "vikings_killed";
 
     // Private fields of other scripts that this script reads or writes (see FindFields).
     static readonly BindingFlags PrivateInstance = BindingFlags.Instance | BindingFlags.NonPublic;
@@ -194,6 +200,8 @@ public class LevelController : MonoBehaviour
         }
         _waiting = false;
 
+        if (_startNow && StatsTracker.Instance != null) StatsTracker.Instance.AddStat(StatManualWaveStarts, 1);
+
         if (_startNow && earlyBonusPerFiveSeconds > 0 && ResourceManager.Instance != null)
         {
             int bonus = Mathf.FloorToInt(_secondsLeft / 5f) * earlyBonusPerFiveSeconds;
@@ -231,6 +239,8 @@ public class LevelController : MonoBehaviour
             if (enemy != null)
             {
                 _kills++;
+                if (enemy.name.Contains("Viking") && StatsTracker.Instance != null)
+                    StatsTracker.Instance.AddStat(StatVikingsKilled, 1);
                 PayKillReward();
                 if (enemy == _boss) PayBossReward();
             }
@@ -413,8 +423,11 @@ public class LevelController : MonoBehaviour
         if (pVictory) winLose.ShowVictory();
         else winLose.ShowDefeat();
 
+        if (StatsTracker.Instance == null) return;
+
+        if (pVictory) StatsTracker.Instance.AddStat(StatLevelsCompleted, 1);
         // Make sure the result and any new achievements are on disk.
-        if (StatsTracker.Instance != null) StatsTracker.Instance.SaveNow();
+        StatsTracker.Instance.SaveNow();
     }
 
     // --- HUD -----------------------------------------------------------------------------------
