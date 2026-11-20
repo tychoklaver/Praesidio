@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -143,6 +144,9 @@ public class LevelController : MonoBehaviour
         _allWavesSpawned = true;
     }
 
+    /// <summary>Raised the moment a wave spawns. The bool is true for the boss wave.</summary>
+    public static event Action<bool> WaveStarted;
+
     void SpawnWave()
     {
         waveManager.StartWave();
@@ -163,6 +167,8 @@ public class LevelController : MonoBehaviour
 
         bool bossWave = _wave == totalWaves && bossPrefab != null;
         if (bossWave) SpawnBoss();
+
+        WaveStarted?.Invoke(bossWave);
 
         ShowBanner(bossWave, counts);
     }
@@ -415,9 +421,13 @@ public class LevelController : MonoBehaviour
 
     // --- End of the level ----------------------------------------------------------------------
 
+    /// <summary>Raised once when the level ends. The bool is true for victory, false for defeat.</summary>
+    public static event Action<bool> LevelEnded;
+
     void End(bool pVictory)
     {
         _ended = true;
+        LevelEnded?.Invoke(pVictory);
         FillResults(pVictory);
 
         if (pVictory) winLose.ShowVictory();

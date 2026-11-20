@@ -46,7 +46,17 @@ public class GameFeedback : MonoBehaviour
     float _shakeLeft;
     float _keepMax, _keepLast;
     float _hitFlash;
-    float _scanTimer; // Buildings are looked up a few times per second, not every frame.
+
+    void OnEnable() => LevelController.WaveStarted += OnWaveStarted;
+    void OnDisable() => LevelController.WaveStarted -= OnWaveStarted;
+
+    // Boss wave: a long, heavy shake and a red flash, so it feels like something big arrived.
+    void OnWaveStarted(bool pBossWave)
+    {
+        if (!pBossWave) return;
+        _shakeLeft = shakeTime * 4f;
+        _hitFlash = 0.7f;
+    }
 
     void Awake()
     {
@@ -128,10 +138,6 @@ public class GameFeedback : MonoBehaviour
 
     void HookBuildings()
     {
-        _scanTimer -= Time.unscaledDeltaTime;
-        if (_scanTimer > 0f) return;
-        _scanTimer = 0.25f;
-
         foreach (BuildingHealth b in FindObjectsByType<BuildingHealth>(FindObjectsSortMode.None))
         {
             if (!_hooked.Add(b)) continue;

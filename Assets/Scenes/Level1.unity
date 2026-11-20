@@ -16122,6 +16122,7 @@ GameObject:
   - component: {fileID: 1877398896}
   - component: {fileID: 1877398895}
   - component: {fileID: 1877398897}
+  - component: {fileID: 1877398898}
   m_Layer: 0
   m_Name: GameFeedback
   m_TagString: Untagged
@@ -16180,8 +16181,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundFeedback
   keep: {fileID: 1654804215}
-  volume: 0.6
+  volume: 1
   lowHealthFraction: 0.35
+  bossPitch: 0.3
+  waveStartSound: {fileID: 8300000, guid: bf1d1540744a5484dad9bb9e52adefbd, type: 3}
+  defeatSound: {fileID: 8300000, guid: befcbf4fedb57804695d732b95131767, type: 3}
+  victorySound: {fileID: 8300000, guid: b7f6a6a7af7e1ab4e9557ee205d7536b, type: 3}
+  enemyDeathSound: {fileID: 0}
+--- !u!114 &1877398898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877398894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31191405e58a9cc4bb7edade713b2bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelMusic
+  musicClip: {fileID: 0}
+  volume: 1
+  fadeSeconds: 0.6
 --- !u!1 &1898204899
 GameObject:
   m_ObjectHideFlags: 0
@@ -16323,7 +16344,7 @@ MonoBehaviour:
     stats:
     - label: Max workers
       value: 
-    type: 3
+    type: 4
   - name: Stone Gatherer
     icon: {fileID: 2007014271573638513, guid: 89a7ce3787fa24a4f81fba2d1acfda72, type: 3}
     tab: 1
@@ -16331,7 +16352,7 @@ MonoBehaviour:
     stats:
     - label: Max workers
       value: 
-    type: 6
+    type: 7
   - name: House
     icon: {fileID: -6860754830899245036, guid: a61572aaf89cc104da0798dc1c1e0760, type: 3}
     tab: 1
