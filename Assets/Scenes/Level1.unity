@@ -3495,6 +3495,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4956333376921078008, guid: 34109467d0b6a6c4b8862457f63b3413, type: 3}
+      propertyPath: nextLevelScene
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956333376921078008, guid: 34109467d0b6a6c4b8862457f63b3413, type: 3}
+      propertyPath: levelSelectScene
+      value: MainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11805,6 +11813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116244208}
   - component: {fileID: 1116244207}
+  - component: {fileID: 1116244209}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -11865,6 +11874,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116244209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116244206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e46dc4dd59e8747959c1f30a76c34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerBuiltTracker
 --- !u!1 &1120372730
 GameObject:
   m_ObjectHideFlags: 0
